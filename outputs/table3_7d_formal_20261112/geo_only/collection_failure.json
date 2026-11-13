@@ -1,0 +1,27 @@
+{
+  "command": "python -B outputs/table3_7d_preflight/collect_formal_results.py",
+  "exit_code": 1,
+  "stage": "post-run collection",
+  "error_type": "ValueError",
+  "file": "outputs/table3_7d_preflight/collect_formal_results.py",
+  "line": 85,
+  "statement": "pd.to_datetime(decisions.sla_deadline_utc, utc=True)",
+  "error_excerpt": "time data \"2023-07-01T04:36:12+00:00\" does not match inferred format \"%Y-%m-%dT%H:%M:%S.%f%z\", at position 7",
+  "diagnosis": "Valid ISO8601 timestamps with and without fractional seconds coexist. Pandas default inferred one fixed fractional format.",
+  "first_eight_deadline_strings": [
+    "2023-07-01T04:00:28.500000+00:00",
+    "2023-07-01T05:07:14.999999999+00:00",
+    "2023-07-01T04:14:46.499999999+00:00",
+    "2023-07-01T04:19:13.500000+00:00",
+    "2023-07-01T04:06:08.999999999+00:00",
+    "2023-07-01T05:10:35.999999999+00:00",
+    "2023-07-01T04:36:29.999999999+00:00",
+    "2023-07-01T04:36:12+00:00"
+  ],
+  "diagnostic_examples_all_valid_iso8601": true,
+  "frozen_collector_modified": false,
+  "collector_rerun": false,
+  "alternative_collector_used": false,
+  "formal_acceptance_passed": false,
+  "time_only_allowed_to_start": false
+}

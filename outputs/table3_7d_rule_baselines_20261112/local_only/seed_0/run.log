@@ -1,0 +1,8 @@
+TaskSchedulingEnv initialized with single_action_mode: False, aggregation: average, disable_defer_action: False
+local_only seed=0: 96/672
+local_only seed=0: 192/672
+local_only seed=0: 288/672
+local_only seed=0: 384/672
+local_only seed=0: 480/672
+local_only seed=0: 576/672
+local_only seed=0: 672/672

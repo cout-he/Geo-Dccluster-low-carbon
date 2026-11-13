@@ -1,0 +1,140 @@
+{
+  "seed": 0,
+  "strategy": "local_only",
+  "simulation": {
+    "year": 2023,
+    "month": 7,
+    "init_day": 1,
+    "init_hour": 0,
+    "duration_days": 7,
+    "timestep_minutes": 15,
+    "workload_path": "data/workload/alibaba_2020_dataset/result_df_full_year_2020.pkl",
+    "cloud_provider": "aws",
+    "shuffle_datacenters": false,
+    "strategy": "local_only",
+    "use_tensorboard": false,
+    "single_action_mode": false,
+    "disable_defer_action": false,
+    "align_external_data": true
+  },
+  "dc_order": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "obs_dim": 34,
+  "act_dim": 6,
+  "normalization": [
+    {
+      "dc_id": 1,
+      "start_utc": "2023-07-01T00:00:00+00:00",
+      "end_utc_inclusive": "2023-07-31T00:00:00+00:00",
+      "rows": 2881,
+      "minimum": {
+        "carbon_intensity_g_kwh": 71.88,
+        "electricity_price_usd_mwh": 23.086564999999997,
+        "ambient_temperature_c": 12.0
+      },
+      "maximum": {
+        "carbon_intensity_g_kwh": 268.51,
+        "electricity_price_usd_mwh": 167.98300999999998,
+        "ambient_temperature_c": 35.1
+      },
+      "span": {
+        "carbon_intensity_g_kwh": 196.63,
+        "electricity_price_usd_mwh": 144.89644499999997,
+        "ambient_temperature_c": 23.1
+      }
+    },
+    {
+      "dc_id": 2,
+      "start_utc": "2023-07-01T00:00:00+00:00",
+      "end_utc_inclusive": "2023-07-31T00:00:00+00:00",
+      "rows": 2881,
+      "minimum": {
+        "carbon_intensity_g_kwh": 84.47,
+        "electricity_price_usd_mwh": -484.39918,
+        "ambient_temperature_c": 10.5
+      },
+      "maximum": {
+        "carbon_intensity_g_kwh": 458.89,
+        "electricity_price_usd_mwh": 198.2803717999999,
+        "ambient_temperature_c": 35.0
+      },
+      "span": {
+        "carbon_intensity_g_kwh": 374.41999999999996,
+        "electricity_price_usd_mwh": 682.6795517999999,
+        "ambient_temperature_c": 24.5
+      }
+    },
+    {
+      "dc_id": 3,
+      "start_utc": "2023-07-01T00:00:00+00:00",
+      "end_utc_inclusive": "2023-07-31T00:00:00+00:00",
+      "rows": 2881,
+      "minimum": {
+        "carbon_intensity_g_kwh": 73.76,
+        "electricity_price_usd_mwh": 23.1336,
+        "ambient_temperature_c": 5.0
+      },
+      "maximum": {
+        "carbon_intensity_g_kwh": 322.62,
+        "electricity_price_usd_mwh": 214.3585080000002,
+        "ambient_temperature_c": 22.1
+      },
+      "span": {
+        "carbon_intensity_g_kwh": 248.86,
+        "electricity_price_usd_mwh": 191.2249080000002,
+        "ambient_temperature_c": 17.1
+      }
+    },
+    {
+      "dc_id": 4,
+      "start_utc": "2023-07-01T00:00:00+00:00",
+      "end_utc_inclusive": "2023-07-31T00:00:00+00:00",
+      "rows": 2881,
+      "minimum": {
+        "carbon_intensity_g_kwh": 344.38,
+        "electricity_price_usd_mwh": 64.79331030000046,
+        "ambient_temperature_c": 23.8
+      },
+      "maximum": {
+        "carbon_intensity_g_kwh": 376.06,
+        "electricity_price_usd_mwh": 1681.5187974000005,
+        "ambient_temperature_c": 32.2
+      },
+      "span": {
+        "carbon_intensity_g_kwh": 31.680000000000007,
+        "electricity_price_usd_mwh": 1616.7254871,
+        "ambient_temperature_c": 8.400000000000002
+      }
+    },
+    {
+      "dc_id": 5,
+      "start_utc": "2023-07-01T00:00:00+00:00",
+      "end_utc_inclusive": "2023-07-31T00:00:00+00:00",
+      "rows": 2881,
+      "minimum": {
+        "carbon_intensity_g_kwh": 249.22,
+        "electricity_price_usd_mwh": -58.55125000000048,
+        "ambient_temperature_c": 2.6
+      },
+      "maximum": {
+        "carbon_intensity_g_kwh": 709.13,
+        "electricity_price_usd_mwh": 316.94249999999954,
+        "ambient_temperature_c": 24.3
+      },
+      "span": {
+        "carbon_intensity_g_kwh": 459.90999999999997,
+        "electricity_price_usd_mwh": 375.49375000000003,
+        "ambient_temperature_c": 21.7
+      }
+    }
+  ],
+  "checkpoint_loaded": false,
+  "actor_inference": false,
+  "routing": "DatacenterClusterManager.step built-in rule-based branch",
+  "instrumentation": "Observe same returned loader tasks; no extra calls or RNG interception."
+}

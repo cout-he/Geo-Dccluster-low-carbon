@@ -1,0 +1,59 @@
+{
+  "status": "simulation_complete_but_official_acceptance_blocked",
+  "created_at_shanghai": "2026-11-12T11:08:52.986849+08:00",
+  "simulation_runs_completed": 5,
+  "actual_steps_per_seed": 672,
+  "total_steps": 3360,
+  "reported_by": "Read-only reporting checks; not a successful run of the frozen collector.",
+  "raw_action_0_all_zero": true,
+  "effective_defer_all_zero": true,
+  "tasks_deferred_all_zero": true,
+  "external_inputs_sha256_all_match": true,
+  "input_rows_read": 16800,
+  "max_offline_input_errors": [
+    {
+      "seed": 0,
+      "electricity_price_usd_mwh": 6.821210263296962e-13,
+      "carbon_intensity_g_kwh": 1.1368683772161603e-13,
+      "ambient_temperature_c": 7.105427357601002e-15
+    },
+    {
+      "seed": 10,
+      "electricity_price_usd_mwh": 6.821210263296962e-13,
+      "carbon_intensity_g_kwh": 1.1368683772161603e-13,
+      "ambient_temperature_c": 7.105427357601002e-15
+    },
+    {
+      "seed": 20,
+      "electricity_price_usd_mwh": 6.821210263296962e-13,
+      "carbon_intensity_g_kwh": 1.1368683772161603e-13,
+      "ambient_temperature_c": 7.105427357601002e-15
+    },
+    {
+      "seed": 30,
+      "electricity_price_usd_mwh": 6.821210263296962e-13,
+      "carbon_intensity_g_kwh": 1.1368683772161603e-13,
+      "ambient_temperature_c": 7.105427357601002e-15
+    },
+    {
+      "seed": 40,
+      "electricity_price_usd_mwh": 6.821210263296962e-13,
+      "carbon_intensity_g_kwh": 1.1368683772161603e-13,
+      "ambient_temperature_c": 7.105427357601002e-15
+    }
+  ],
+  "checkpoint_matches_freeze": true,
+  "changed_frozen_files": [],
+  "preexisting_files_rehashed": 812,
+  "changed_preexisting_files": [],
+  "seed42_untouched_and_excluded": true,
+  "nine_metrics_independently_recomputed": true,
+  "sample_std_ddof": 1,
+  "collector_exit_code": 1,
+  "official_collection_passed": false,
+  "next_batch_allowed": false,
+  "other_strategy_directories_exist": {
+    "time_only": false,
+    "geo_time": false
+  }
+}

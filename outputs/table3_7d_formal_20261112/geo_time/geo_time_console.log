@@ -1,0 +1,47 @@
+TaskSchedulingEnv initialized with single_action_mode: False, aggregation: average, disable_defer_action: False
+[geo_time, seed=0] 96/672
+[geo_time, seed=0] 192/672
+[geo_time, seed=0] 288/672
+[geo_time, seed=0] 384/672
+[geo_time, seed=0] 480/672
+[geo_time, seed=0] 576/672
+[geo_time, seed=0] 672/672
+[geo_time, seed=0] finished 672 steps; cost=$110959.57
+TaskSchedulingEnv initialized with single_action_mode: False, aggregation: average, disable_defer_action: False
+[geo_time, seed=10] 96/672
+[geo_time, seed=10] 192/672
+[geo_time, seed=10] 288/672
+[geo_time, seed=10] 384/672
+[geo_time, seed=10] 480/672
+[geo_time, seed=10] 576/672
+[geo_time, seed=10] 672/672
+[geo_time, seed=10] finished 672 steps; cost=$111036.61
+TaskSchedulingEnv initialized with single_action_mode: False, aggregation: average, disable_defer_action: False
+[geo_time, seed=20] 96/672
+[geo_time, seed=20] 192/672
+[geo_time, seed=20] 288/672
+[geo_time, seed=20] 384/672
+[geo_time, seed=20] 480/672
+[geo_time, seed=20] 576/672
+[geo_time, seed=20] 672/672
+[geo_time, seed=20] finished 672 steps; cost=$111250.52
+TaskSchedulingEnv initialized with single_action_mode: False, aggregation: average, disable_defer_action: False
+[geo_time, seed=30] 96/672
+[geo_time, seed=30] 192/672
+[geo_time, seed=30] 288/672
+[geo_time, seed=30] 384/672
+[geo_time, seed=30] 480/672
+[geo_time, seed=30] 576/672
+[geo_time, seed=30] 672/672
+[geo_time, seed=30] finished 672 steps; cost=$111070.82
+TaskSchedulingEnv initialized with single_action_mode: False, aggregation: average, disable_defer_action: False
+[geo_time, seed=40] 96/672
+[geo_time, seed=40] 192/672
+[geo_time, seed=40] 288/672
+[geo_time, seed=40] 384/672
+[geo_time, seed=40] 480/672
+[geo_time, seed=40] 576/672
+[geo_time, seed=40] 672/672
+[geo_time, seed=40] finished 672 steps; cost=$111066.94
+OUTPUT_DIR=E:\a_myprofile\sustain-cluster-main\outputs\table3_7d_formal_20261112\geo_time
+

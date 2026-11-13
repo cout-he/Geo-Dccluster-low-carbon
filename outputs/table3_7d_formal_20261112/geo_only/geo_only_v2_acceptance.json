@@ -1,0 +1,83 @@
+{
+  "status": "passed",
+  "batch": "geo_only",
+  "runs": 5,
+  "new_simulations_started_for_revalidation": 0,
+  "original_collector_unchanged": true,
+  "raw_prior_files_unchanged": true,
+  "collector_v2_sha256": "ce447b991376a5987bdd54c5a4c6cf4991db5598938b1bab87c06468d160cf76",
+  "original_collector_sha256": "2b93c34eae77e9122497811c96a59fe77e3967a4c3071281b49bed3e598ccf62",
+  "official_index": "outputs/table3_7d_formal_20261112/validated_index_05_runs.json",
+  "run_record_count": 5,
+  "aggregate_comparison": {
+    "total_cost_usd": {
+      "mean": 111067.13485756144,
+      "sample_std_ddof1": 81.80201920275596,
+      "matches_original_aggregate": true
+    },
+    "total_co2_t": {
+      "mean": 304.84621710198167,
+      "sample_std_ddof1": 0.2608772659261239,
+      "matches_original_aggregate": true
+    },
+    "total_energy_mwh": {
+      "mean": 1110.8663450745266,
+      "sample_std_ddof1": 1.039982506714446,
+      "matches_original_aggregate": true
+    },
+    "total_water_m3": {
+      "mean": 7374.355274680001,
+      "sample_std_ddof1": 1.8158938972611154,
+      "matches_original_aggregate": true
+    },
+    "sla_violation_pct_finished": {
+      "mean": 36.24458438687243,
+      "sample_std_ddof1": 0.3057366409115362,
+      "matches_original_aggregate": true
+    },
+    "avg_cpu_util_pct": {
+      "mean": 2.36706487659302,
+      "sample_std_ddof1": 0.0052369252781657915,
+      "matches_original_aggregate": true
+    },
+    "avg_gpu_util_pct": {
+      "mean": 13.380053409559526,
+      "sample_std_ddof1": 0.06544885007091332,
+      "matches_original_aggregate": true
+    },
+    "transmission_cost_usd": {
+      "mean": 4086.3396701154134,
+      "sample_std_ddof1": 51.489376896114415,
+      "matches_original_aggregate": true
+    },
+    "tasks_deferred": {
+      "mean": 0.0,
+      "sample_std_ddof1": 0.0,
+      "matches_original_aggregate": true
+    }
+  },
+  "date_parser_tests": {
+    "passed": 6,
+    "actual_deadline_rows": 134045,
+    "precisions_tested": [
+      0,
+      6,
+      9
+    ],
+    "utc_dtype": "datetime64[ns, UTC]",
+    "invalid_input_raises": true,
+    "all_date_parser_fields_reviewed": {
+      "decisions.time_utc": {
+        "rows": 134045,
+        "dtype": "datetime64[ns, UTC]",
+        "fractional_seconds_present": false
+      },
+      "decisions.sla_deadline_utc": {
+        "rows": 134045,
+        "dtype": "datetime64[ns, UTC]",
+        "fractional_seconds_present": true
+      }
+    }
+  },
+  "time_only_authorized_to_start": true
+}

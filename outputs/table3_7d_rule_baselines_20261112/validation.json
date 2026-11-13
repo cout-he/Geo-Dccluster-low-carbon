@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "runs": 25,
+  "steps_per_run": 672,
+  "total_steps": 16800,
+  "external_input_rows": 84000,
+  "paired_difference_rows": 75,
+  "sac_offline_regression_runs": 15,
+  "runtime_hashes_reproduced_from_csv": true,
+  "zero_effective_defer": true,
+  "local_only_zero_remote_and_tx": true,
+  "all_task_accounting_balanced": true,
+  "protected_files_unchanged": true
+}

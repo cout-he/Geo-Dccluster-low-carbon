@@ -1,0 +1,10 @@
+﻿strategy,metric,mean,sample_std_ddof1,n,matches_original_aggregate
+time_only,total_cost_usd,112039.83244752034,254.88433951798086,5,True
+time_only,total_co2_t,316.3364827907448,0.7361450092458879,5,True
+time_only,total_energy_mwh,1110.4385562236573,1.6989050078780812,5,True
+time_only,total_water_m3,7489.018537260001,4.232881206385065,5,True
+time_only,sla_violation_pct_finished,34.79342279342279,0.020460961788281978,5,True
+time_only,avg_cpu_util_pct,2.606505168230364,0.006981537947009204,5,True
+time_only,avg_gpu_util_pct,14.872386471303287,0.12855329133631746,5,True
+time_only,transmission_cost_usd,0.0,0.0,5,True
+time_only,tasks_deferred,820.0,41.018288603987365,5,True

@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "completed_at_shanghai": "2026-11-12T11:27:43.704481+08:00",
+  "collector_v1_sha256": "2b93c34eae77e9122497811c96a59fe77e3967a4c3071281b49bed3e598ccf62",
+  "collector_v2_sha256": "ce447b991376a5987bdd54c5a4c6cf4991db5598938b1bab87c06468d160cf76",
+  "original_frozen_collector_unchanged": true,
+  "original_frozen_manifest_and_commands_unchanged": true,
+  "previous_raw_geo_csv_json_and_seed42_unchanged": true,
+  "preserved_files_checked": 75,
+  "accepted_geo_records_and_05_index_unchanged": true,
+  "geo_only_rerun_count": 0,
+  "new_time_only_runs": 5,
+  "new_geo_time_runs": 0,
+  "accepted_formal_runs": 10,
+  "planned_formal_runs": 15,
+  "official_05_index": "outputs\\table3_7d_formal_20261112\\validated_index_05_runs.json",
+  "official_10_index": "outputs\\table3_7d_formal_20261112\\validated_index_10_runs.json",
+  "date_tests_passed": 6,
+  "actual_geo_deadline_rows_tested": 134045,
+  "precisions_tested": [
+    0,
+    6,
+    9
+  ],
+  "time_only_all_execution_local": true,
+  "time_only_tx_cost_energy_carbon_all_zero": true,
+  "all_config_and_external_input_hashes_match": true,
+  "same_seed_realized_workload_hashes_match": true,
+  "defer_probability_policy": "Frozen sampler draws from full six-action policy, preserves p0, maps all nonzero actions to origin; collector changes no policy logic.",
+  "no_training_or_model_updates": true,
+  "actor_immutability_evidence": "Frozen inference-only evaluator and model file checks; no additional live tensor hooks claimed.",
+  "cohort_status": "10 accepted, Geo+Time five seeds not started; no final 15-run aggregate yet."
+}

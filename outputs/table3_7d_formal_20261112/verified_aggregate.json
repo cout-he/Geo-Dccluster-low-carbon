@@ -1,0 +1,143 @@
+{
+  "geo_only": {
+    "total_cost_usd": {
+      "mean": 111067.13485756144,
+      "sample_std_ddof1": 81.8020192027547,
+      "n": 5
+    },
+    "total_co2_t": {
+      "mean": 304.8462171019817,
+      "sample_std_ddof1": 0.26087726592613136,
+      "n": 5
+    },
+    "total_energy_mwh": {
+      "mean": 1110.8663450745266,
+      "sample_std_ddof1": 1.0399825067144721,
+      "n": 5
+    },
+    "total_water_m3": {
+      "mean": 7374.35527468,
+      "sample_std_ddof1": 1.8158938972610543,
+      "n": 5
+    },
+    "transmission_cost_usd": {
+      "mean": 4086.3396701154134,
+      "sample_std_ddof1": 51.48937689611426,
+      "n": 5
+    },
+    "sla_violation_pct_finished": {
+      "mean": 36.24458438687244,
+      "sample_std_ddof1": 0.305736640911536,
+      "n": 5
+    },
+    "avg_cpu_util_pct": {
+      "mean": 2.3670648765930196,
+      "sample_std_ddof1": 0.005236925278165805,
+      "n": 5
+    },
+    "avg_gpu_util_pct": {
+      "mean": 13.380053409559526,
+      "sample_std_ddof1": 0.0654488500709127,
+      "n": 5
+    },
+    "tasks_deferred": {
+      "mean": 0.0,
+      "sample_std_ddof1": 0.0,
+      "n": 5
+    }
+  },
+  "geo_time": {
+    "total_cost_usd": {
+      "mean": 111076.89319005993,
+      "sample_std_ddof1": 106.85150084567611,
+      "n": 5
+    },
+    "total_co2_t": {
+      "mean": 304.8807693780497,
+      "sample_std_ddof1": 0.24011753667273614,
+      "n": 5
+    },
+    "total_energy_mwh": {
+      "mean": 1110.8473734488794,
+      "sample_std_ddof1": 0.7419946220257319,
+      "n": 5
+    },
+    "total_water_m3": {
+      "mean": 7374.663836,
+      "sample_std_ddof1": 0.4576010284429891,
+      "n": 5
+    },
+    "transmission_cost_usd": {
+      "mean": 4080.000330402563,
+      "sample_std_ddof1": 63.99792846359723,
+      "n": 5
+    },
+    "sla_violation_pct_finished": {
+      "mean": 36.54627293279293,
+      "sample_std_ddof1": 0.18211613995394443,
+      "n": 5
+    },
+    "avg_cpu_util_pct": {
+      "mean": 2.372015382524455,
+      "sample_std_ddof1": 0.005459315019712999,
+      "n": 5
+    },
+    "avg_gpu_util_pct": {
+      "mean": 13.374695836901926,
+      "sample_std_ddof1": 0.047978540028242596,
+      "n": 5
+    },
+    "tasks_deferred": {
+      "mean": 475.6,
+      "sample_std_ddof1": 10.01498876684343,
+      "n": 5
+    }
+  },
+  "time_only": {
+    "total_cost_usd": {
+      "mean": 112039.83244752034,
+      "sample_std_ddof1": 254.88433951797856,
+      "n": 5
+    },
+    "total_co2_t": {
+      "mean": 316.33648279074475,
+      "sample_std_ddof1": 0.7361450092458943,
+      "n": 5
+    },
+    "total_energy_mwh": {
+      "mean": 1110.4385562236573,
+      "sample_std_ddof1": 1.6989050078781291,
+      "n": 5
+    },
+    "total_water_m3": {
+      "mean": 7489.01853726,
+      "sample_std_ddof1": 4.232881206385017,
+      "n": 5
+    },
+    "transmission_cost_usd": {
+      "mean": 0.0,
+      "sample_std_ddof1": 0.0,
+      "n": 5
+    },
+    "sla_violation_pct_finished": {
+      "mean": 34.79342279342279,
+      "sample_std_ddof1": 0.020460961788283157,
+      "n": 5
+    },
+    "avg_cpu_util_pct": {
+      "mean": 2.606505168230364,
+      "sample_std_ddof1": 0.006981537947009209,
+      "n": 5
+    },
+    "avg_gpu_util_pct": {
+      "mean": 14.872386471303287,
+      "sample_std_ddof1": 0.12855329133631768,
+      "n": 5
+    },
+    "tasks_deferred": {
+      "mean": 820.0,
+      "sample_std_ddof1": 41.018288603987365,
+      "n": 5
+    }
+  }
+}

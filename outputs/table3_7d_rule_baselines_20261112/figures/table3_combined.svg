@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1080pt" height="345.6pt" viewBox="0 0 1080 345.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-12T18:36:52.671640</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 345.6 
+L 1080 345.6 
+L 1080 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="27" y="53.512751" transform="rotate(-0 27 53.512751)">Controller</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Arial', 'DejaVu Sans', sans-serif" transform="translate(263.186859 53.512751)">Cost</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Arial', 'DejaVu Sans', sans-serif" transform="translate(263.684672 63.019282)">USD</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Arial', 'DejaVu Sans', sans-serif" transform="translate(358.217578 53.512751)">CO2</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Arial', 'DejaVu Sans', sans-serif" transform="translate(365.971641 63.019282)">t</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Arial', 'DejaVu Sans', sans-serif" transform="translate(446.499 53.512751)">Energy</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Arial', 'DejaVu Sans', sans-serif" transform="translate(451.009547 63.137407)">MWh</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Arial', 'DejaVu Sans', sans-serif" transform="translate(543.704484 53.512751)">Water</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Arial', 'DejaVu Sans', sans-serif" transform="translate(549.534094 63.019282)">m3</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Arial', 'DejaVu Sans', sans-serif" transform="translate(641.322 53.512751)">SLA</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Arial', 'DejaVu Sans', sans-serif" transform="translate(646.320516 63.019282)">%</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Arial', 'DejaVu Sans', sans-serif" transform="translate(735.104672 53.512751)">CPU</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Arial', 'DejaVu Sans', sans-serif" transform="translate(740.604516 63.019282)">%</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Arial', 'DejaVu Sans', sans-serif" transform="translate(829.138359 53.512751)">GPU</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Arial', 'DejaVu Sans', sans-serif" transform="translate(834.888516 63.019282)">%</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Arial', 'DejaVu Sans', sans-serif" transform="translate(916.921969 53.512751)">TX cost</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Arial', 'DejaVu Sans', sans-serif" transform="translate(923.672672 63.019282)">USD</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Arial', 'DejaVu Sans', sans-serif" transform="translate(1015.953469 53.512751)">Defer</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Arial', 'DejaVu Sans', sans-serif" transform="translate(1006.702453 63.019282)">decisions</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 9px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="27" y="105.389482" transform="rotate(-0 27 105.389482)">RBC Local Only</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="273.186" y="105.126045" transform="rotate(-0 273.186 105.126045)">111900 ± 259</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="367.47" y="105.126045" transform="rotate(-0 367.47 105.126045)">316.13 ± 0.73</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="461.754" y="105.126045" transform="rotate(-0 461.754 105.126045)">1110.68 ± 1.69</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="556.038" y="105.126045" transform="rotate(-0 556.038 105.126045)">7490 ± 4</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="650.322" y="105.126045" transform="rotate(-0 650.322 105.126045)">0.02 ± 0.03</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="744.606" y="105.126045" transform="rotate(-0 744.606 105.126045)">2.61 ± 0.01</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="838.89" y="105.126045" transform="rotate(-0 838.89 105.126045)">14.89 ± 0.13</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="933.174" y="105.126045" transform="rotate(-0 933.174 105.126045)">0 ± 0</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1027.458" y="105.126045" transform="rotate(-0 1027.458 105.126045)">0.0 ± 0.0</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 9px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="27" y="129.179121" transform="rotate(-0 27 129.179121)">RBC Lowest Carbon</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="273.186" y="128.920605" transform="rotate(-0 273.186 128.920605)">104603 ± 70</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="367.47" y="128.920605" transform="rotate(-0 367.47 128.920605)">292.81 ± 0.01</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="461.754" y="128.920605" transform="rotate(-0 461.754 128.920605)">1108.31 ± 0.03</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="556.038" y="128.920605" transform="rotate(-0 556.038 128.920605)">7326 ± 0</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="650.322" y="128.920605" transform="rotate(-0 650.322 128.920605)">0.98 ± 0.00</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="744.606" y="128.920605" transform="rotate(-0 744.606 128.920605)">2.62 ± 0.00</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="838.89" y="128.920605" transform="rotate(-0 838.89 128.920605)">12.86 ± 0.00</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="933.174" y="128.920605" transform="rotate(-0 933.174 128.920605)">4219 ± 70</text>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1027.458" y="128.920605" transform="rotate(-0 1027.458 128.920605)">0.0 ± 0.0</text>
+   </g>
+   <g id="text_31">
+    <text style="font-size: 9px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="27" y="152.973681" transform="rotate(-0 27 152.973681)">RBC Lowest Price</text>
+   </g>
+   <g id="text_32">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="273.186" y="152.715165" transform="rotate(-0 273.186 152.715165)">102695 ± 55</text>
+   </g>
+   <g id="text_33">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="367.47" y="152.715165" transform="rotate(-0 367.47 152.715165)">294.49 ± 0.01</text>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="461.754" y="152.715165" transform="rotate(-0 461.754 152.715165)">1088.91 ± 0.02</text>
+   </g>
+   <g id="text_35">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="556.038" y="152.715165" transform="rotate(-0 556.038 152.715165)">7320 ± 0</text>
+   </g>
+   <g id="text_36">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="650.322" y="152.715165" transform="rotate(-0 650.322 152.715165)">1.00 ± 0.00</text>
+   </g>
+   <g id="text_37">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="744.606" y="152.715165" transform="rotate(-0 744.606 152.715165)">2.97 ± 0.00</text>
+   </g>
+   <g id="text_38">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="838.89" y="152.715165" transform="rotate(-0 838.89 152.715165)">11.85 ± 0.00</text>
+   </g>
+   <g id="text_39">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="933.174" y="152.715165" transform="rotate(-0 933.174 152.715165)">4254 ± 55</text>
+   </g>
+   <g id="text_40">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1027.458" y="152.715165" transform="rotate(-0 1027.458 152.715165)">0.0 ± 0.0</text>
+   </g>
+   <g id="text_41">
+    <text style="font-size: 9px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="27" y="176.768241" transform="rotate(-0 27 176.768241)">RBC Most Available</text>
+   </g>
+   <g id="text_42">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="273.186" y="176.509725" transform="rotate(-0 273.186 176.509725)">122787 ± 29</text>
+   </g>
+   <g id="text_43">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="367.47" y="176.509725" transform="rotate(-0 367.47 176.509725)">321.68 ± 0.01</text>
+   </g>
+   <g id="text_44">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="461.754" y="176.509725" transform="rotate(-0 461.754 176.509725)">1204.82 ± 0.03</text>
+   </g>
+   <g id="text_45">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="556.038" y="176.509725" transform="rotate(-0 556.038 176.509725)">7474 ± 0</text>
+   </g>
+   <g id="text_46">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="650.322" y="176.509725" transform="rotate(-0 650.322 176.509725)">2.70 ± 0.00</text>
+   </g>
+   <g id="text_47">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="744.606" y="176.509725" transform="rotate(-0 744.606 176.509725)">1.80 ± 0.00</text>
+   </g>
+   <g id="text_48">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="838.89" y="176.509725" transform="rotate(-0 838.89 176.509725)">19.96 ± 0.00</text>
+   </g>
+   <g id="text_49">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="933.174" y="176.509725" transform="rotate(-0 933.174 176.509725)">3472 ± 29</text>
+   </g>
+   <g id="text_50">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1027.458" y="176.509725" transform="rotate(-0 1027.458 176.509725)">0.0 ± 0.0</text>
+   </g>
+   <g id="text_51">
+    <text style="font-size: 9px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="27" y="200.562801" transform="rotate(-0 27 200.562801)">RBC Round Robin</text>
+   </g>
+   <g id="text_52">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="273.186" y="200.304285" transform="rotate(-0 273.186 200.304285)">114818 ± 26</text>
+   </g>
+   <g id="text_53">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="367.47" y="200.304285" transform="rotate(-0 367.47 200.304285)">320.67 ± 0.01</text>
+   </g>
+   <g id="text_54">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="461.754" y="200.304285" transform="rotate(-0 461.754 200.304285)">1114.76 ± 0.02</text>
+   </g>
+   <g id="text_55">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="556.038" y="200.304285" transform="rotate(-0 556.038 200.304285)">7527 ± 0</text>
+   </g>
+   <g id="text_56">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="650.322" y="200.304285" transform="rotate(-0 650.322 200.304285)">0.05 ± 0.00</text>
+   </g>
+   <g id="text_57">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="744.606" y="200.304285" transform="rotate(-0 744.606 200.304285)">2.69 ± 0.00</text>
+   </g>
+   <g id="text_58">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="838.89" y="200.304285" transform="rotate(-0 838.89 200.304285)">15.39 ± 0.00</text>
+   </g>
+   <g id="text_59">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="933.174" y="200.304285" transform="rotate(-0 933.174 200.304285)">3958 ± 26</text>
+   </g>
+   <g id="text_60">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1027.458" y="200.304285" transform="rotate(-0 1027.458 200.304285)">0.0 ± 0.0</text>
+   </g>
+   <g id="text_61">
+    <text style="font-size: 9px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="27" y="224.362282" transform="rotate(-0 27 224.362282)">SAC Geo Only</text>
+   </g>
+   <g id="text_62">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="273.186" y="224.098845" transform="rotate(-0 273.186 224.098845)">111067 ± 82</text>
+   </g>
+   <g id="text_63">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="367.47" y="224.098845" transform="rotate(-0 367.47 224.098845)">304.85 ± 0.26</text>
+   </g>
+   <g id="text_64">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="461.754" y="224.098845" transform="rotate(-0 461.754 224.098845)">1110.87 ± 1.04</text>
+   </g>
+   <g id="text_65">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="556.038" y="224.098845" transform="rotate(-0 556.038 224.098845)">7374 ± 2</text>
+   </g>
+   <g id="text_66">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="650.322" y="224.098845" transform="rotate(-0 650.322 224.098845)">36.24 ± 0.31</text>
+   </g>
+   <g id="text_67">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="744.606" y="224.098845" transform="rotate(-0 744.606 224.098845)">2.37 ± 0.01</text>
+   </g>
+   <g id="text_68">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="838.89" y="224.098845" transform="rotate(-0 838.89 224.098845)">13.38 ± 0.07</text>
+   </g>
+   <g id="text_69">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="933.174" y="224.098845" transform="rotate(-0 933.174 224.098845)">4086 ± 51</text>
+   </g>
+   <g id="text_70">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1027.458" y="224.098845" transform="rotate(-0 1027.458 224.098845)">0.0 ± 0.0</text>
+   </g>
+   <g id="text_71">
+    <text style="font-size: 9px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="27" y="248.156842" transform="rotate(-0 27 248.156842)">SAC Time Only</text>
+   </g>
+   <g id="text_72">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="273.186" y="247.893405" transform="rotate(-0 273.186 247.893405)">112040 ± 255</text>
+   </g>
+   <g id="text_73">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="367.47" y="247.893405" transform="rotate(-0 367.47 247.893405)">316.34 ± 0.74</text>
+   </g>
+   <g id="text_74">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="461.754" y="247.893405" transform="rotate(-0 461.754 247.893405)">1110.44 ± 1.70</text>
+   </g>
+   <g id="text_75">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="556.038" y="247.893405" transform="rotate(-0 556.038 247.893405)">7489 ± 4</text>
+   </g>
+   <g id="text_76">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="650.322" y="247.893405" transform="rotate(-0 650.322 247.893405)">34.79 ± 0.02</text>
+   </g>
+   <g id="text_77">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="744.606" y="247.893405" transform="rotate(-0 744.606 247.893405)">2.61 ± 0.01</text>
+   </g>
+   <g id="text_78">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="838.89" y="247.893405" transform="rotate(-0 838.89 247.893405)">14.87 ± 0.13</text>
+   </g>
+   <g id="text_79">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="933.174" y="247.893405" transform="rotate(-0 933.174 247.893405)">0 ± 0</text>
+   </g>
+   <g id="text_80">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1027.458" y="247.893405" transform="rotate(-0 1027.458 247.893405)">820.0 ± 41.0</text>
+   </g>
+   <g id="text_81">
+    <text style="font-size: 9px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="27" y="271.946481" transform="rotate(-0 27 271.946481)">SAC Geo+Time</text>
+   </g>
+   <g id="text_82">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="273.186" y="271.687965" transform="rotate(-0 273.186 271.687965)">111077 ± 107</text>
+   </g>
+   <g id="text_83">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="367.47" y="271.687965" transform="rotate(-0 367.47 271.687965)">304.88 ± 0.24</text>
+   </g>
+   <g id="text_84">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="461.754" y="271.687965" transform="rotate(-0 461.754 271.687965)">1110.85 ± 0.74</text>
+   </g>
+   <g id="text_85">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="556.038" y="271.687965" transform="rotate(-0 556.038 271.687965)">7375 ± 0</text>
+   </g>
+   <g id="text_86">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="650.322" y="271.687965" transform="rotate(-0 650.322 271.687965)">36.55 ± 0.18</text>
+   </g>
+   <g id="text_87">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="744.606" y="271.687965" transform="rotate(-0 744.606 271.687965)">2.37 ± 0.01</text>
+   </g>
+   <g id="text_88">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="838.89" y="271.687965" transform="rotate(-0 838.89 271.687965)">13.37 ± 0.05</text>
+   </g>
+   <g id="text_89">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="933.174" y="271.687965" transform="rotate(-0 933.174 271.687965)">4080 ± 64</text>
+   </g>
+   <g id="text_90">
+    <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1027.458" y="271.687965" transform="rotate(-0 1027.458 271.687965)">475.6 ± 10.0</text>
+   </g>
+  </g>
+  <g id="text_91">
+   <text style="font-weight: 700; font-size: 13px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="27" y="17.28" transform="rotate(-0 27 17.28)">Table 3-style comparison — seven days, five matched seeds</text>
+  </g>
+  <g id="text_92">
+   <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="27" y="326.592" transform="rotate(-0 27 326.592)">Mean ± sample SD (ddof=1). Includes TX in cost, CO2 and energy. SLA denominator: completed tasks. Water: DC only.</text>
+  </g>
+  <g id="text_93">
+   <text style="font-size: 8px; font-family: 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="27" y="336.96" transform="rotate(-0 27 336.96)">Existing built-in routing paths retained; Most Available uses absolute available CPU cores. This is not the paper’s original 30-day/10-seed table.</text>
+  </g>
+ </g>
+</svg>

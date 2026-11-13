@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "rbc_runs": 25,
+  "sac_existing_runs_read_only": 15,
+  "new_sac_runs": 0,
+  "steps_per_run": 672,
+  "total_rbc_steps": 16800,
+  "runtime_input_rows": 84000,
+  "mean_and_sample_std_recomputed": true,
+  "input_hashes_match_sac": true,
+  "protected_files_unchanged": true,
+  "original_sac_results_unchanged": true,
+  "seed42_excluded": true,
+  "figures": {
+    "nine_metric_overview": {
+      "collision": "PASS",
+      "glyph_floor": "PASS",
+      "alignment": "PASS",
+      "agent_visual_inspection": "completed; labels, uncertainty, order and clipping reviewed"
+    },
+    "paired_cost_carbon_sla": {
+      "collision": "PASS",
+      "glyph_floor": "PASS",
+      "alignment": "PASS",
+      "agent_visual_inspection": "completed; labels, uncertainty, order and clipping reviewed"
+    },
+    "table3_combined": {
+      "collision": "PASS",
+      "glyph_floor": "PASS",
+      "alignment": "NOT APPLICABLE",
+      "agent_visual_inspection": "completed; labels, uncertainty, order and clipping reviewed"
+    }
+  },
+  "report": "outputs/table3_7d_rule_baselines_20261112/final_rule_experiment_report.md",
+  "limitations": [
+    "Most Available uses absolute available CPU cores.",
+    "Built-in RBC direct queue differs from SAC delivery-buffer timing.",
+    "Seven days and five seeds do not reproduce the original paper window/seed count."
+  ]
+}

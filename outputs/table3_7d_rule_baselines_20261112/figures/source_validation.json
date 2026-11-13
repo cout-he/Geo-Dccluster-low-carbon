@@ -1,0 +1,9 @@
+{
+  "ready": true,
+  "strict": false,
+  "counts": {
+    "PASS": 18,
+    "WARN": 3,
+    "FAIL": 0
+  }
+}

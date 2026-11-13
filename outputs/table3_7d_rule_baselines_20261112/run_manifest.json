@@ -1,0 +1,373 @@
+{
+  "status": "complete_verified",
+  "created_utc": "2026-11-12T10:23:31.422049+00:00",
+  "strategies": [
+    "local_only",
+    "lowest_carbon",
+    "lowest_price",
+    "most_available",
+    "round_robin"
+  ],
+  "seeds": [
+    0,
+    10,
+    20,
+    30,
+    40
+  ],
+  "required_runs": 25,
+  "completed_runs": [
+    {
+      "strategy": "local_only",
+      "seed": 0,
+      "record": "E:\\a_myprofile\\sustain-cluster-main\\outputs\\table3_7d_rule_baselines_20261112\\local_only\\seed_0\\run_record.json"
+    },
+    {
+      "strategy": "lowest_carbon",
+      "seed": 0,
+      "record": "E:\\a_myprofile\\sustain-cluster-main\\outputs\\table3_7d_rule_baselines_20261112\\lowest_carbon\\seed_0\\run_record.json"
+    },
+    {
+      "strategy": "lowest_price",
+      "seed": 0,
+      "record": "E:\\a_myprofile\\sustain-cluster-main\\outputs\\table3_7d_rule_baselines_20261112\\lowest_price\\seed_0\\run_record.json"
+    },
+    {
+      "strategy": "most_available",
+      "seed": 0,
+      "record": "E:\\a_myprofile\\sustain-cluster-main\\outputs\\table3_7d_rule_baselines_20261112\\most_available\\seed_0\\run_record.json"
+    },
+    {
+      "strategy": "round_robin",
+      "seed": 0,
+      "record": "E:\\a_myprofile\\sustain-cluster-main\\outputs\\table3_7d_rule_baselines_20261112\\round_robin\\seed_0\\run_record.json"
+    },
+    {
+      "strategy": "local_only",
+      "seed": 10,
+      "record": "E:\\a_myprofile\\sustain-cluster-main\\outputs\\table3_7d_rule_baselines_20261112\\local_only\\seed_10\\run_record.json"
+    },
+    {
+      "strategy": "lowest_carbon",
+      "seed": 10,
+      "record": "E:\\a_myprofile\\sustain-cluster-main\\outputs\\table3_7d_rule_baselines_20261112\\lowest_carbon\\seed_10\\run_record.json"
+    },
+    {
+      "strategy": "lowest_price",
+      "seed": 10,
+      "record": "E:\\a_myprofile\\sustain-cluster-main\\outputs\\table3_7d_rule_baselines_20261112\\lowest_price\\seed_10\\run_record.json"
+    },
+    {
+      "strategy": "most_available",
+      "seed": 10,
+      "record": "E:\\a_myprofile\\sustain-cluster-main\\outputs\\table3_7d_rule_baselines_20261112\\most_available\\seed_10\\run_record.json"
+    },
+    {
+      "strategy": "round_robin",
+      "seed": 10,
+      "record": "E:\\a_myprofile\\sustain-cluster-main\\outputs\\table3_7d_rule_baselines_20261112\\round_robin\\seed_10\\run_record.json"
+    },
+    {
+      "strategy": "local_only",
+      "seed": 20,
+      "record": "E:\\a_myprofile\\sustain-cluster-main\\outputs\\table3_7d_rule_baselines_20261112\\local_only\\seed_20\\run_record.json"
+    },
+    {
+      "strategy": "lowest_carbon",
+      "seed": 20,
+      "record": "E:\\a_myprofile\\sustain-cluster-main\\outputs\\table3_7d_rule_baselines_20261112\\lowest_carbon\\seed_20\\run_record.json"
+    },
+    {
+      "strategy": "lowest_price",
+      "seed": 20,
+      "record": "E:\\a_myprofile\\sustain-cluster-main\\outputs\\table3_7d_rule_baselines_20261112\\lowest_price\\seed_20\\run_record.json"
+    },
+    {
+      "strategy": "most_available",
+      "seed": 20,
+      "record": "E:\\a_myprofile\\sustain-cluster-main\\outputs\\table3_7d_rule_baselines_20261112\\most_available\\seed_20\\run_record.json"
+    },
+    {
+      "strategy": "round_robin",
+      "seed": 20,
+      "record": "E:\\a_myprofile\\sustain-cluster-main\\outputs\\table3_7d_rule_baselines_20261112\\round_robin\\seed_20\\run_record.json"
+    },
+    {
+      "strategy": "local_only",
+      "seed": 30,
+      "record": "E:\\a_myprofile\\sustain-cluster-main\\outputs\\table3_7d_rule_baselines_20261112\\local_only\\seed_30\\run_record.json"
+    },
+    {
+      "strategy": "lowest_carbon",
+      "seed": 30,
+      "record": "E:\\a_myprofile\\sustain-cluster-main\\outputs\\table3_7d_rule_baselines_20261112\\lowest_carbon\\seed_30\\run_record.json"
+    },
+    {
+      "strategy": "lowest_price",
+      "seed": 30,
+      "record": "E:\\a_myprofile\\sustain-cluster-main\\outputs\\table3_7d_rule_baselines_20261112\\lowest_price\\seed_30\\run_record.json"
+    },
+    {
+      "strategy": "most_available",
+      "seed": 30,
+      "record": "E:\\a_myprofile\\sustain-cluster-main\\outputs\\table3_7d_rule_baselines_20261112\\most_available\\seed_30\\run_record.json"
+    },
+    {
+      "strategy": "round_robin",
+      "seed": 30,
+      "record": "E:\\a_myprofile\\sustain-cluster-main\\outputs\\table3_7d_rule_baselines_20261112\\round_robin\\seed_30\\run_record.json"
+    },
+    {
+      "strategy": "local_only",
+      "seed": 40,
+      "record": "E:\\a_myprofile\\sustain-cluster-main\\outputs\\table3_7d_rule_baselines_20261112\\local_only\\seed_40\\run_record.json"
+    },
+    {
+      "strategy": "lowest_carbon",
+      "seed": 40,
+      "record": "E:\\a_myprofile\\sustain-cluster-main\\outputs\\table3_7d_rule_baselines_20261112\\lowest_carbon\\seed_40\\run_record.json"
+    },
+    {
+      "strategy": "lowest_price",
+      "seed": 40,
+      "record": "E:\\a_myprofile\\sustain-cluster-main\\outputs\\table3_7d_rule_baselines_20261112\\lowest_price\\seed_40\\run_record.json"
+    },
+    {
+      "strategy": "most_available",
+      "seed": 40,
+      "record": "E:\\a_myprofile\\sustain-cluster-main\\outputs\\table3_7d_rule_baselines_20261112\\most_available\\seed_40\\run_record.json"
+    },
+    {
+      "strategy": "round_robin",
+      "seed": 40,
+      "record": "E:\\a_myprofile\\sustain-cluster-main\\outputs\\table3_7d_rule_baselines_20261112\\round_robin\\seed_40\\run_record.json"
+    }
+  ],
+  "python": "E:\\a_myprofile\\nature-AI data centres\\sustain-cluster\\.conda-env\\python.exe",
+  "python_version": "3.10.21 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:35:39) [MSC v.1942 64 bit (AMD64)]",
+  "torch": "2.14.0+cpu",
+  "torch_threads": 2,
+  "device": "cpu",
+  "numpy": "2.2.6",
+  "pandas": "2.3.3",
+  "protected_files_sha256": {
+    "checkpoints/train_multiaction_defer_20250527_210534/best_eval_checkpoint.pth": "c589fe58450f33f76a4d07a344997ab8a2f14ccba7f78f17fd8258616c69adca",
+    "configs/dcs/dc_config.json": "b1675fbca01217565f469c1199584b88afcda2de8d8502cffcad19ae26b6ecd2",
+    "configs/env/datacenters.yaml": "c3721b04da11badc5984799377536ebfc1692309da491f426d0eb5b697b11ab8",
+    "configs/env/reward_config.yaml": "9b46e2033aecd2eb8fb452dceff9d156cf81b1431e00cc7046d4c90d6c10cea3",
+    "configs/env/sim_config_table3_7d_aligned.yaml": "330a916ae92357f22cc66c0cc8643062816483c178714749005f71b1f7367cc9",
+    "data/carbon_intensity/AU-NSW/2023/AU-NSW_2023_hourly.csv": "cc6cea81513c83442219f9b1891d0d514e7fe7a6d0b15fc7447b2fad4b359809",
+    "data/carbon_intensity/CL-SIC/2023/CL-SIC_2023_hourly.csv": "1f5287c0143ec2638f67ed8f367a13cddfc25f3ba3307c49dd4df6e49d8fc44c",
+    "data/carbon_intensity/DE-LU/2023/DE-LU_2023_hourly.csv": "b6040328169313ca91b28806f3d69191cb6c035f45a7bcdd338a7c090d914dcb",
+    "data/carbon_intensity/SG/2023/SG_2023_hourly.csv": "d668136330b50887e9736d194586b984b71f32c3192382b7df65739a37839de3",
+    "data/carbon_intensity/US-CAL-CISO/2023/US-CAL-CISO_2023_hourly.csv": "44bafab775c6b0d4762b1dc971eb293cfea154f80799a5230f9268d32e1ad55b",
+    "data/electricity_prices/standardized/AU-NSW/2023/AU-NSW_electricity_prices_2023.csv": "34f3993be153f3915b04589cc96cf9bfe11321e54f3c7df52799a48f999917c3",
+    "data/electricity_prices/standardized/CL-SIC/2023/CL-SIC_electricity_prices_2023.csv": "9dc33d953c051cef6307bdbba9e1e1f1a5216f040c982f2af6264c33601e95c0",
+    "data/electricity_prices/standardized/DE-LU/2023/DE-LU_electricity_prices_2023.csv": "92009879f715c90f903b49521f3cf0d97677c0ca00c2b271f6b86b4f61bad64b",
+    "data/electricity_prices/standardized/SG/2023/SG_electricity_prices_2023.csv": "e7537547f5d3ed18f58535c284908e423f38fa1253529e7305081fb4522bf630",
+    "data/electricity_prices/standardized/US-CAL-CISO/2023/US-CAL-CISO_electricity_prices_2023.csv": "031f729c7354d56ea79eca169da7f875b8513572ac5704dc2d60814072cf5592",
+    "data/network_cost/aws_transmission_cost_matrix.csv": "ff3f6e77197b16ca107a01b3303e41e108cbe37cfb158d64011e93131848ae75",
+    "data/network_cost/network_delay.py": "c73a64170cdfb3c59a8a504e003694d5f6700237b99210c0220a282da9019e20",
+    "data/weather/AU-NSW/2023.json": "391576a25f1a8ac480a0fb84927a3888955d7722676e51e779e6f149f8c80c7a",
+    "data/weather/CL-SIC/2023.json": "8744eddffa261d078ca54487e08cb7d846d17607490393c25bb5ef662f457d0e",
+    "data/weather/DE-LU/2023.json": "8cbcb5482579889e7f93abcf74e80453b520e47dfc3b84c275d365ba39333089",
+    "data/weather/SG/2023.json": "6ca110ba97eda2c261328b7e49376f5be9d12a6a07835065a59f4e97856fd654",
+    "data/weather/US-CAL-CISO/2023.json": "d183ba0333304aa5d7d69cf0c52b85f3a7020e914b1462c3135422d83dc3e73b",
+    "data/workload/alibaba_2020_dataset/result_df_full_year_2020.pkl": "3ba8a8e0067288f8d2542752a292f7da04cb79305689ba145cc6060e96cb7f2e",
+    "envs/__init__.py": "9c1f6475ac946ac3866cbe9f85ca0f64ffc576e3fe9ab4fff156f8c4905fbb53",
+    "envs/env_config.py": "a56de2959cc1476c82c702241bf5621510d06e64a3d63bdc7509647c71b7e558",
+    "envs/sustaindc/__init__.py": "9c1f6475ac946ac3866cbe9f85ca0f64ffc576e3fe9ab4fff156f8c4905fbb53",
+    "envs/sustaindc/battery_env.py": "907c8c15bb41dcf776be0e50f6391221975cc2e53690ce4c9e1da12ca2c1a631",
+    "envs/sustaindc/battery_model.py": "49476a3b2015bb34d7d7ccdc542e87116d7c2d485a452f063b69d5a85b6bc337",
+    "envs/sustaindc/datacenter_model.py": "7841e42531fd5330598ed1ea025d171f477621b33d35db1e51224cbf026e4c19",
+    "envs/sustaindc/dc_gym.py": "d058417ada38b14e97f12a08921442acae6cdb6ec35160e71ecdf41b77822245",
+    "envs/sustaindc/sustaindc_env.py": "ea1d5016a720a9916ed5e58f259a40a6501b0c6c80e0b69e73debceb9516f9b3",
+    "envs/sustaindc/timeloadshifting_env.py": "2e45528769adc0c22f4b674b781083663458ca34025a62cfdbe30d3b397c0886",
+    "envs/task_scheduling_env.py": "847344a747b748c4ed0d453a6cc330c6f0080bc132dc01d6dc3e7946484ccae5",
+    "rewards/__init__.py": "539043bfe82804cb7a5603bfa61813e16f70e4d05356b8778ad80a6eeab3d772",
+    "rewards/base_reward.py": "5bf96e5f2c7e5912ce2e53ee382c620e9d044e21fad90ada850df51b5b098697",
+    "rewards/predefined/__init__.py": "1e0633daa4425c9cc718c7f6cfd3565d947895ad30b57c914588510ae901e12c",
+    "rewards/predefined/carbon_emissions_reward.py": "52090b6df677ca7e99cea3a2e6ded9f28173151d0fc8e8ec15e3858bd56a778f",
+    "rewards/predefined/composite_reward.py": "f1d8522651e06fcde24a8f17589548025ba8d612a6df90bea1305b2674bf7508",
+    "rewards/predefined/efficiency_reward.py": "1e9f50659f6c9633901815e314fd60242b45b48cb156c572bdb0b792eccf5b50",
+    "rewards/predefined/energy_consumption_reward.py": "d1adb0603f71d26e2a5d2ee91f6fade622206aa4cb56a7614c352a814ee66161",
+    "rewards/predefined/energy_price_reward.py": "2ac85a9cbc00f265ce1ce60275d13fc8d1a6ed83a277617d1d192b9afae49bcd",
+    "rewards/predefined/sla_penalty_reward.py": "35fcb216f10acb75d2c4c79cfcd86e5b2aaacedeebcad2b6ceb8ff85bd77d6af",
+    "rewards/predefined/timeliness_reward.py": "eb6bde5b2e2dd43ec0b2c8363e243d85774b8f3cabe79c69b7899afe893aeae5",
+    "rewards/predefined/transmission_cost_reward.py": "aff4ce575a6efa51b7eb598b64ae9c5d8d17cb129281a20241aeadb3b6e41b83",
+    "rewards/predefined/transmission_emissions_reward.py": "90949a8410f82673074121bc76b4919232c40eefa441483e2fe90bffb081f9c6",
+    "rewards/registry_utils.py": "cad37f0b5928f308faf2a263b2bdcd9f219621a60d138ac603f917f30d354454",
+    "rewards/reward_registry.py": "0dacae868931394dd601227e1493892e6bd33a5c5ba59a274a99b6a92031fddc",
+    "rl_components/__init__.py": "9c1f6475ac946ac3866cbe9f85ca0f64ffc576e3fe9ab4fff156f8c4905fbb53",
+    "rl_components/agent_net.py": "80828829bea0bf7172dc63f82c4efcec6d0eb4a50a2d758c9ad03f924c65e0e7",
+    "rl_components/replay_buffer.py": "74fb0feafd6158fd9912944b72a46bacd94ecbb256b868af580429d3b13a16b7",
+    "rl_components/rollout_storage.py": "fd4af976496b38906f90b369c927a69b33e4ac6ae286c3f799064f37610f4aaa",
+    "rl_components/task.py": "f6116d6c0c8d6474c8c316fa1f790deb84e9016811970bdabf76dc8cb743b6e9",
+    "scripts/evaluate_table3_rl.py": "c9df8072d3d4ccdd4c75be8b838215e0a4750dfcc1b9ea69fbe9500303dfd72c",
+    "simulation/__init__.py": "a0dee11345543f9871bebe6db9314297c58c6cae96b6eca7e9d8df73fa907d14",
+    "simulation/cluster_manager.py": "6e950aaa9af384b8b3d56103c876750581ce68684ed9bef646c4dae221066941",
+    "train_SAC_agent.py": "0417331192cba9338a02f2f0d06a12dc1bc0e0889431bdf8599fb4193d08f739",
+    "utils/__init__.py": "a0dee11345543f9871bebe6db9314297c58c6cae96b6eca7e9d8df73fa907d14",
+    "utils/aligned_inputs.py": "b1beaed7d0931cfd8e0cd3d348452a3d0112b38246e4799656fe2fa2aed7134b",
+    "utils/checkpoint_manager.py": "a1c9e70804396c9fff07f0ec5bd464702ae74a39b9a7f3209a6d93bffdefc5f9",
+    "utils/config_loader.py": "cd8b09409c238676a1d87f8dcc54cc8018db13c2c82f06f964f5a575658bbd9f",
+    "utils/config_logger.py": "3f80e30afe885accf19ab8e4f1b5e0f8e7c3d12d3774d8e9d2869dc19612c9ce",
+    "utils/dc_config.py": "8d9f122628a3ccbd32223b64672e41f900133b2d499c5d9e2f83936da1a92a5e",
+    "utils/dc_config_reader.py": "c5922ce5f141a6885af29bb558c929f1b74d4848cb4cf9ba24651676c81680b3",
+    "utils/make_envs.py": "5c32ffd79110e1de5605fae79e7e99655464d28232033fcb5195ef6af0ed1f6e",
+    "utils/managers.py": "cc6d882191653e0c684756796b772327e910fe67b5cb47d46621c21f612d4eaf",
+    "utils/running_stats.py": "901c1fe2ba0154b2a59774676e7db218fff1ed8e9c0587d1b77066e2179432a8",
+    "utils/state_aggregation.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "utils/table3_policy.py": "a38ef554ca37f021209517d81f521694a7980551d86ffc3386bada8b611a2d16",
+    "utils/task_assignment_strategies.py": "3af7b8f0b44d9e319fdc91c18f93a0668648cad96569fd7cac2eca432717ba33",
+    "utils/transmission_cost_loader.py": "603e250fd3fab6d45eaf57574864a557294a028d3c485ceadb65186bed8ba9ba",
+    "utils/transmission_region_mapper.py": "8e44eb1a5856e021e5a5c08f84251fa4f1d5f87841b398e88486b04a570c21df",
+    "utils/utils_cf.py": "e32101b577c52c22278296d02a669f4a681dd5847157540c8abf2585c5c38965",
+    "utils/workload_utils.py": "db779547296511998029e6636b62feec7028b8282b580ca43b24277f52a05130",
+    "outputs/table3_7d_formal_20261112/geo_only/geo_only/seed_0/summary.json": "4fd712f6ced6f6a16b9bf8e375b884a35d1b0d12726ff2ee8958d0c88742f33e",
+    "outputs/table3_7d_formal_20261112/geo_only/geo_only/seed_0/steps.csv": "43085725c318bd7159a86b1830465aadb04631ca0ecd4cd31c1ea3d3aadfd337",
+    "outputs/table3_7d_formal_20261112/geo_only/geo_only/seed_0/inputs.csv": "9f87d23992422f14e8589965d5c6bfe0fe36b0307855782992690ca048549388",
+    "outputs/table3_7d_formal_20261112/geo_only/geo_only/seed_0/decisions.csv": "95ad8f14c20da38991443bc6fcc249a75f2ab7051071ffbf76b00219935a05f9",
+    "outputs/table3_7d_formal_20261112/geo_only/geo_only/seed_0/sim_eval.yaml": "9a691761622bb0f315f4ce96cc68271049ed81b031446e41a2a82b1c300a8782",
+    "outputs/table3_7d_formal_20261112/geo_only/geo_only/seed_0/run_record.json": "679407805fe0881d957806b06b53dae6a7cec122e1de6477f1230de02543ac80",
+    "outputs/table3_7d_formal_20261112/geo_only/geo_only/seed_10/summary.json": "56021176514e4610516252c688717f9dd3f59e34e248458a33408a568ff2e2e3",
+    "outputs/table3_7d_formal_20261112/geo_only/geo_only/seed_10/steps.csv": "19f968be02ad222cfd8991284ce6a396e37dc206977a26d3721d775002e964be",
+    "outputs/table3_7d_formal_20261112/geo_only/geo_only/seed_10/inputs.csv": "9f87d23992422f14e8589965d5c6bfe0fe36b0307855782992690ca048549388",
+    "outputs/table3_7d_formal_20261112/geo_only/geo_only/seed_10/decisions.csv": "e4dcc462db21968079147de5c9c14f52bdba4ffcdaadce4b5f1550a946ba1ba3",
+    "outputs/table3_7d_formal_20261112/geo_only/geo_only/seed_10/sim_eval.yaml": "9a691761622bb0f315f4ce96cc68271049ed81b031446e41a2a82b1c300a8782",
+    "outputs/table3_7d_formal_20261112/geo_only/geo_only/seed_10/run_record.json": "30be2cb65ef89d29195f1756be7ca388c055b67bbfbd09bce6dd578b759f15a9",
+    "outputs/table3_7d_formal_20261112/geo_only/geo_only/seed_20/summary.json": "337aa9e8de9245fd28bd46ea652b321e40f92f3072f2941e20109506a6dd69a5",
+    "outputs/table3_7d_formal_20261112/geo_only/geo_only/seed_20/steps.csv": "335c877cbb7b4797eda725f43ebecae78adc0695f92a1939f53ed8b7f6d27596",
+    "outputs/table3_7d_formal_20261112/geo_only/geo_only/seed_20/inputs.csv": "9f87d23992422f14e8589965d5c6bfe0fe36b0307855782992690ca048549388",
+    "outputs/table3_7d_formal_20261112/geo_only/geo_only/seed_20/decisions.csv": "f20c65aa4063c73755520f0ea2a1ca2ff2fa419178c6fb74d29b744270630745",
+    "outputs/table3_7d_formal_20261112/geo_only/geo_only/seed_20/sim_eval.yaml": "9a691761622bb0f315f4ce96cc68271049ed81b031446e41a2a82b1c300a8782",
+    "outputs/table3_7d_formal_20261112/geo_only/geo_only/seed_20/run_record.json": "07a0a20f1dd1402eaa021ce970a8e08009e39d3bb99be5572c50bc7f936fc0b2",
+    "outputs/table3_7d_formal_20261112/geo_only/geo_only/seed_30/summary.json": "e8c026c13134b4553e575e3f55168ff1307c191bb525129d1be6c8ad0cb02555",
+    "outputs/table3_7d_formal_20261112/geo_only/geo_only/seed_30/steps.csv": "c769fe7ee46095de663dcd77cb7857b31251f36d268529d3d51c1e2a98f1e6e5",
+    "outputs/table3_7d_formal_20261112/geo_only/geo_only/seed_30/inputs.csv": "9f87d23992422f14e8589965d5c6bfe0fe36b0307855782992690ca048549388",
+    "outputs/table3_7d_formal_20261112/geo_only/geo_only/seed_30/decisions.csv": "fabc4124cfa79674db5393b462f77886e8822df29d471583d6ccd5f0dad38c8b",
+    "outputs/table3_7d_formal_20261112/geo_only/geo_only/seed_30/sim_eval.yaml": "9a691761622bb0f315f4ce96cc68271049ed81b031446e41a2a82b1c300a8782",
+    "outputs/table3_7d_formal_20261112/geo_only/geo_only/seed_30/run_record.json": "6c5b7638880993211d4f8a68b45e5969f91844d6ee397b33e01f50aaa553e669",
+    "outputs/table3_7d_formal_20261112/geo_only/geo_only/seed_40/summary.json": "bf72a508938ca0617e3a2ace920a42f1183c7863c9cc1268967e460ae0134c5c",
+    "outputs/table3_7d_formal_20261112/geo_only/geo_only/seed_40/steps.csv": "97ab78394db5975d2be6bebf4a5dc1a5d4ada167c32e0f5a068b145aabfec24d",
+    "outputs/table3_7d_formal_20261112/geo_only/geo_only/seed_40/inputs.csv": "9f87d23992422f14e8589965d5c6bfe0fe36b0307855782992690ca048549388",
+    "outputs/table3_7d_formal_20261112/geo_only/geo_only/seed_40/decisions.csv": "476aaf075259f32b8e8acbc7245cd67bea59931a2256aca54abbfed17497d0df",
+    "outputs/table3_7d_formal_20261112/geo_only/geo_only/seed_40/sim_eval.yaml": "9a691761622bb0f315f4ce96cc68271049ed81b031446e41a2a82b1c300a8782",
+    "outputs/table3_7d_formal_20261112/geo_only/geo_only/seed_40/run_record.json": "084136bdcd508afee110ce68e5160fdcab7dcddd57245e840f7546551d8adc7b",
+    "outputs/table3_7d_formal_20261112/time_only/time_only/seed_0/summary.json": "d9c3c751fa7d6e077f8a52987dc8da3a633ec322a9d8a16e94375fd56a297838",
+    "outputs/table3_7d_formal_20261112/time_only/time_only/seed_0/steps.csv": "cc7a22df08c4a67fe04ecf2dd4605eb40c719595e859b7b8dba057c8028b23b9",
+    "outputs/table3_7d_formal_20261112/time_only/time_only/seed_0/inputs.csv": "9f87d23992422f14e8589965d5c6bfe0fe36b0307855782992690ca048549388",
+    "outputs/table3_7d_formal_20261112/time_only/time_only/seed_0/decisions.csv": "3b520fccbd1a9a35962064e4f273646572a47d49794eb645e3cd159db7d01374",
+    "outputs/table3_7d_formal_20261112/time_only/time_only/seed_0/sim_eval.yaml": "9a691761622bb0f315f4ce96cc68271049ed81b031446e41a2a82b1c300a8782",
+    "outputs/table3_7d_formal_20261112/time_only/time_only/seed_0/run_record.json": "efbe45a103c72a807cdf06dba5f95466667b48a4040047a3274b68d6ffb6cf14",
+    "outputs/table3_7d_formal_20261112/time_only/time_only/seed_10/summary.json": "c8116fdf48814d0ba46667e5e27b5feed5115e30f73d91dda66e7ad09b713325",
+    "outputs/table3_7d_formal_20261112/time_only/time_only/seed_10/steps.csv": "6412646da83714058268c95576b340955750c18c1ddbf9502bfea8a667a3eb8d",
+    "outputs/table3_7d_formal_20261112/time_only/time_only/seed_10/inputs.csv": "9f87d23992422f14e8589965d5c6bfe0fe36b0307855782992690ca048549388",
+    "outputs/table3_7d_formal_20261112/time_only/time_only/seed_10/decisions.csv": "fad4764ea5a1a174aaa4c23d1bc0f10ebf02e2bc4dee439b1c6aee4bf460d25c",
+    "outputs/table3_7d_formal_20261112/time_only/time_only/seed_10/sim_eval.yaml": "9a691761622bb0f315f4ce96cc68271049ed81b031446e41a2a82b1c300a8782",
+    "outputs/table3_7d_formal_20261112/time_only/time_only/seed_10/run_record.json": "d54b926f58507e15684c3da0ec87fbaa87601cf6b931b54ec5a14b5afe10e88b",
+    "outputs/table3_7d_formal_20261112/time_only/time_only/seed_20/summary.json": "cb1310c6809b53b3c8f9ab283133784246e38070bccfbbb58b94272330b47217",
+    "outputs/table3_7d_formal_20261112/time_only/time_only/seed_20/steps.csv": "f125bd05bcb5e27d4f1fdce465f34f19f5d8d65700ed4d40e384960c1453452b",
+    "outputs/table3_7d_formal_20261112/time_only/time_only/seed_20/inputs.csv": "9f87d23992422f14e8589965d5c6bfe0fe36b0307855782992690ca048549388",
+    "outputs/table3_7d_formal_20261112/time_only/time_only/seed_20/decisions.csv": "e566270a83af06d29f27787c2460de2f337a2326ee575ad6a0e5102470dbccdb",
+    "outputs/table3_7d_formal_20261112/time_only/time_only/seed_20/sim_eval.yaml": "9a691761622bb0f315f4ce96cc68271049ed81b031446e41a2a82b1c300a8782",
+    "outputs/table3_7d_formal_20261112/time_only/time_only/seed_20/run_record.json": "66afb087e9a1a065c66b6ea529588c7f975dfa33ffed5f3bf21ad20720aab89f",
+    "outputs/table3_7d_formal_20261112/time_only/time_only/seed_30/summary.json": "5b4c3bee623ecb2527084b0039da916573aee82475abf96dd2d387c4d9b176a5",
+    "outputs/table3_7d_formal_20261112/time_only/time_only/seed_30/steps.csv": "9d2014601b390c1b3f1cd1574b65e4c046ab24c813da7ebdd0dffe7f92e61136",
+    "outputs/table3_7d_formal_20261112/time_only/time_only/seed_30/inputs.csv": "9f87d23992422f14e8589965d5c6bfe0fe36b0307855782992690ca048549388",
+    "outputs/table3_7d_formal_20261112/time_only/time_only/seed_30/decisions.csv": "060ded0bc3c436bccf811ad752955010e1382bf101d8f0481c4e5e1f27e18f7b",
+    "outputs/table3_7d_formal_20261112/time_only/time_only/seed_30/sim_eval.yaml": "9a691761622bb0f315f4ce96cc68271049ed81b031446e41a2a82b1c300a8782",
+    "outputs/table3_7d_formal_20261112/time_only/time_only/seed_30/run_record.json": "eaddb79949c22bf661397b526eedf749f4846bacd725c4de1e67f716e99ab2d5",
+    "outputs/table3_7d_formal_20261112/time_only/time_only/seed_40/summary.json": "8285cde9dc2508274b83b0e46e4a41db8dfb774d2625babe49d331e9ffd33458",
+    "outputs/table3_7d_formal_20261112/time_only/time_only/seed_40/steps.csv": "c351f2d753dc86e7772e6261303b377607df28563908bb58d704fba78cf674ff",
+    "outputs/table3_7d_formal_20261112/time_only/time_only/seed_40/inputs.csv": "9f87d23992422f14e8589965d5c6bfe0fe36b0307855782992690ca048549388",
+    "outputs/table3_7d_formal_20261112/time_only/time_only/seed_40/decisions.csv": "e256ac16feb986d88b10f174a072e477a4adff8661530650a7741962bff1a030",
+    "outputs/table3_7d_formal_20261112/time_only/time_only/seed_40/sim_eval.yaml": "9a691761622bb0f315f4ce96cc68271049ed81b031446e41a2a82b1c300a8782",
+    "outputs/table3_7d_formal_20261112/time_only/time_only/seed_40/run_record.json": "99f4053699fba933ae0fe0e3924bd349dbd7e7fcb024fedb722afba8528d6549",
+    "outputs/table3_7d_formal_20261112/geo_time/geo_time/seed_0/summary.json": "08edbb65a18a3d679a48bb3dd40bc110816d4bbc65bf301693de91ac1a01cce5",
+    "outputs/table3_7d_formal_20261112/geo_time/geo_time/seed_0/steps.csv": "619e499baa7e78a12fcdf6bef01cd6b9618694db8a554907fa5b0a00d2df311a",
+    "outputs/table3_7d_formal_20261112/geo_time/geo_time/seed_0/inputs.csv": "9f87d23992422f14e8589965d5c6bfe0fe36b0307855782992690ca048549388",
+    "outputs/table3_7d_formal_20261112/geo_time/geo_time/seed_0/decisions.csv": "dfd53fe8cb043775bb3b5f1040e6dfb6bf867e684ad34c7df4b466e84e16158f",
+    "outputs/table3_7d_formal_20261112/geo_time/geo_time/seed_0/sim_eval.yaml": "9a691761622bb0f315f4ce96cc68271049ed81b031446e41a2a82b1c300a8782",
+    "outputs/table3_7d_formal_20261112/geo_time/geo_time/seed_0/run_record.json": "e9df66857685256213c72ddb0e995916910ca7a643ab2b8a3b574e8a1f6f7574",
+    "outputs/table3_7d_formal_20261112/geo_time/geo_time/seed_10/summary.json": "f6f38a54e97c128b5d72a82cf42a52e15deec39ad9da12d45f07380c0e4ae4e0",
+    "outputs/table3_7d_formal_20261112/geo_time/geo_time/seed_10/steps.csv": "0d1e3dcd040447a2e61b2d72cd8073160cab973035e2753ae450c66f2148fd24",
+    "outputs/table3_7d_formal_20261112/geo_time/geo_time/seed_10/inputs.csv": "9f87d23992422f14e8589965d5c6bfe0fe36b0307855782992690ca048549388",
+    "outputs/table3_7d_formal_20261112/geo_time/geo_time/seed_10/decisions.csv": "20d947892f8d9e20f8301dafcc8e43b283ca5f6e066e24e74a1f5ec7d9b0425d",
+    "outputs/table3_7d_formal_20261112/geo_time/geo_time/seed_10/sim_eval.yaml": "9a691761622bb0f315f4ce96cc68271049ed81b031446e41a2a82b1c300a8782",
+    "outputs/table3_7d_formal_20261112/geo_time/geo_time/seed_10/run_record.json": "6e80417e1f5acc2bd96d1143863f578c70d30f9c608a6fe451734d3c9c9ad2d2",
+    "outputs/table3_7d_formal_20261112/geo_time/geo_time/seed_20/summary.json": "2ff36bec63d4e218d1628f7d0191d0c614109a8ab0acfcc46b80b6f10354aff4",
+    "outputs/table3_7d_formal_20261112/geo_time/geo_time/seed_20/steps.csv": "b2d8bbbbdf14ef4ba1a11ffe6ad31e9b995d49de95b209e3aba28a1141899d57",
+    "outputs/table3_7d_formal_20261112/geo_time/geo_time/seed_20/inputs.csv": "9f87d23992422f14e8589965d5c6bfe0fe36b0307855782992690ca048549388",
+    "outputs/table3_7d_formal_20261112/geo_time/geo_time/seed_20/decisions.csv": "8258aa771226ddcaa16a50bf1b1e871bb68d2995ed54ca0e5c99aead6b0ae6e4",
+    "outputs/table3_7d_formal_20261112/geo_time/geo_time/seed_20/sim_eval.yaml": "9a691761622bb0f315f4ce96cc68271049ed81b031446e41a2a82b1c300a8782",
+    "outputs/table3_7d_formal_20261112/geo_time/geo_time/seed_20/run_record.json": "996e6683af2d3f8ecedfd7027732fdaf11636d5fc4c41326826c6d12a7fa5e6c",
+    "outputs/table3_7d_formal_20261112/geo_time/geo_time/seed_30/summary.json": "939c0dec73176f3871451889ec3940de732c0eea0ede49d04254fc087653ed45",
+    "outputs/table3_7d_formal_20261112/geo_time/geo_time/seed_30/steps.csv": "f59f83e765e87e98a7b1a105110de325c6e40ae3ccdd0955171b0e47c6890a80",
+    "outputs/table3_7d_formal_20261112/geo_time/geo_time/seed_30/inputs.csv": "9f87d23992422f14e8589965d5c6bfe0fe36b0307855782992690ca048549388",
+    "outputs/table3_7d_formal_20261112/geo_time/geo_time/seed_30/decisions.csv": "9897e4af7168724e4570dff16c0aae49c3c60d2b11ee1f9815feddf4a004bfe8",
+    "outputs/table3_7d_formal_20261112/geo_time/geo_time/seed_30/sim_eval.yaml": "9a691761622bb0f315f4ce96cc68271049ed81b031446e41a2a82b1c300a8782",
+    "outputs/table3_7d_formal_20261112/geo_time/geo_time/seed_30/run_record.json": "b544316f131bbe3a55e30fba0c4d095f4561d1cf3aaa0c89663d0226b8bb134c",
+    "outputs/table3_7d_formal_20261112/geo_time/geo_time/seed_40/summary.json": "3792cb2d30db7ed126c4adf953d8f962dcf07b44ff7657b72f0f4b8e9f287e68",
+    "outputs/table3_7d_formal_20261112/geo_time/geo_time/seed_40/steps.csv": "e9ee3927489db289ff1543bebdaf4c01d736058fa18947c229975bfd4e481b22",
+    "outputs/table3_7d_formal_20261112/geo_time/geo_time/seed_40/inputs.csv": "9f87d23992422f14e8589965d5c6bfe0fe36b0307855782992690ca048549388",
+    "outputs/table3_7d_formal_20261112/geo_time/geo_time/seed_40/decisions.csv": "fd0198a2ee20eb24cf707b49284d6d20e642529924c583e31afc1a61d4ae9654",
+    "outputs/table3_7d_formal_20261112/geo_time/geo_time/seed_40/sim_eval.yaml": "9a691761622bb0f315f4ce96cc68271049ed81b031446e41a2a82b1c300a8782",
+    "outputs/table3_7d_formal_20261112/geo_time/geo_time/seed_40/run_record.json": "1e4ba9e5a5a972cec92b3e13e3b79a036416a9d18d166d46357e8ceea53175a4",
+    "outputs/table3_7d_formal_20261112/validated_index_15_runs.json": "10565a931c16aca9222b46e68bce64dab68891aa4a36ea963a665f220e14571c",
+    "outputs/table3_7d_formal_20261112/verified_aggregate.json": "6caeae1a04c378793b75f5b6a34b86b118edb57038bc5c5e62368d03a837e1a7"
+  },
+  "sac_regression_passed": true,
+  "only_simulation_config_change": "simulation.strategy",
+  "checkpoint_loaded": false,
+  "training": false,
+  "known_differences": [
+    "Most Available uses absolute available CPU cores, not percentage.",
+    "Built-in RBC enqueues directly; SAC uses TaskSchedulingEnv in-transit delivery.",
+    "Capacity candidate checks occur before DC scheduling; no reservation between same-step assignments."
+  ],
+  "new_code_sha256": {
+    "collect_rule_results.py": "a6e777d02f856fcf7e2d629914804ad3ffee61644a5834682afea2be66205774",
+    "finalize_delivery.py": "7e8a6ac0c0a6933d63144c4f8d54210773c3239ae326e72b2657fcdf001867a5",
+    "make_figures_and_report.py": "dd741114a0c8c63f7b3af6b3034bf4b65b055bac0e10a410ced777ba98baa67e",
+    "rbc_common.py": "fa6f886e10c7eeb08691d602511298157e5b944f303cee0b04e7a970b4e92fad",
+    "run_rule_experiments.py": "95ec88203476d2b5a9e7f9c05ee83dbb3d0c4c8dcf0aefb9093f31eb564b9dbe"
+  },
+  "validation": {
+    "status": "passed",
+    "runs": 25,
+    "steps_per_run": 672,
+    "total_steps": 16800,
+    "external_input_rows": 84000,
+    "paired_difference_rows": 75,
+    "sac_offline_regression_runs": 15,
+    "runtime_hashes_reproduced_from_csv": true,
+    "zero_effective_defer": true,
+    "local_only_zero_remote_and_tx": true,
+    "all_task_accounting_balanced": true,
+    "protected_files_unchanged": true
+  },
+  "collector_sha256": "a6e777d02f856fcf7e2d629914804ad3ffee61644a5834682afea2be66205774",
+  "common_metrics_sha256": "fa6f886e10c7eeb08691d602511298157e5b944f303cee0b04e7a970b4e92fad",
+  "figure_qa": {
+    "nine_metric_overview": {
+      "collision": "PASS",
+      "glyph_floor": "PASS",
+      "alignment": "PASS",
+      "agent_visual_inspection": "completed; labels, uncertainty, order and clipping reviewed"
+    },
+    "paired_cost_carbon_sla": {
+      "collision": "PASS",
+      "glyph_floor": "PASS",
+      "alignment": "PASS",
+      "agent_visual_inspection": "completed; labels, uncertainty, order and clipping reviewed"
+    },
+    "table3_combined": {
+      "collision": "PASS",
+      "glyph_floor": "PASS",
+      "alignment": "NOT APPLICABLE",
+      "agent_visual_inspection": "completed; labels, uncertainty, order and clipping reviewed"
+    }
+  },
+  "completed_utc": "2026-11-12T10:38:30.197250+00:00"
+}

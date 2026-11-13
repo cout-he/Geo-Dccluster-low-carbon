@@ -1,0 +1,28 @@
+﻿contrast,metric,unit,mean_paired_difference,sample_std_of_paired_differences_ddof1,n_pairs,a_greater_count,a_lower_count,equal_count
+geo_only_minus_geo_time,total_cost_usd,USD,-9.758332498482195,119.7332940091429,5,3,2,0
+geo_only_minus_geo_time,total_co2_t,t,-0.034552276068006905,0.26165573158775385,5,2,3,0
+geo_only_minus_geo_time,total_energy_mwh,MWh,0.018971625647191105,0.9579075403269145,5,3,2,0
+geo_only_minus_geo_time,total_water_m3,m3,-0.30856132000026265,1.5497565226343317,5,3,2,0
+geo_only_minus_geo_time,sla_violation_pct_finished,percentage points,-0.30168854592049427,0.36829261381368916,5,1,4,0
+geo_only_minus_geo_time,avg_cpu_util_pct,percentage points,-0.004950505931435067,0.008485403918485882,5,2,3,0
+geo_only_minus_geo_time,avg_gpu_util_pct,percentage points,0.0053575726575964214,0.054480704011986764,5,3,2,0
+geo_only_minus_geo_time,transmission_cost_usd,USD,6.339339712850051,20.548350796939687,5,3,2,0
+geo_only_minus_geo_time,tasks_deferred,decisions,-475.6,10.014988766843425,5,0,5,0
+time_only_minus_geo_time,total_cost_usd,USD,962.9392574604193,307.2905296921891,5,5,0,0
+time_only_minus_geo_time,total_co2_t,t,11.455713412695104,0.8675861533220028,5,5,0,0
+time_only_minus_geo_time,total_energy_mwh,MWh,-0.4088172252220829,2.358103268252398,5,1,4,0
+time_only_minus_geo_time,total_water_m3,m3,114.35470126,4.537354006882584,5,5,0,0
+time_only_minus_geo_time,sla_violation_pct_finished,percentage points,-1.752850139370139,0.1887007664103512,5,0,5,0
+time_only_minus_geo_time,avg_cpu_util_pct,percentage points,0.23448978570590945,0.009867831326571694,5,5,0,0
+time_only_minus_geo_time,avg_gpu_util_pct,percentage points,1.4976906344013607,0.16887478351480661,5,5,0,0
+time_only_minus_geo_time,transmission_cost_usd,USD,-4080.000330402563,63.99792846359718,5,0,5,0
+time_only_minus_geo_time,tasks_deferred,decisions,344.4,37.493999519923186,5,5,0,0
+geo_only_minus_time_only,total_cost_usd,USD,-972.6975899589015,300.08761021055295,5,0,5,0
+geo_only_minus_time_only,total_co2_t,t,-11.490265688763111,0.9195766335443923,5,0,5,0
+geo_only_minus_time_only,total_energy_mwh,MWh,0.42778885086927404,2.4469478816755577,5,2,3,0
+geo_only_minus_time_only,total_water_m3,m3,-114.66326258000026,5.870909928743046,5,0,5,0
+geo_only_minus_time_only,sla_violation_pct_finished,percentage points,1.4511615934496447,0.2889671071921679,5,5,0,0
+geo_only_minus_time_only,avg_cpu_util_pct,percentage points,-0.2394402916373445,0.006930194668826545,5,0,5,0
+geo_only_minus_time_only,avg_gpu_util_pct,percentage points,-1.4923330617437642,0.1866609347565108,5,0,5,0
+geo_only_minus_time_only,transmission_cost_usd,USD,4086.339670115414,51.48937689611429,5,5,0,0
+geo_only_minus_time_only,tasks_deferred,decisions,-820.0,41.018288603987365,5,0,5,0

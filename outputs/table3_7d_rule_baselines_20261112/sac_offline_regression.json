@@ -1,0 +1,99 @@
+{
+  "status": "passed",
+  "runs": 15,
+  "metrics_per_run": 9,
+  "absolute_tolerance": 1e-07,
+  "relative_tolerance": 1e-12,
+  "results": [
+    {
+      "strategy": "geo_only",
+      "seed": 0,
+      "nine_metrics_pass": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "strategy": "geo_only",
+      "seed": 10,
+      "nine_metrics_pass": true,
+      "max_absolute_error": 1.4551915228366852e-11
+    },
+    {
+      "strategy": "geo_only",
+      "seed": 20,
+      "nine_metrics_pass": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "strategy": "geo_only",
+      "seed": 30,
+      "nine_metrics_pass": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "strategy": "geo_only",
+      "seed": 40,
+      "nine_metrics_pass": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "strategy": "time_only",
+      "seed": 0,
+      "nine_metrics_pass": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "strategy": "time_only",
+      "seed": 10,
+      "nine_metrics_pass": true,
+      "max_absolute_error": 9.094947017729282e-13
+    },
+    {
+      "strategy": "time_only",
+      "seed": 20,
+      "nine_metrics_pass": true,
+      "max_absolute_error": 2.2737367544323206e-13
+    },
+    {
+      "strategy": "time_only",
+      "seed": 30,
+      "nine_metrics_pass": true,
+      "max_absolute_error": 9.094947017729282e-13
+    },
+    {
+      "strategy": "time_only",
+      "seed": 40,
+      "nine_metrics_pass": true,
+      "max_absolute_error": 5.684341886080802e-14
+    },
+    {
+      "strategy": "geo_time",
+      "seed": 0,
+      "nine_metrics_pass": true,
+      "max_absolute_error": 4.440892098500626e-16
+    },
+    {
+      "strategy": "geo_time",
+      "seed": 10,
+      "nine_metrics_pass": true,
+      "max_absolute_error": 4.547473508864641e-13
+    },
+    {
+      "strategy": "geo_time",
+      "seed": 20,
+      "nine_metrics_pass": true,
+      "max_absolute_error": 2.9103830456733704e-11
+    },
+    {
+      "strategy": "geo_time",
+      "seed": 30,
+      "nine_metrics_pass": true,
+      "max_absolute_error": 0.0
+    },
+    {
+      "strategy": "geo_time",
+      "seed": 40,
+      "nine_metrics_pass": true,
+      "max_absolute_error": 0.0
+    }
+  ]
+}

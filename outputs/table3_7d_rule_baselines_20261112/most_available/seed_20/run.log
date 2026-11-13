@@ -1,0 +1,8 @@
+TaskSchedulingEnv initialized with single_action_mode: False, aggregation: average, disable_defer_action: False
+most_available seed=20: 96/672
+most_available seed=20: 192/672
+most_available seed=20: 288/672
+most_available seed=20: 384/672
+most_available seed=20: 480/672
+most_available seed=20: 576/672
+most_available seed=20: 672/672

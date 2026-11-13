@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "runs": 5,
+  "steps_per_run": 672,
+  "hashes_reproduced_from_csv": true,
+  "actual_workload_and_inputs_match_sac": true,
+  "task_accounting_balanced": true,
+  "metrics_recomputed": true
+}
