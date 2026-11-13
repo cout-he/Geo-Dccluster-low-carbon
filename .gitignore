@@ -1,0 +1,67 @@
+# VSCode settings
+.vscode/
+
+# History plugin or backup files
+.history/
+
+# MAC OS
+.DS_Store
+
+# Model checkpoints
+checkpoints/
+
+# Logs
+logs/
+
+# Tensorboard runs
+runs/
+
+# Raw data inside any subfolder of data/
+data/*/raw/
+
+# Any file with "deprecated" in its name
+*deprecated*
+
+# Catch folders with "deprecated" in their name:
+*deprecated*/
+
+# General Python-related
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+*.pyd
+*.pyc
+
+# Ignore raw data
+data/workload/alibaba_2020_dataset/*.csv
+*.pkl
+*.log
+*.tar.gz
+*.gz
+*.zip
+*.egg
+*.whl
+*.header
+*.0
+
+# Auto added
+filtered_file_list.txt
+.pytest_cacheenv/
+thermal_control_data.csv
+results/
+
+# Ignore the zip file of the workload dataset
+!data/workload/alibaba_2020_dataset/result_df_full_year_2020.zip
+docs_src/
+sustaindc_all_python_code.txt
+project_contents_recursive.txt
+list_files.py
+consolidate_code.py
+consolidate_code_src.py
+
+# Ignore the following files
+!checkpoints/train_multiaction_defer_20250527_210534/best_eval_checkpoint.pth
+!checkpoints/train_multiaction_nodefer_20250527_212105/best_eval_checkpoint.pth
+!checkpoints/train_single_action_enable_defer_20250527_222926/best_eval_checkpoint.pth
+!checkpoints/train_single_action_disable_defer_20250527_223002/best_eval_checkpoint.pth
