@@ -1,0 +1,19 @@
+simulation:
+  year: 2023
+  month: 8
+  init_day: 1
+  init_hour: 5
+  duration_days: 7
+  timestep_minutes: 15
+  workload_path: data/workload/alibaba_2020_dataset/result_df_full_year_2020.pkl
+  cloud_provider: aws
+  shuffle_datacenters: false
+  strategy: manual_rl
+  use_tensorboard: true
+  single_action_mode: false
+  disable_defer_action: false
+  aggregation_method: average
+  # fixed uses the exact dates above; randomized_aligned preserves the legacy
+  # seeded +/-7 day/random hour mechanism while aligning BOTH clocks.
+  reset_mode: fixed
+  weather_augmentation: false

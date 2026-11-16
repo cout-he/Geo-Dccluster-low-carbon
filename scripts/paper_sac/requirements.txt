@@ -1,0 +1,11 @@
+# Install into a dedicated virtual environment. Exact tested versions are in
+# each experiment_manifest.json; original repository requirements are untouched.
+numpy
+pandas
+torch
+gymnasium
+tensorboard
+PyYAML
+psychrolib
+psutil
+pytest
