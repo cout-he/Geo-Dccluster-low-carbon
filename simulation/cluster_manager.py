@@ -72,6 +72,7 @@ class DatacenterClusterManager:
         # Load tasks with fallback unzip logic
         if tasks_file_path:
             self.tasks = self._load_or_extract_tasks_file(tasks_file_path)
+            self.workload_sorted = self.tasks['interval_15m'].is_monotonic_increasing
         else:
             raise ValueError("No tasks file path provided. Please provide a valid path to the tasks pickle file.")
 
@@ -90,7 +91,7 @@ class DatacenterClusterManager:
                             "local_only": DistributeLocalOnly(),
                         }
 
-    def reset(self, seed=None):
+    def reset(self, seed=None, *, randomize_start=True, align_simulation_time=False):
         """
         Reset all datacenters in the cluster.
 
@@ -104,14 +105,15 @@ class DatacenterClusterManager:
             np.random.seed(seed)
             # print(f"Random seed set to {seed} for reproducibility.")
         rng = np.random.default_rng(seed)
-        # Limit day to ±7 days around the initial value, wrapping around the year (0-364)
-        low_day = max(0, self.init_day - 7)
-        high_day = min(364, self.init_day + 7)
-        self.random_init_day = int(rng.integers(low_day, high_day + 1))  # +1 because high is exclusive
-
         self.random_year = self.simulation_year
-        # You can keep full 0–23 hour range, or restrict it too if needed
-        self.random_init_hour = int(rng.integers(0, 24))
+        self.random_init_day = self.init_day
+        self.random_init_hour = self.init_hour
+        if randomize_start:
+            # Retain the baseline's clipped day window and unrestricted UTC hour.
+            low_day = max(0, self.init_day - 7)
+            high_day = min(364, self.init_day + 7)
+            self.random_init_day = int(rng.integers(low_day, high_day + 1))
+            self.random_init_hour = int(rng.integers(0, 24))
 
         if self.shuffle_datacenter_order:
             items = list(self.datacenters.items())
@@ -119,9 +121,15 @@ class DatacenterClusterManager:
             self.datacenters = dict(items)
 
 
-        for dc_name, dc in self.datacenters.items():
-            # print(f"Resetting {dc_name} with UTC start: Day {self.random_init_day}, Hour {self.random_init_hour}")
-            dc.reset(init_year=self.random_year, init_day=self.random_init_day, init_hour=self.random_init_hour, seed=seed)
+        self.align_simulation_time = align_simulation_time
+        for dc in self.datacenters.values():
+            dc.reset(
+                init_year=self.random_year,
+                init_day=self.random_init_day,
+                init_hour=self.random_init_hour,
+                seed=seed,
+                align_simulation_time=align_simulation_time,
+            )
             
         
         # Reset stateful strategies
@@ -147,12 +155,18 @@ class DatacenterClusterManager:
         # Replace year in current_time with 2020
         adjusted_time = current_time.replace(year=2020)
 
-        tasks_for_time = self.tasks[self.tasks['interval_15m'] == adjusted_time]
-        tasks_list = []
+        workload_times = self.tasks['interval_15m']
+        if getattr(self, "align_simulation_time", False) and self.workload_sorted:
+            # Locate the first matching interval without scanning the full-year trace.
+            times = workload_times.array
+            index = times.searchsorted(adjusted_time)
+            row = self.tasks.iloc[index] if index < len(times) and times[index] == adjusted_time else None
+        else:
+            tasks_for_time = self.tasks[workload_times == adjusted_time]
+            row = None if tasks_for_time.empty else tasks_for_time.iloc[0]
 
-        if not tasks_for_time.empty:
-            # We'll just take the first row in that timeslot
-            row = tasks_for_time.iloc[0]
+        tasks_list = []
+        if row is not None:
             tasks_list = extract_tasks_from_row(
                 row,
                 scale=1,
@@ -299,7 +313,11 @@ class DatacenterClusterManager:
                         kwh_per_gb = 0.06  # fixed intensity (KWh/GB) Extracted from https://onlinelibrary.wiley.com/doi/10.1111/jiec.12630
                         energy_kwh_transmision = task.bandwidth_gb * kwh_per_gb
                         task.origin_dc = next(dc for dc in self.datacenters.values() if dc.dc_id == task.origin_dc_id)
-                        ci_origin = task.origin_dc.ci_manager.get_current_ci(norm=False) / 1000  # in kgCO2/kWh
+                        if getattr(self, "align_simulation_time", False):
+                            origin_info = results["datacenter_infos"][f"DC{task.origin_dc_id}"]
+                            ci_origin = origin_info["__common__"]["ci"] / 1000
+                        else:
+                            ci_origin = task.origin_dc.ci_manager.get_current_ci(norm=False) / 1000
 
                         # If there is no transmision (origin datacenter is the same as destination)
                         if task.origin_dc_id == task.dest_dc_id:
@@ -325,6 +343,8 @@ class DatacenterClusterManager:
                             )
 
                     except KeyError:
+                        if getattr(self, "align_simulation_time", False):
+                            raise
                         print(f"[WARNING] Transmission cost not found between {origin_region} and {dest_region}")
                 
                 else:

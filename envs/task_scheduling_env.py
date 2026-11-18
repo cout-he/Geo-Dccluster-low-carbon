@@ -34,6 +34,9 @@ class TaskSchedulingEnv(gym.Env):
         self.logger = getattr(self.cluster_manager, "logger", None)
         self.start_time = start_time
         self.end_time = end_time
+        self.episode_end_time = end_time
+        self.align_simulation_time = (sim_config or {}).get("align_simulation_time", False)
+        self.randomize_episode_start = (sim_config or {}).get("randomize_episode_start", True)
         self.time_step = pd.Timedelta(minutes=15)
         self.current_time = self.start_time
         self.reward_fn = reward_fn 
@@ -239,9 +242,40 @@ class TaskSchedulingEnv(gym.Env):
         super().reset(seed=seed) # Gymnasium expects options, but we don't use them yet
         random.seed(seed) # Set random seed for reproducibility
         self.current_time = self.start_time
-        self.cluster_manager.reset(seed=seed) # Pass seed to cluster manager
-        
-        # print(f"Resetting environment with seed {seed} at time {self.current_time}")
+        reset_info = {}
+        if self.align_simulation_time:
+            manager = self.cluster_manager
+            manager.reset(
+                seed=seed,
+                randomize_start=self.randomize_episode_start,
+                align_simulation_time=True,
+            )
+            self.current_time = pd.Timestamp(year=manager.random_year, month=1, day=1, tz="UTC")
+            self.current_time += pd.Timedelta(
+                days=manager.random_init_day, hours=manager.random_init_hour
+            )
+            self.episode_end_time = self.current_time + (self.end_time - self.start_time)
+            dc_source_indices = {}
+            for dc in manager.datacenters.values():
+                weather = dc.weather_manager
+                dc_source_indices[dc.location] = {
+                    "carbon_15m": dc.ci_manager.time_step,
+                    "electricity_price_15m": dc.price_manager.index,
+                    "weather_local_15m": weather.time_step,
+                    "weather_roll_days": weather.roll_days,
+                    "weather_source_local_15m": (
+                        weather.time_step - weather.roll_days * 96
+                    ) % len(weather.temperature_data),
+                }
+            reset_info = {
+                "reset_seed": seed,
+                "episode_start_utc": self.current_time.isoformat(),
+                "episode_end_utc": self.episode_end_time.isoformat(),
+                "workload_start_utc": self.current_time.replace(year=2020).isoformat(),
+                "dc_source_indices": dc_source_indices,
+            }
+        else:
+            self.cluster_manager.reset(seed=seed)
 
         self.deferred_tasks.clear()
         self.in_transit_tasks.clear()
@@ -249,7 +283,7 @@ class TaskSchedulingEnv(gym.Env):
 
         self.global_step = 0 # Reset TensorBoard step counter
 
-        return self._get_obs(), {} # Gymnasium returns obs, info
+        return self._get_obs(), reset_info
 
 
     def step(self, actions): # actions is a single int if single_action_mode else list
@@ -346,6 +380,9 @@ class TaskSchedulingEnv(gym.Env):
                     dest_dc_chosen_by_agent = dc_list_values[action_for_task - 1]
                     task.dest_dc_id = dest_dc_chosen_by_agent.dc_id
                     task.dest_dc = dest_dc_chosen_by_agent
+                    if self.align_simulation_time and task.origin_dc_id == task.dest_dc_id:
+                        dest_dc_chosen_by_agent.pending_tasks.append(task)
+                        continue
                     origin_loc = self.cluster_manager.get_dc_location(task.origin_dc_id)
                     dest_loc = dest_dc_chosen_by_agent.location
                     delay_s = get_transmission_delay(origin_loc, dest_loc, self.cluster_manager.cloud_provider, task.bandwidth_gb)
@@ -372,7 +409,7 @@ class TaskSchedulingEnv(gym.Env):
         self.current_time += self.time_step
         self._load_new_tasks() # Load new and previously deferred tasks for next obs
 
-        done = self.current_time >= self.end_time
+        done = self.current_time >= self.episode_end_time
         truncated = done # For now, done and truncated are the same
 
         obs_next = self._get_obs() # Generate next observation based on new self.current_tasks
@@ -381,8 +418,11 @@ class TaskSchedulingEnv(gym.Env):
             "total_emissions_kg": results.get("transmission_emissions_total_kg", 0), # Example
             "scheduled_tasks_this_step": processed_actions_count, # How many actions were processed
             "datacenter_infos": results["datacenter_infos"],
-            "transmission_cost_total_usd" : results["transmission_cost_total_usd"],
+            "transmission_cost_total_usd": results["transmission_cost_total_usd"],
         }
+        if self.align_simulation_time:
+            info["transmission_energy_total_kwh"] = info["total_energy_kwh"]
+            info["transmission_emissions_total_kg"] = info["total_emissions_kg"]
         return obs_next, reward, done, truncated, info
     
 

@@ -1,0 +1,12 @@
+# Python 3.11 recommended. Install the lab's CUDA-compatible PyTorch wheel first
+# if needed. The == constraint also accepts local variants such as +cu128.
+torch==2.7.1
+numpy==2.2.6
+pandas==2.3.3
+gymnasium==1.1.1
+cloudpickle==3.1.1
+psychrolib==2.5.0
+tensorboard==2.19.0
+PyYAML==6.0.2
+matplotlib==3.10.3
+pytest==8.3.5

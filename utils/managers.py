@@ -206,7 +206,7 @@ class CI_Manager():
         desired_std_dev (float, optional): Desired standard deviation for coherent noise. Defaults to 5.
         timezone_shift (int, optional): Shift for the timezone. Defaults to 0.
     """
-    def __init__(self, location, simulation_year=2020, init_day=0, future_steps=4, weight=0.1, desired_std_dev=5, timezone_shift=0):
+    def __init__(self, location, simulation_year=2020, init_day=0, future_steps=4, weight=0.1, desired_std_dev=5, timezone_shift=0, *, exact_quarters=False):
         """Initialize the CI_Manager class.
 
         Args:
@@ -222,6 +222,7 @@ class CI_Manager():
         self.simulation_year = simulation_year
         self.init_day = init_day
         self.future_steps = future_steps
+        self.exact_quarters = exact_quarters
         self.weight = weight
         self.desired_std_dev = desired_std_dev
         self.timezone_shift = timezone_shift
@@ -259,7 +260,10 @@ class CI_Manager():
 
     def _interpolate(self):
         x = range(len(self.carbon_data))
-        x_interp = np.linspace(0, len(self.carbon_data), len(self.carbon_data) * self.timestep_per_hour)
+        if self.exact_quarters:
+            x_interp = np.arange(len(x) * self.timestep_per_hour) / self.timestep_per_hour
+        else:
+            x_interp = np.linspace(0, len(x), len(x) * self.timestep_per_hour)
         smooth = np.interp(x_interp, x, self.carbon_data)
         self.carbon_smooth = np.roll(smooth, -1 * self.timezone_shift * self.timestep_per_hour)
         self.original_data = self.carbon_smooth.copy()
@@ -335,7 +339,7 @@ def load_weather_data(weather_file):
 # Class to manage weather data
 
 class Weather_Manager():
-    def __init__(self, location='US-NY-NYIS', simulation_year=2023, init_day=0, weight=0.02, desired_std_dev=0.75, timezone_shift=0, elevation=27.0, debug=False):
+    def __init__(self, location='US-NY-NYIS', simulation_year=2023, init_day=0, weight=0.02, desired_std_dev=0.75, timezone_shift=0, elevation=27.0, debug=False, *, exact_quarters=False):
         self.location = location
         self.simulation_year = simulation_year
         self.init_day = init_day
@@ -344,6 +348,7 @@ class Weather_Manager():
         self.timezone_shift = timezone_shift
         self.elevation = elevation
         self.debug = debug
+        self.exact_quarters = exact_quarters
 
         self.timestep_per_hour = 4
         self.time_steps_day = self.timestep_per_hour * 24
@@ -391,7 +396,10 @@ class Weather_Manager():
 
     def _interpolate_weather_data(self):
         x = np.arange(len(self.weather_df))
-        new_x = np.linspace(0, len(x), len(x) * self.timestep_per_hour)
+        if self.exact_quarters:
+            new_x = np.arange(len(x) * self.timestep_per_hour) / self.timestep_per_hour
+        else:
+            new_x = np.linspace(0, len(x), len(x) * self.timestep_per_hour)
 
         self.temperature_data = np.interp(new_x, x, self.weather_df["temperature_2m"])
         self.humidity_data = np.interp(new_x, x, self.weather_df["relative_humidity_2m"])
@@ -421,6 +429,7 @@ class Weather_Manager():
 
         self.time_step = (init_day if init_day is not None else self.init_day) * self.time_steps_day + (init_hour if init_hour is not None else 0) * self.timestep_per_hour
         
+        self.roll_days = 0
         if not self.debug:
             # Add noise to the temperature data using the CoherentNoise
             rng = np.random.default_rng(seed)
@@ -430,9 +439,10 @@ class Weather_Manager():
             self.temperature_data = self.original_temp_data + coh_noise
             self.wet_bulb_data = self.original_wb_data + coh_noise
             
-            num_roll_days = rng.integers(0, 14) # Random roll the temperature some days.
-            self.temperature_data =  np.roll(self.temperature_data, num_roll_days*self.timestep_per_hour*24)
-            self.wet_bulb_data =  np.roll(self.wet_bulb_data, num_roll_days*self.timestep_per_hour*24)
+            self.roll_days = int(rng.integers(0, 14))
+            roll_steps = self.roll_days * self.time_steps_day
+            self.temperature_data = np.roll(self.temperature_data, roll_steps)
+            self.wet_bulb_data = np.roll(self.wet_bulb_data, roll_steps)
 
             self.temperature_data = np.clip(self.temperature_data, self.min_temp, self.max_temp)
             max_30_days = np.max(self.temperature_data[self.time_step:30*self.time_steps_day + self.time_step])
@@ -497,10 +507,11 @@ class Weather_Manager():
 
 
 class ElectricityPrice_Manager:
-    def __init__(self, location, simulation_year, timezone_shift=0):
+    def __init__(self, location, simulation_year, timezone_shift=0, *, exact_quarters=False):
         self.location = location
         self.simulation_year = simulation_year
         self.timezone_shift = timezone_shift
+        self.exact_quarters = exact_quarters
         self.prices = None
         self.index = 0
         self._load_data()
@@ -541,7 +552,10 @@ class ElectricityPrice_Manager:
     def _interpolate_prices(self):
         self.timestep_per_hour = 4  # 15 min steps
         x = np.arange(len(self.original_prices))
-        new_x = np.linspace(0, len(x) - 1, len(x) * self.timestep_per_hour)
+        if self.exact_quarters:
+            new_x = np.arange(len(x) * self.timestep_per_hour) / self.timestep_per_hour
+        else:
+            new_x = np.linspace(0, len(x) - 1, len(x) * self.timestep_per_hour)
         self.prices = np.interp(new_x, x, self.original_prices)
 
     def reset(self, init_day, init_hour, seed=None):

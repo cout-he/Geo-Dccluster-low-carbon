@@ -1,0 +1,19 @@
+experiment:
+  name: table3_sac_reproduction
+  baseline_commit: c79e8f78a9229b904f123276168a9ef7746177fd
+  paper_doi: 10.52202/085713-0172
+  paper_url: https://proceedings.neurips.cc/paper_files/paper/2025/file/075661dddd5afc49e905b24e12e6a968-Paper-Datasets_and_Benchmarks_Track.pdf
+  observation_dim: 34
+  action_dim: 6
+  evaluation_steps: 2880
+  evaluation_seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  evaluation_modes: [geo_only, time_only, geo_time]
+  workload:
+    trace_year: 2020
+    task_scale: 5
+    scale: 1
+    group_size: 1
+    sla_multiplier: 1.5
+    active_hours_local: [8, 20]
+    activity_active: 1.0
+    activity_inactive: 0.3

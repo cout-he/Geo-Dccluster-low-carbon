@@ -9,14 +9,16 @@ class EnergyPriceReward(BaseReward):
     across all datacenters during the simulation timestep.
     Penalizes higher costs.
     """
-    def __init__(self, normalize_factor: float = 100.0):
+    def __init__(self, normalize_factor: float = 100.0, use_metered_totals: bool = False):
         """
         Args:
             normalize_factor (float): A factor to divide the total cost by,
                                       scaling the reward. Adjust based on expected
                                       cost magnitudes per timestep. Defaults to 100.0.
+            use_metered_totals: Use metered DC costs from Appendix F.4.2.
         """
         super().__init__()
+        self.use_metered_totals = use_metered_totals
         # Use np.float64 for potentially higher precision if costs can be large
         self.normalize_factor = np.float64(normalize_factor) if normalize_factor != 0 else np.float64(1.0) # Avoid division by zero
 
@@ -27,13 +29,21 @@ class EnergyPriceReward(BaseReward):
         Args:
             cluster_info (dict): Dictionary containing simulation results.
                                  Expected to have cluster_info["datacenter_infos"][dc_name]["__common__"]["energy_cost_USD"].
-            current_tasks (list): List of tasks considered in this step (not used by this implementation).
+            current_tasks (list): Tasks considered in this step for the legacy cost proxy.
             current_time: Current simulation time (not used by this implementation).
 
         Returns:
             float: Reward value (typically negative, lower is better).
         """
                 
+        if self.use_metered_totals:
+            total_cost = sum(
+                dc_info["__common__"]["energy_cost_USD"]
+                for dc_info in cluster_info["datacenter_infos"].values()
+            )
+            self.last_reward = float(-total_cost / self.normalize_factor)
+            return self.last_reward
+
         total_task_cost = np.float64(0.0)
         for task in current_tasks:
             dest_dc = getattr(task, "dest_dc", None)

@@ -12,7 +12,7 @@ import torch
 from gymnasium import spaces
 
 from utils.make_envs import make_bat_fwd_env, make_dc_env, make_ls_env
-from utils.managers import CI_Manager, ElectricityPrice_Manager, Time_Manager, Weather_Manager
+from utils.managers import CI_Manager, ElectricityPrice_Manager, Time_Manager, Weather_Manager, sc_obs
 from utils.utils_cf import get_energy_variables, get_init_day, obtain_paths
 from rl_components.agent_net import ActorNet
 from utils.running_stats import RunningStats # Import RunningStats class
@@ -262,7 +262,7 @@ class SustainDC(gym.Env):
         if hasattr(self, 'observation_space') and hasattr(self.observation_space, 'seed'):
             self.observation_space.seed(self.seed)
 
-    def reset(self, init_year=None, init_day=None, init_hour=None, seed=None, options=None):
+    def reset(self, init_year=None, init_day=None, init_hour=None, seed=None, options=None, *, align_simulation_time=False):
         """
         Reset the environment.
 
@@ -290,24 +290,46 @@ class SustainDC(gym.Env):
 
         # **Reinitialize the managers with new paths**
         self.simulation_year = init_year
+        self.align_simulation_time = align_simulation_time
         self.t_m = Time_Manager(init_day, timezone_shift=self.timezone_shift)
-        self.ci_manager = CI_Manager(location=self.location, simulation_year=self.simulation_year, timezone_shift=self.timezone_shift)
-        self.weather_manager = Weather_Manager(location=self.location, simulation_year=self.simulation_year, timezone_shift=self.timezone_shift)
-        self.price_manager = ElectricityPrice_Manager(location=self.location, simulation_year=self.simulation_year, timezone_shift=self.timezone_shift)
+        source_timezone = 0 if align_simulation_time else self.timezone_shift
+        self.ci_manager = CI_Manager(
+            self.location, self.simulation_year, timezone_shift=source_timezone,
+            exact_quarters=align_simulation_time,
+        )
+        self.weather_manager = Weather_Manager(
+            self.location, self.simulation_year, timezone_shift=source_timezone,
+            exact_quarters=align_simulation_time,
+        )
+        self.price_manager = ElectricityPrice_Manager(
+            self.location, self.simulation_year, timezone_shift=source_timezone,
+            exact_quarters=align_simulation_time,
+        )
 
         # Reset termination and reward flags for all agents
         self.ls_terminated = self.dc_terminated = self.bat_terminated = False
         self.ls_truncated = self.dc_truncated = self.bat_truncated = False
 
         # Adjust based on local timezone
-        local_init_day = (init_day + int((init_hour + self.timezone_shift) / 24)) % 365
-        local_init_hour = (init_hour + self.timezone_shift) % 24
+        shifted_hour = init_hour + self.timezone_shift
+        day_offset = shifted_hour // 24 if align_simulation_time else int(shifted_hour / 24)
+        local_init_day = (init_day + day_offset) % 365
+        local_init_hour = shifted_hour % 24
+        if align_simulation_time:
+            # CI and prices are on UTC grids. Weather and the DC clock are on nominal local time.
+            ci_price_day, ci_price_hour = init_day, init_hour
+        else:
+            ci_price_day, ci_price_hour = local_init_day, local_init_hour
         self.current_hour = local_init_hour
         
         t_i = self.t_m.reset(init_day=local_init_day, init_hour=local_init_hour, seed=seed)
         temp, norm_temp, wet_bulb, norm_wet_bulb = self.weather_manager.reset(init_day=local_init_day, init_hour=local_init_hour, seed=seed)
-        ci_i, ci_i_future, ci_i_denorm = self.ci_manager.reset(init_day=local_init_day, init_hour=local_init_hour, seed=seed)
-        price_i = self.price_manager.reset(init_day=local_init_day, init_hour=local_init_hour, seed=seed)
+        ci_i, ci_i_future, ci_i_denorm = self.ci_manager.reset(
+            init_day=ci_price_day, init_hour=ci_price_hour, seed=seed
+        )
+        price_i = self.price_manager.reset(
+            init_day=ci_price_day, init_hour=ci_price_hour, seed=seed
+        )
 
         # Reset sub-environments
         try:
@@ -315,6 +337,8 @@ class SustainDC(gym.Env):
             _, self.dc_info = self.dc_env.reset(seed=seed) # Pass seed
             bat_s, self.bat_info = self.bat_env.reset(seed=seed) # Pass seed
         except Exception as e:
+            if self.align_simulation_time:
+                raise
             print(f"ERROR during sub-env reset in DC {self.dc_id}: {e}")
             self.dc_info = {}; self.bat_info = {} # Default empty on error
                 
@@ -377,6 +401,13 @@ class SustainDC(gym.Env):
         terminateds["__all__"] = False
         truncateds["__all__"] = False
         
+        if self.align_simulation_time:
+            # Physics runs before the managers advance. Snapshot the matching current inputs.
+            metering_time = sc_obs(self.t_m.hour, self.t_m.day)
+            metering_weather = self.weather_manager._current_temp
+            metering_ci = self.ci_manager.get_current_ci(norm=False)
+            metering_price = self.price_manager.get_current_price()
+
         # Perform actions for each agent and update their respective environments
         self._perform_actions(action_dict)
     
@@ -462,9 +493,18 @@ class SustainDC(gym.Env):
         running_count = len(self.running_tasks)
         pending_count = len(self.pending_tasks)
 
-        # Estimate energy cost
+        # Price is in USD/MWh and energy is in kWh.
+        if self.align_simulation_time:
+            self.infos["__common__"].update({
+                "time": metering_time,
+                "weather": metering_weather,
+                "ci": metering_ci,
+                "price_USD_kwh": metering_price,
+            })
+        else:
+            metering_price = price_i
         energy_kwh = self.bat_info.get("bat_total_energy_with_battery_KWh", 0)
-        energy_cost_USD = energy_kwh * price_i/1000  # Assuming price_i is in $ per kWh
+        energy_cost_USD = energy_kwh * metering_price / 1000
         energy_ci = self.bat_info.get("bat_avg_CI", 0)  # Average carbon intensity in gCO₂eq/kWh
         # Estimate CO₂ emissions, ci_i is in gCO₂eq/kWh
         carbon_emissions_kg = energy_kwh * energy_ci / 1000  # Convert gCO₂eq to kgCO₂eq
@@ -535,6 +575,8 @@ class SustainDC(gym.Env):
         try:
             _, _, self.dc_terminated, self.dc_truncated, self.dc_info = self.dc_env.step(self.current_crac_setpoint)
         except Exception as e:
+            if self.align_simulation_time:
+                raise
             print(f"ERROR during dc_env.step in DC {self.dc_id}: {e}")
             # Handle error state? Maybe set default info?
             self.dc_info = self.dc_info or {} # Ensure dc_info exists
@@ -547,8 +589,10 @@ class SustainDC(gym.Env):
             self.bat_env.set_dcload(dc_total_power_kw / 1e3)
             self.bat_state, _, self.bat_terminated, self.bat_truncated, self.bat_info = self.bat_env.step(DO_NOTHING_BATTERY)
         except Exception as e:
-             print(f"ERROR during bat_env.step in DC {self.dc_id}: {e}")
-             self.bat_info = self.bat_info or {} # Ensure bat_info exists
+            if self.align_simulation_time:
+                raise
+            print(f"ERROR during bat_env.step in DC {self.dc_id}: {e}")
+            self.bat_info = self.bat_info or {} # Ensure bat_info exists
 
 
 
@@ -564,12 +608,16 @@ class SustainDC(gym.Env):
             # Pass GPU/Mem loads to the internal dc_env update if it uses them
             self.dc_env.update_workloads(cpu_workload, mem_util, gpu_workload)
         except Exception as e:
+            if self.align_simulation_time:
+                raise
             print(f"ERROR during dc_env update in DC {self.dc_id}: {e}")
 
         try:
             self.bat_env.update_ci(ci_i_denorm, ci_i_future[0])
         except Exception as e:
-             print(f"ERROR during bat_env update in DC {self.dc_id}: {e}")
+            if self.align_simulation_time:
+                raise
+            print(f"ERROR during bat_env update in DC {self.dc_id}: {e}")
 
 
     def _populate_observation_dict(self):
