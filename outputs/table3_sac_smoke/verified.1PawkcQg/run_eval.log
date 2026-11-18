@@ -1,0 +1,15 @@
+eval preflight passed | output=/var/tmp/table3-sac-repo.8dB6r7sD/outputs/table3_sac_smoke/ubuntu | free GiB=952.03
+device=cpu | checked 18 inputs
+Evaluating geo_only, seed 0, 8 steps
+TaskSchedulingEnv initialized with single_action_mode: False, aggregation: average, disable_defer_action: False
+Evaluating geo_only, seed 1, 8 steps
+TaskSchedulingEnv initialized with single_action_mode: False, aggregation: average, disable_defer_action: False
+Evaluating time_only, seed 0, 8 steps
+TaskSchedulingEnv initialized with single_action_mode: False, aggregation: average, disable_defer_action: False
+Evaluating time_only, seed 1, 8 steps
+TaskSchedulingEnv initialized with single_action_mode: False, aggregation: average, disable_defer_action: False
+Evaluating geo_time, seed 0, 8 steps
+TaskSchedulingEnv initialized with single_action_mode: False, aggregation: average, disable_defer_action: False
+Evaluating geo_time, seed 1, 8 steps
+TaskSchedulingEnv initialized with single_action_mode: False, aggregation: average, disable_defer_action: False
+Evaluation outputs saved to /var/tmp/table3-sac-repo.8dB6r7sD/outputs/table3_sac_smoke/ubuntu

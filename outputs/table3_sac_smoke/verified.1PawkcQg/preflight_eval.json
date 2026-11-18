@@ -1,0 +1,53 @@
+{
+  "stage": "eval",
+  "python": "3.12.3 (main, Jan 22 2026, 20:57:42) [GCC 13.3.0]",
+  "dependencies": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "matplotlib": "3.10.3",
+    "torch": "2.7.1+cpu",
+    "gymnasium": "1.1.1",
+    "psychrolib": "installed",
+    "cloudpickle": "3.1.1",
+    "tensorboard": "2.19.0"
+  },
+  "free_gib": 952.03,
+  "git": {
+    "baseline_commit": "c79e8f78a9229b904f123276168a9ef7746177fd",
+    "commit": "fa531a5503abbdde2e04266aa08c9e0def9bb8e7",
+    "branch": "experiment/table3-sac-reproduction",
+    "dirty": false
+  },
+  "checkpoint": {
+    "path": "/var/tmp/table3-sac-repo.8dB6r7sD/outputs/table3_sac_smoke/ubuntu/checkpoints/final.pt",
+    "sha256": "ce83c9a921186923cff441838b014b05f85b7bba182d6fa00afcca82d9a7d0b4"
+  },
+  "device": "cpu",
+  "data": {
+    "window_start_utc": "2020-07-01T00:00:00+00:00",
+    "window_stop_exclusive_utc": "2020-07-31T00:00:00+00:00",
+    "quarters_with_tasks": 2874,
+    "fresh_tasks": 101564,
+    "max_fresh_tasks_per_quarter": 320,
+    "input_sha256": {
+      "data/workload/alibaba_2020_dataset/result_df_full_year_2020.pkl": "3ba8a8e0067288f8d2542752a292f7da04cb79305689ba145cc6060e96cb7f2e",
+      "configs/dcs/dc_config.json": "b1675fbca01217565f469c1199584b88afcda2de8d8502cffcad19ae26b6ecd2",
+      "data/network_cost/aws_transmission_cost_matrix.csv": "96ed38224d68f7d1990de53d227fa4688277f81e8151623901b0b55093543e1d",
+      "data/carbon_intensity/US-CAL-CISO/2023/US-CAL-CISO_2023_hourly.csv": "d06d8171b696a5cfc78e5a654009f343ee73bcc1849dd9ffc56cdd17b2f6bbd4",
+      "data/electricity_prices/standardized/US-CAL-CISO/2023/US-CAL-CISO_electricity_prices_2023.csv": "031f729c7354d56ea79eca169da7f875b8513572ac5704dc2d60814072cf5592",
+      "data/weather/US-CAL-CISO/2023.json": "d183ba0333304aa5d7d69cf0c52b85f3a7020e914b1462c3135422d83dc3e73b",
+      "data/carbon_intensity/DE-LU/2023/DE-LU_2023_hourly.csv": "870a3e500e130f8ef5c550d711864c31399b540ef30d8e69d16f4122e7fd487e",
+      "data/electricity_prices/standardized/DE-LU/2023/DE-LU_electricity_prices_2023.csv": "92009879f715c90f903b49521f3cf0d97677c0ca00c2b271f6b86b4f61bad64b",
+      "data/weather/DE-LU/2023.json": "8cbcb5482579889e7f93abcf74e80453b520e47dfc3b84c275d365ba39333089",
+      "data/carbon_intensity/CL-SIC/2023/CL-SIC_2023_hourly.csv": "bc7ea01f491a661a36f35fb4361fde79ad665da26543dc3017ace9b1c430c31b",
+      "data/electricity_prices/standardized/CL-SIC/2023/CL-SIC_electricity_prices_2023.csv": "9dc33d953c051cef6307bdbba9e1e1f1a5216f040c982f2af6264c33601e95c0",
+      "data/weather/CL-SIC/2023.json": "8744eddffa261d078ca54487e08cb7d846d17607490393c25bb5ef662f457d0e",
+      "data/carbon_intensity/SG/2023/SG_2023_hourly.csv": "555a0cb9852b98fad3443a5192903c18b42a07c2eb0f76bc72a20db5cec7fac4",
+      "data/electricity_prices/standardized/SG/2023/SG_electricity_prices_2023.csv": "e7537547f5d3ed18f58535c284908e423f38fa1253529e7305081fb4522bf630",
+      "data/weather/SG/2023.json": "6ca110ba97eda2c261328b7e49376f5be9d12a6a07835065a59f4e97856fd654",
+      "data/carbon_intensity/AU-NSW/2023/AU-NSW_2023_hourly.csv": "62d10fe5804f2e745f228a5f69142717c33fa322ae4916e5ebdf446c535175dd",
+      "data/electricity_prices/standardized/AU-NSW/2023/AU-NSW_electricity_prices_2023.csv": "34f3993be153f3915b04589cc96cf9bfe11321e54f3c7df52799a48f999917c3",
+      "data/weather/AU-NSW/2023.json": "391576a25f1a8ac480a0fb84927a3888955d7722676e51e779e6f149f8c80c7a"
+    }
+  }
+}

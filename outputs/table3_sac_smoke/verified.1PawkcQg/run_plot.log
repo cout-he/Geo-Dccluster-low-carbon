@@ -1,0 +1,2 @@
+plot preflight passed | output=/var/tmp/table3-sac-repo.8dB6r7sD/outputs/table3_sac_smoke/ubuntu | free GiB=952.03
+Figures saved to outputs/table3_sac_smoke/ubuntu/figures

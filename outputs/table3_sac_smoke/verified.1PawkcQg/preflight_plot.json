@@ -1,0 +1,16 @@
+{
+  "stage": "plot",
+  "python": "3.12.3 (main, Jan 22 2026, 20:57:42) [GCC 13.3.0]",
+  "dependencies": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "matplotlib": "3.10.3"
+  },
+  "free_gib": 952.03,
+  "git": {
+    "baseline_commit": "c79e8f78a9229b904f123276168a9ef7746177fd",
+    "commit": "fa531a5503abbdde2e04266aa08c9e0def9bb8e7",
+    "branch": "experiment/table3-sac-reproduction",
+    "dirty": false
+  }
+}

@@ -1,0 +1,366 @@
+{
+  "training_run_id": "65811905274b4643b8b45a793f6bd4f6",
+  "training_seed": 42,
+  "smoke": true,
+  "total_steps": 8,
+  "config": {
+    "sim": {
+      "year": 2023,
+      "month": 7,
+      "init_day": 1,
+      "init_hour": 0,
+      "duration_days": 30,
+      "timestep_minutes": 15,
+      "workload_path": "data/workload/alibaba_2020_dataset/result_df_full_year_2020.pkl",
+      "cloud_provider": "aws",
+      "shuffle_datacenters": true,
+      "strategy": "manual_rl",
+      "single_action_mode": false,
+      "disable_defer_action": false,
+      "use_tensorboard": true,
+      "align_simulation_time": true,
+      "randomize_episode_start": true
+    },
+    "algorithm": {
+      "name": "SAC",
+      "gamma": 0.99,
+      "alpha": 0.01,
+      "actor_learning_rate": 0.0001,
+      "critic_learning_rate": 0.0003,
+      "optimizer": "Adam",
+      "batch_size": 512,
+      "tau": 0.005,
+      "replay_buffer_size": 100000,
+      "warmup_steps": 1000,
+      "total_steps": 10000000,
+      "update_frequency": 1,
+      "policy_update_frequency": 2,
+      "hidden_dim": 64,
+      "max_tasks": 400,
+      "device": "auto",
+      "use_attention": false,
+      "use_layer_norm": false,
+      "training_seed": 42,
+      "save_interval": 10000,
+      "log_interval": 100
+    },
+    "reward": {
+      "normalize": false,
+      "components": {
+        "energy_price": {
+          "weight": 0.5,
+          "args": {
+            "normalize_factor": 100000,
+            "use_metered_totals": true
+          }
+        },
+        "carbon_emissions": {
+          "weight": 0.3,
+          "args": {
+            "normalize_factor": 10,
+            "use_metered_totals": true
+          }
+        },
+        "transmission_cost": {
+          "weight": 0.2,
+          "args": {
+            "normalize_factor": 1
+          }
+        },
+        "sla_penalty": {
+          "weight": 0.1,
+          "args": {
+            "penalty_per_violation": 5.0
+          }
+        },
+        "transmission_emissions": {
+          "weight": 0.1,
+          "args": {
+            "normalize_factor": 1
+          }
+        }
+      }
+    },
+    "datacenters": [
+      {
+        "dc_id": 1,
+        "location": "US-CAL-CISO",
+        "timezone_shift": -7,
+        "population_weight": 0.18,
+        "total_cores": 50000,
+        "total_gpus": 1000,
+        "total_mem": 80000,
+        "dc_config_file": "configs/dcs/dc_config.json",
+        "use_rl_hvac": false,
+        "hru_enabled": false
+      },
+      {
+        "dc_id": 2,
+        "location": "DE-LU",
+        "timezone_shift": 1,
+        "population_weight": 0.22,
+        "total_cores": 85000,
+        "total_gpus": 600,
+        "total_mem": 80000,
+        "dc_config_file": "configs/dcs/dc_config.json",
+        "use_rl_hvac": false,
+        "hru_enabled": false
+      },
+      {
+        "dc_id": 3,
+        "location": "CL-SIC",
+        "timezone_shift": -5,
+        "population_weight": 0.2,
+        "total_cores": 110000,
+        "total_gpus": 300,
+        "total_mem": 60000,
+        "dc_config_file": "configs/dcs/dc_config.json",
+        "use_rl_hvac": false,
+        "hru_enabled": false
+      },
+      {
+        "dc_id": 4,
+        "location": "SG",
+        "timezone_shift": 8,
+        "population_weight": 0.25,
+        "total_cores": 75000,
+        "total_gpus": 700,
+        "total_mem": 50000,
+        "dc_config_file": "configs/dcs/dc_config.json",
+        "use_rl_hvac": false,
+        "hru_enabled": false
+      },
+      {
+        "dc_id": 5,
+        "location": "AU-NSW",
+        "timezone_shift": 11,
+        "population_weight": 0.15,
+        "total_cores": 65000,
+        "total_gpus": 300,
+        "total_mem": 60000,
+        "dc_config_file": "configs/dcs/dc_config.json",
+        "use_rl_hvac": false,
+        "hru_enabled": false
+      }
+    ],
+    "manifest": {
+      "name": "table3_sac_reproduction",
+      "baseline_commit": "c79e8f78a9229b904f123276168a9ef7746177fd",
+      "paper_doi": "10.52202/085713-0172",
+      "paper_url": "https://proceedings.neurips.cc/paper_files/paper/2025/file/075661dddd5afc49e905b24e12e6a968-Paper-Datasets_and_Benchmarks_Track.pdf",
+      "observation_dim": 34,
+      "action_dim": 6,
+      "evaluation_steps": 2880,
+      "evaluation_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "evaluation_modes": [
+        "geo_only",
+        "time_only",
+        "geo_time"
+      ],
+      "workload": {
+        "trace_year": 2020,
+        "task_scale": 5,
+        "scale": 1,
+        "group_size": 1,
+        "sla_multiplier": 1.5,
+        "active_hours_local": [
+          8,
+          20
+        ],
+        "activity_active": 1.0,
+        "activity_inactive": 0.3
+      }
+    }
+  },
+  "effective_algorithm": {
+    "name": "SAC",
+    "gamma": 0.99,
+    "alpha": 0.01,
+    "actor_learning_rate": 0.0001,
+    "critic_learning_rate": 0.0003,
+    "optimizer": "Adam",
+    "batch_size": 4,
+    "tau": 0.005,
+    "replay_buffer_size": 64,
+    "warmup_steps": 0,
+    "total_steps": 8,
+    "update_frequency": 1,
+    "policy_update_frequency": 2,
+    "hidden_dim": 64,
+    "max_tasks": 400,
+    "device": "auto",
+    "use_attention": false,
+    "use_layer_norm": false,
+    "training_seed": 42,
+    "save_interval": 4,
+    "log_interval": 2
+  },
+  "input_hashes": {
+    "data/workload/alibaba_2020_dataset/result_df_full_year_2020.pkl": "3ba8a8e0067288f8d2542752a292f7da04cb79305689ba145cc6060e96cb7f2e",
+    "configs/dcs/dc_config.json": "b1675fbca01217565f469c1199584b88afcda2de8d8502cffcad19ae26b6ecd2",
+    "data/network_cost/aws_transmission_cost_matrix.csv": "96ed38224d68f7d1990de53d227fa4688277f81e8151623901b0b55093543e1d",
+    "data/carbon_intensity/US-CAL-CISO/2023/US-CAL-CISO_2023_hourly.csv": "d06d8171b696a5cfc78e5a654009f343ee73bcc1849dd9ffc56cdd17b2f6bbd4",
+    "data/electricity_prices/standardized/US-CAL-CISO/2023/US-CAL-CISO_electricity_prices_2023.csv": "031f729c7354d56ea79eca169da7f875b8513572ac5704dc2d60814072cf5592",
+    "data/weather/US-CAL-CISO/2023.json": "d183ba0333304aa5d7d69cf0c52b85f3a7020e914b1462c3135422d83dc3e73b",
+    "data/carbon_intensity/DE-LU/2023/DE-LU_2023_hourly.csv": "870a3e500e130f8ef5c550d711864c31399b540ef30d8e69d16f4122e7fd487e",
+    "data/electricity_prices/standardized/DE-LU/2023/DE-LU_electricity_prices_2023.csv": "92009879f715c90f903b49521f3cf0d97677c0ca00c2b271f6b86b4f61bad64b",
+    "data/weather/DE-LU/2023.json": "8cbcb5482579889e7f93abcf74e80453b520e47dfc3b84c275d365ba39333089",
+    "data/carbon_intensity/CL-SIC/2023/CL-SIC_2023_hourly.csv": "bc7ea01f491a661a36f35fb4361fde79ad665da26543dc3017ace9b1c430c31b",
+    "data/electricity_prices/standardized/CL-SIC/2023/CL-SIC_electricity_prices_2023.csv": "9dc33d953c051cef6307bdbba9e1e1f1a5216f040c982f2af6264c33601e95c0",
+    "data/weather/CL-SIC/2023.json": "8744eddffa261d078ca54487e08cb7d846d17607490393c25bb5ef662f457d0e",
+    "data/carbon_intensity/SG/2023/SG_2023_hourly.csv": "555a0cb9852b98fad3443a5192903c18b42a07c2eb0f76bc72a20db5cec7fac4",
+    "data/electricity_prices/standardized/SG/2023/SG_electricity_prices_2023.csv": "e7537547f5d3ed18f58535c284908e423f38fa1253529e7305081fb4522bf630",
+    "data/weather/SG/2023.json": "6ca110ba97eda2c261328b7e49376f5be9d12a6a07835065a59f4e97856fd654",
+    "data/carbon_intensity/AU-NSW/2023/AU-NSW_2023_hourly.csv": "62d10fe5804f2e745f228a5f69142717c33fa322ae4916e5ebdf446c535175dd",
+    "data/electricity_prices/standardized/AU-NSW/2023/AU-NSW_electricity_prices_2023.csv": "34f3993be153f3915b04589cc96cf9bfe11321e54f3c7df52799a48f999917c3",
+    "data/weather/AU-NSW/2023.json": "391576a25f1a8ac480a0fb84927a3888955d7722676e51e779e6f149f8c80c7a"
+  },
+  "git": {
+    "baseline_commit": "c79e8f78a9229b904f123276168a9ef7746177fd",
+    "commit": "fa531a5503abbdde2e04266aa08c9e0def9bb8e7",
+    "branch": "experiment/table3-sac-reproduction",
+    "dirty": false
+  },
+  "runtime": {
+    "python": "3.12.3",
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "processor": "x86_64",
+    "architecture": "x86_64",
+    "logical_cpu_count": 16,
+    "numpy": "2.2.6",
+    "dependencies": {
+      "cloudpickle": "3.1.1",
+      "gymnasium": "1.1.1",
+      "pandas": "2.3.3",
+      "psychrolib": "2.5.0",
+      "tensorboard": "2.19.0",
+      "PyYAML": "6.0.2"
+    },
+    "torch": "2.7.1+cpu",
+    "cuda": null,
+    "cudnn": null,
+    "device": "cpu",
+    "cuda_devices": [],
+    "torch_threads": 1,
+    "torch_interop_threads": 8,
+    "deterministic_algorithms": true,
+    "cudnn_deterministic": true,
+    "cudnn_benchmark": false
+  },
+  "random_configuration": {
+    "training_seed": 42,
+    "reset_seed_rule": "initial seed; subsequent resets use seed plus zero-based terminal global step",
+    "python_numpy_torch_cuda_seeded": true
+  },
+  "replay_reward_preprocessing": "baseline running scalar mean and variance, updated before normalization",
+  "replay_target_semantics": "baseline same-position next task bootstrap with fixed alpha",
+  "started_at_utc": "2026-11-18T12:41:28.480718+00:00",
+  "initial_reset": {
+    "reset_seed": 42,
+    "episode_start_utc": "2023-06-25T18:00:00+00:00",
+    "episode_end_utc": "2023-07-25T18:00:00+00:00",
+    "workload_start_utc": "2020-06-25T18:00:00+00:00",
+    "dc_source_indices": {
+      "DE-LU": {
+        "carbon_15m": 16872,
+        "electricity_price_15m": 16872,
+        "weather_local_15m": 16876,
+        "weather_roll_days": 1,
+        "weather_source_local_15m": 16780
+      },
+      "AU-NSW": {
+        "carbon_15m": 16872,
+        "electricity_price_15m": 16872,
+        "weather_local_15m": 16916,
+        "weather_roll_days": 1,
+        "weather_source_local_15m": 16820
+      },
+      "CL-SIC": {
+        "carbon_15m": 16872,
+        "electricity_price_15m": 16872,
+        "weather_local_15m": 16852,
+        "weather_roll_days": 1,
+        "weather_source_local_15m": 16756
+      },
+      "US-CAL-CISO": {
+        "carbon_15m": 16872,
+        "electricity_price_15m": 16872,
+        "weather_local_15m": 16844,
+        "weather_roll_days": 1,
+        "weather_source_local_15m": 16748
+      },
+      "SG": {
+        "carbon_15m": 16872,
+        "electricity_price_15m": 16872,
+        "weather_local_15m": 16904,
+        "weather_roll_days": 1,
+        "weather_source_local_15m": 16808
+      }
+    }
+  },
+  "status": "complete",
+  "global_step": 8,
+  "episodes_completed": 0,
+  "current_episode_reset": {
+    "reset_seed": 42,
+    "episode_start_utc": "2023-06-25T18:00:00+00:00",
+    "episode_end_utc": "2023-07-25T18:00:00+00:00",
+    "workload_start_utc": "2020-06-25T18:00:00+00:00",
+    "dc_source_indices": {
+      "DE-LU": {
+        "carbon_15m": 16872,
+        "electricity_price_15m": 16872,
+        "weather_local_15m": 16876,
+        "weather_roll_days": 1,
+        "weather_source_local_15m": 16780
+      },
+      "AU-NSW": {
+        "carbon_15m": 16872,
+        "electricity_price_15m": 16872,
+        "weather_local_15m": 16916,
+        "weather_roll_days": 1,
+        "weather_source_local_15m": 16820
+      },
+      "CL-SIC": {
+        "carbon_15m": 16872,
+        "electricity_price_15m": 16872,
+        "weather_local_15m": 16852,
+        "weather_roll_days": 1,
+        "weather_source_local_15m": 16756
+      },
+      "US-CAL-CISO": {
+        "carbon_15m": 16872,
+        "electricity_price_15m": 16872,
+        "weather_local_15m": 16844,
+        "weather_roll_days": 1,
+        "weather_source_local_15m": 16748
+      },
+      "SG": {
+        "carbon_15m": 16872,
+        "electricity_price_15m": 16872,
+        "weather_local_15m": 16904,
+        "weather_roll_days": 1,
+        "weather_source_local_15m": 16808
+      }
+    }
+  },
+  "critic_updates": 5,
+  "actor_updates": 2,
+  "overflow_steps": 0,
+  "max_tasks_seen": 94,
+  "best_checkpoint": null,
+  "ended_at_utc": "2026-11-18T12:41:50.161183+00:00",
+  "final_checkpoint": "checkpoints/final.pt",
+  "final_checkpoint_sha256": "ce83c9a921186923cff441838b014b05f85b7bba182d6fa00afcca82d9a7d0b4"
+}

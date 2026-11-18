@@ -1,0 +1,64 @@
+.......................                                                  [100%]
+=============================== warnings summary ===============================
+tests/test_repro_table3_evaluation.py::test_plot_cli_exports_training_and_evaluation_from_csv
+  /var/tmp/table3-sac-validation.DCpQTQll/venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:64: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+    prop = Group((name + Suppress("=") + comma_separated(value)) | oneOf(_CONSTANTS))
+
+tests/test_repro_table3_evaluation.py::test_plot_cli_exports_training_and_evaluation_from_csv
+tests/test_repro_table3_evaluation.py::test_plot_cli_exports_training_and_evaluation_from_csv
+tests/test_repro_table3_evaluation.py::test_plot_cli_exports_training_and_evaluation_from_csv
+tests/test_repro_table3_evaluation.py::test_plot_cli_exports_training_and_evaluation_from_csv
+tests/test_repro_table3_evaluation.py::test_plot_cli_exports_training_and_evaluation_from_csv
+tests/test_repro_table3_evaluation.py::test_plot_cli_exports_training_and_evaluation_from_csv
+  /var/tmp/table3-sac-validation.DCpQTQll/venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+    parse = parser.parseString(pattern)
+
+tests/test_repro_table3_evaluation.py::test_plot_cli_exports_training_and_evaluation_from_csv
+tests/test_repro_table3_evaluation.py::test_plot_cli_exports_training_and_evaluation_from_csv
+tests/test_repro_table3_evaluation.py::test_plot_cli_exports_training_and_evaluation_from_csv
+tests/test_repro_table3_evaluation.py::test_plot_cli_exports_training_and_evaluation_from_csv
+tests/test_repro_table3_evaluation.py::test_plot_cli_exports_training_and_evaluation_from_csv
+tests/test_repro_table3_evaluation.py::test_plot_cli_exports_training_and_evaluation_from_csv
+  /var/tmp/table3-sac-validation.DCpQTQll/venv/lib/python3.12/site-packages/matplotlib/_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+    parser.resetCache()
+
+tests/test_repro_table3_evaluation.py::test_plot_cli_exports_training_and_evaluation_from_csv
+  /var/tmp/table3-sac-validation.DCpQTQll/venv/lib/python3.12/site-packages/matplotlib/_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+    ParserElement.enablePackrat()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+23 passed, 14 warnings in 16.03s
+TaskSchedulingEnv initialized with single_action_mode: False, aggregation: average, disable_defer_action: False
+train preflight passed | output=/var/tmp/table3-sac-repo.8dB6r7sD/outputs/table3_sac_smoke/ubuntu | free GiB=952.18
+device=cpu | checked 18 inputs
+train preflight passed | output=/var/tmp/table3-sac-repo.8dB6r7sD/outputs/table3_sac_smoke/ubuntu | free GiB=952.05
+device=cpu | checked 18 inputs
+TaskSchedulingEnv initialized with single_action_mode: False, aggregation: average, disable_defer_action: False
+step 2/8  mean reward -12.2923  critic updates 0  replay overflow steps 0
+step 4/8  mean reward -13.7711  critic updates 1  replay overflow steps 0
+Training paused at 5; artifacts in /var/tmp/table3-sac-repo.8dB6r7sD/outputs/table3_sac_smoke/ubuntu
+train preflight passed | output=/var/tmp/table3-sac-repo.8dB6r7sD/outputs/table3_sac_smoke/ubuntu | free GiB=952.03
+device=cpu | checked 18 inputs
+TaskSchedulingEnv initialized with single_action_mode: False, aggregation: average, disable_defer_action: False
+step 6/8  mean reward -19.4015  critic updates 3  replay overflow steps 0
+step 8/8  mean reward -23.6457  critic updates 5  replay overflow steps 0
+Training complete at 8; artifacts in /var/tmp/table3-sac-repo.8dB6r7sD/outputs/table3_sac_smoke/ubuntu
+eval preflight passed | output=/var/tmp/table3-sac-repo.8dB6r7sD/outputs/table3_sac_smoke/ubuntu | free GiB=952.03
+device=cpu | checked 18 inputs
+Evaluating geo_only, seed 0, 8 steps
+TaskSchedulingEnv initialized with single_action_mode: False, aggregation: average, disable_defer_action: False
+Evaluating geo_only, seed 1, 8 steps
+TaskSchedulingEnv initialized with single_action_mode: False, aggregation: average, disable_defer_action: False
+Evaluating time_only, seed 0, 8 steps
+TaskSchedulingEnv initialized with single_action_mode: False, aggregation: average, disable_defer_action: False
+Evaluating time_only, seed 1, 8 steps
+TaskSchedulingEnv initialized with single_action_mode: False, aggregation: average, disable_defer_action: False
+Evaluating geo_time, seed 0, 8 steps
+TaskSchedulingEnv initialized with single_action_mode: False, aggregation: average, disable_defer_action: False
+Evaluating geo_time, seed 1, 8 steps
+TaskSchedulingEnv initialized with single_action_mode: False, aggregation: average, disable_defer_action: False
+Evaluation outputs saved to /var/tmp/table3-sac-repo.8dB6r7sD/outputs/table3_sac_smoke/ubuntu
+plot preflight passed | output=/var/tmp/table3-sac-repo.8dB6r7sD/outputs/table3_sac_smoke/ubuntu | free GiB=952.03
+Figures saved to outputs/table3_sac_smoke/ubuntu/figures
+Verified counts: 8 training steps, 5 critic updates, 6 matched eval runs, 14 PNG/PDF pairs
+Ubuntu smoke output: /mnt/e/a-Geo-Dccluster-low-carbon/Geo-Dccluster-low-carbon-table3-sac/outputs/table3_sac_smoke/verified.1PawkcQg

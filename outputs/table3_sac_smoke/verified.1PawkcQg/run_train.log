@@ -1,0 +1,12 @@
+train preflight passed | output=/var/tmp/table3-sac-repo.8dB6r7sD/outputs/table3_sac_smoke/ubuntu | free GiB=952.05
+device=cpu | checked 18 inputs
+TaskSchedulingEnv initialized with single_action_mode: False, aggregation: average, disable_defer_action: False
+step 2/8  mean reward -12.2923  critic updates 0  replay overflow steps 0
+step 4/8  mean reward -13.7711  critic updates 1  replay overflow steps 0
+Training paused at 5; artifacts in /var/tmp/table3-sac-repo.8dB6r7sD/outputs/table3_sac_smoke/ubuntu
+train preflight passed | output=/var/tmp/table3-sac-repo.8dB6r7sD/outputs/table3_sac_smoke/ubuntu | free GiB=952.03
+device=cpu | checked 18 inputs
+TaskSchedulingEnv initialized with single_action_mode: False, aggregation: average, disable_defer_action: False
+step 6/8  mean reward -19.4015  critic updates 3  replay overflow steps 0
+step 8/8  mean reward -23.6457  critic updates 5  replay overflow steps 0
+Training complete at 8; artifacts in /var/tmp/table3-sac-repo.8dB6r7sD/outputs/table3_sac_smoke/ubuntu

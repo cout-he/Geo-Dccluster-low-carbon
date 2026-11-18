@@ -1,0 +1,16 @@
+simulation:
+  year: 2023
+  month: 7
+  init_day: 1
+  init_hour: 0
+  duration_days: 30
+  timestep_minutes: 15
+  workload_path: data/workload/alibaba_2020_dataset/result_df_full_year_2020.pkl
+  cloud_provider: aws
+  shuffle_datacenters: false
+  strategy: manual_rl
+  single_action_mode: false
+  disable_defer_action: false
+  use_tensorboard: false
+  align_simulation_time: true
+  randomize_episode_start: false
