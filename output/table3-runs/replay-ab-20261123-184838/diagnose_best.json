@@ -1,0 +1,590 @@
+{
+  "steps_per_seed": 2880,
+  "device": "cuda",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "baseline": {
+    "path": "/home/wenjiehe/table3-runs/replay-ab-20261123-184838/baseline/checkpoints/best.pt",
+    "sha256": "b760f8f5aeaf9ef277b9bc07f854bd8fbe9108db8afd340eb9882ae54c4a3201",
+    "training_step": 285120,
+    "training_run_id": "49c8a978c01f4a2984ea263e8f48fc7f",
+    "training_git": {
+      "baseline_commit": "c79e8f78a9229b904f123276168a9ef7746177fd",
+      "commit": "7b88dce19811c6563ad4a07205007f721b0fa09f",
+      "branch": "HEAD",
+      "dirty": false
+    },
+    "replay_target_semantics": "baseline same-position next task bootstrap with fixed alpha",
+    "continuing_tasks": null,
+    "matched_successors": null,
+    "evaluation_by_seed": {
+      "0": {
+        "arrival_stream_sha256": "e7f0fdd5bc88cf1f6e549fc275a9083fa116306a30a735778519a630dea1987e",
+        "all": {
+          "decisions": 101564,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 1.389410622580334e-07,
+          "mean_p_defer": 1.3680148700133257e-12,
+          "effective_defer_rate": 0.0
+        },
+        "slack_below_step": {
+          "decisions": 27922,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 1.4461878495619468e-08,
+          "mean_p_defer": 5.179384892063416e-13,
+          "effective_defer_rate": 0.0
+        },
+        "slack_at_least_step": {
+          "decisions": 73642,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 1.2447918376241244e-07,
+          "mean_p_defer": 1.6903286679125016e-12,
+          "effective_defer_rate": 0.0
+        }
+      },
+      "1": {
+        "arrival_stream_sha256": "9032e9dd3234e9f1815619fa9d9813c92b24144b2314ee76a6efe75e859d8d90",
+        "all": {
+          "decisions": 101564,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 1.6149219952731717e-07,
+          "mean_p_defer": 1.5900535576318102e-12,
+          "effective_defer_rate": 0.0
+        },
+        "slack_below_step": {
+          "decisions": 27922,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 1.1831366379611291e-08,
+          "mean_p_defer": 4.237291877233469e-13,
+          "effective_defer_rate": 0.0
+        },
+        "slack_at_least_step": {
+          "decisions": 73642,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 1.4966083314770665e-07,
+          "mean_p_defer": 2.0322755105470606e-12,
+          "effective_defer_rate": 0.0
+        }
+      },
+      "2": {
+        "arrival_stream_sha256": "b172920855ae5248d8ae3c99b2f13694b46326246519fe0eaa7e98f62753b4dc",
+        "all": {
+          "decisions": 101564,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 1.4065577074856592e-07,
+          "mean_p_defer": 1.384897904262986e-12,
+          "effective_defer_rate": 0.0
+        },
+        "slack_below_step": {
+          "decisions": 27922,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 1.265844594063857e-08,
+          "mean_p_defer": 4.533502593166166e-13,
+          "effective_defer_rate": 0.0
+        },
+        "slack_at_least_step": {
+          "decisions": 73642,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 1.2799732480792842e-07,
+          "mean_p_defer": 1.738102235245219e-12,
+          "effective_defer_rate": 0.0
+        }
+      },
+      "3": {
+        "arrival_stream_sha256": "aec40994c2b246b1d85a028336b44caaec8b91b33f4574c3355c73a736a094b1",
+        "all": {
+          "decisions": 101564,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 1.5570660317299896e-07,
+          "mean_p_defer": 1.533088527165127e-12,
+          "effective_defer_rate": 0.0
+        },
+        "slack_below_step": {
+          "decisions": 27922,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 1.3029824785015081e-08,
+          "mean_p_defer": 4.66650841093585e-13,
+          "effective_defer_rate": 0.0
+        },
+        "slack_at_least_step": {
+          "decisions": 73642,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 1.4267677838798404e-07,
+          "mean_p_defer": 1.937437581651558e-12,
+          "effective_defer_rate": 0.0
+        }
+      },
+      "4": {
+        "arrival_stream_sha256": "c772e2690d2d7c9c9850bfc3602d6bd0c82cd6c4f11bf5c4139808acac7ff8d2",
+        "all": {
+          "decisions": 101564,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 1.5296932479343118e-07,
+          "mean_p_defer": 1.5061372611696188e-12,
+          "effective_defer_rate": 0.0
+        },
+        "slack_below_step": {
+          "decisions": 27922,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 1.0045623460347809e-08,
+          "mean_p_defer": 3.5977449539244355e-13,
+          "effective_defer_rate": 0.0
+        },
+        "slack_at_least_step": {
+          "decisions": 73642,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 1.4292370133308318e-07,
+          "mean_p_defer": 1.940790599563879e-12,
+          "effective_defer_rate": 0.0
+        }
+      },
+      "5": {
+        "arrival_stream_sha256": "a8edce519a26dd1de09cb6206ca89ae87eef4b67168b0780af1868bc5eb3a28d",
+        "all": {
+          "decisions": 101564,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 1.395692037531642e-07,
+          "mean_p_defer": 1.374199556468475e-12,
+          "effective_defer_rate": 0.0
+        },
+        "slack_below_step": {
+          "decisions": 27922,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 1.105546017784239e-08,
+          "mean_p_defer": 3.9594084155298296e-13,
+          "effective_defer_rate": 0.0
+        },
+        "slack_at_least_step": {
+          "decisions": 73642,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 1.2851374357532312e-07,
+          "mean_p_defer": 1.7451147928535771e-12,
+          "effective_defer_rate": 0.0
+        }
+      },
+      "6": {
+        "arrival_stream_sha256": "e6b69365264e4f1b0902e985b6af85c81027ba44916658b88196b55386085aec",
+        "all": {
+          "decisions": 101564,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 1.7275058852652227e-07,
+          "mean_p_defer": 1.7009037506057487e-12,
+          "effective_defer_rate": 0.0
+        },
+        "slack_below_step": {
+          "decisions": 27922,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 1.0718789854126192e-08,
+          "mean_p_defer": 3.838833125895778e-13,
+          "effective_defer_rate": 0.0
+        },
+        "slack_at_least_step": {
+          "decisions": 73642,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 1.6203179867239772e-07,
+          "mean_p_defer": 2.2002634185980515e-12,
+          "effective_defer_rate": 0.0
+        }
+      },
+      "7": {
+        "arrival_stream_sha256": "48678ed630518354c2b2354a80b9016c24e30cd57ccd0c8f522eb16d5556505c",
+        "all": {
+          "decisions": 101564,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 1.7313644744723136e-07,
+          "mean_p_defer": 1.7047029207911401e-12,
+          "effective_defer_rate": 0.0
+        },
+        "slack_below_step": {
+          "decisions": 27922,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 1.7504799654380017e-08,
+          "mean_p_defer": 6.269178301833686e-13,
+          "effective_defer_rate": 0.0
+        },
+        "slack_at_least_step": {
+          "decisions": 73642,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 1.5563164779285232e-07,
+          "mean_p_defer": 2.113354441661719e-12,
+          "effective_defer_rate": 0.0
+        }
+      },
+      "8": {
+        "arrival_stream_sha256": "acdaffb9835242913146fe14066c0d019d0899bf1971416571d0288ec178913b",
+        "all": {
+          "decisions": 101564,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 1.6194785999780278e-07,
+          "mean_p_defer": 1.5945399944646014e-12,
+          "effective_defer_rate": 0.0
+        },
+        "slack_below_step": {
+          "decisions": 27922,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 1.2177022318820398e-08,
+          "mean_p_defer": 4.3610852800015753e-13,
+          "effective_defer_rate": 0.0
+        },
+        "slack_at_least_step": {
+          "decisions": 73642,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 1.4977083767898255e-07,
+          "mean_p_defer": 2.033769284905116e-12,
+          "effective_defer_rate": 0.0
+        }
+      },
+      "9": {
+        "arrival_stream_sha256": "cc6bbd3ee58035bc90b8759e3b78e919d8006372aa71a237bdf7e851ed45ee7a",
+        "all": {
+          "decisions": 101564,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 1.6233607783944993e-07,
+          "mean_p_defer": 1.5983623906054303e-12,
+          "effective_defer_rate": 0.0
+        },
+        "slack_below_step": {
+          "decisions": 27922,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 1.3608203696633569e-08,
+          "mean_p_defer": 4.873649343397167e-13,
+          "effective_defer_rate": 0.0
+        },
+        "slack_at_least_step": {
+          "decisions": 73642,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 1.4872787414281754e-07,
+          "mean_p_defer": 2.0196066666143986e-12,
+          "effective_defer_rate": 0.0
+        }
+      }
+    }
+  },
+  "fixed": {
+    "path": "/home/wenjiehe/table3-runs/replay-ab-20261123-184838/fixed/checkpoints/best.pt",
+    "sha256": "dfd99f318ad94d25d067eac9fc5f81f6664e75e5e2e86c86f0ff7964f251f0b0",
+    "training_step": 279360,
+    "training_run_id": "e228d2a131434e5b9663b440871d6494",
+    "training_git": {
+      "baseline_commit": "c79e8f78a9229b904f123276168a9ef7746177fd",
+      "commit": "fa3a848afdfd5493ef123dd979763fcc570b7d6f",
+      "branch": "HEAD",
+      "dirty": false
+    },
+    "replay_target_semantics": "same-task next decision bootstrap with fixed alpha",
+    "continuing_tasks": 8644,
+    "matched_successors": 8644,
+    "evaluation_by_seed": {
+      "0": {
+        "arrival_stream_sha256": "e7f0fdd5bc88cf1f6e549fc275a9083fa116306a30a735778519a630dea1987e",
+        "all": {
+          "decisions": 101564,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 4.3240629378427643e-07,
+          "mean_p_defer": 4.257476012999453e-12,
+          "effective_defer_rate": 0.0
+        },
+        "slack_below_step": {
+          "decisions": 27922,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 5.558274296250062e-08,
+          "mean_p_defer": 1.9906433264988404e-12,
+          "effective_defer_rate": 0.0
+        },
+        "slack_at_least_step": {
+          "decisions": 73642,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 3.7682355082177937e-07,
+          "mean_p_defer": 5.116965194071038e-12,
+          "effective_defer_rate": 0.0
+        }
+      },
+      "1": {
+        "arrival_stream_sha256": "9032e9dd3234e9f1815619fa9d9813c92b24144b2314ee76a6efe75e859d8d90",
+        "all": {
+          "decisions": 101564,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 4.486931255290708e-07,
+          "mean_p_defer": 4.4178362956271e-12,
+          "effective_defer_rate": 0.0
+        },
+        "slack_below_step": {
+          "decisions": 27922,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 5.341467355465053e-08,
+          "mean_p_defer": 1.912995972876246e-12,
+          "effective_defer_rate": 0.0
+        },
+        "slack_at_least_step": {
+          "decisions": 73642,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 3.9527845197442466e-07,
+          "mean_p_defer": 5.3675681265368225e-12,
+          "effective_defer_rate": 0.0
+        }
+      },
+      "2": {
+        "arrival_stream_sha256": "b172920855ae5248d8ae3c99b2f13694b46326246519fe0eaa7e98f62753b4dc",
+        "all": {
+          "decisions": 101564,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 4.335042773100483e-07,
+          "mean_p_defer": 4.268286768048209e-12,
+          "effective_defer_rate": 0.0
+        },
+        "slack_below_step": {
+          "decisions": 27922,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 5.230971764941008e-08,
+          "mean_p_defer": 1.873423023043123e-12,
+          "effective_defer_rate": 0.0
+        },
+        "slack_at_least_step": {
+          "decisions": 73642,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 3.8119455966064156e-07,
+          "mean_p_defer": 5.176320030154553e-12,
+          "effective_defer_rate": 0.0
+        }
+      },
+      "3": {
+        "arrival_stream_sha256": "aec40994c2b246b1d85a028336b44caaec8b91b33f4574c3355c73a736a094b1",
+        "all": {
+          "decisions": 101564,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 4.468048469294129e-07,
+          "mean_p_defer": 4.39924428862011e-12,
+          "effective_defer_rate": 0.0
+        },
+        "slack_below_step": {
+          "decisions": 27922,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 5.7304372514001166e-08,
+          "mean_p_defer": 2.052301859250812e-12,
+          "effective_defer_rate": 0.0
+        },
+        "slack_at_least_step": {
+          "decisions": 73642,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 3.895004744154119e-07,
+          "mean_p_defer": 5.289107770231823e-12,
+          "effective_defer_rate": 0.0
+        }
+      },
+      "4": {
+        "arrival_stream_sha256": "c772e2690d2d7c9c9850bfc3602d6bd0c82cd6c4f11bf5c4139808acac7ff8d2",
+        "all": {
+          "decisions": 101564,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 4.329533242292576e-07,
+          "mean_p_defer": 4.26286207937121e-12,
+          "effective_defer_rate": 0.0
+        },
+        "slack_below_step": {
+          "decisions": 27922,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 5.118599380982673e-08,
+          "mean_p_defer": 1.833177917406587e-12,
+          "effective_defer_rate": 0.0
+        },
+        "slack_at_least_step": {
+          "decisions": 73642,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 3.817673304194337e-07,
+          "mean_p_defer": 5.184097803148117e-12,
+          "effective_defer_rate": 0.0
+        }
+      },
+      "5": {
+        "arrival_stream_sha256": "a8edce519a26dd1de09cb6206ca89ae87eef4b67168b0780af1868bc5eb3a28d",
+        "all": {
+          "decisions": 101564,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 4.3467451082167687e-07,
+          "mean_p_defer": 4.279808897066646e-12,
+          "effective_defer_rate": 0.0
+        },
+        "slack_below_step": {
+          "decisions": 27922,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 5.195944034098279e-08,
+          "mean_p_defer": 1.8608781728021914e-12,
+          "effective_defer_rate": 0.0
+        },
+        "slack_at_least_step": {
+          "decisions": 73642,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 3.827150704806978e-07,
+          "mean_p_defer": 5.196967362112623e-12,
+          "effective_defer_rate": 0.0
+        }
+      },
+      "6": {
+        "arrival_stream_sha256": "e6b69365264e4f1b0902e985b6af85c81027ba44916658b88196b55386085aec",
+        "all": {
+          "decisions": 101564,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 4.4373561827019765e-07,
+          "mean_p_defer": 4.369024637373456e-12,
+          "effective_defer_rate": 0.0
+        },
+        "slack_below_step": {
+          "decisions": 27922,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 5.151803980159003e-08,
+          "mean_p_defer": 1.845069830298332e-12,
+          "effective_defer_rate": 0.0
+        },
+        "slack_at_least_step": {
+          "decisions": 73642,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 3.922175784686107e-07,
+          "mean_p_defer": 5.326003890016712e-12,
+          "effective_defer_rate": 0.0
+        }
+      },
+      "7": {
+        "arrival_stream_sha256": "48678ed630518354c2b2354a80b9016c24e30cd57ccd0c8f522eb16d5556505c",
+        "all": {
+          "decisions": 101564,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 4.3820219177089797e-07,
+          "mean_p_defer": 4.3145424734246185e-12,
+          "effective_defer_rate": 0.0
+        },
+        "slack_below_step": {
+          "decisions": 27922,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 5.3074341091577896e-08,
+          "mean_p_defer": 1.9008072878582442e-12,
+          "effective_defer_rate": 0.0
+        },
+        "slack_at_least_step": {
+          "decisions": 73642,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 3.8512785067931703e-07,
+          "mean_p_defer": 5.2297310051236665e-12,
+          "effective_defer_rate": 0.0
+        }
+      },
+      "8": {
+        "arrival_stream_sha256": "acdaffb9835242913146fe14066c0d019d0899bf1971416571d0288ec178913b",
+        "all": {
+          "decisions": 101564,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 4.5138472012270954e-07,
+          "mean_p_defer": 4.44433775868132e-12,
+          "effective_defer_rate": 0.0
+        },
+        "slack_below_step": {
+          "decisions": 27922,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 5.286377439220915e-08,
+          "mean_p_defer": 1.893266040835511e-12,
+          "effective_defer_rate": 0.0
+        },
+        "slack_at_least_step": {
+          "decisions": 73642,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 3.9852094573050423e-07,
+          "mean_p_defer": 5.4115986221246605e-12,
+          "effective_defer_rate": 0.0
+        }
+      },
+      "9": {
+        "arrival_stream_sha256": "cc6bbd3ee58035bc90b8759e3b78e919d8006372aa71a237bdf7e851ed45ee7a",
+        "all": {
+          "decisions": 101564,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 4.5688308939875323e-07,
+          "mean_p_defer": 4.4984747489145095e-12,
+          "effective_defer_rate": 0.0
+        },
+        "slack_below_step": {
+          "decisions": 27922,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 5.509892338193451e-08,
+          "mean_p_defer": 1.9733157861877554e-12,
+          "effective_defer_rate": 0.0
+        },
+        "slack_at_least_step": {
+          "decisions": 73642,
+          "raw_defer": 0,
+          "effective_defer": 0,
+          "sum_p_defer": 4.017841660168171e-07,
+          "mean_p_defer": 5.455910567567653e-12,
+          "effective_defer_rate": 0.0
+        }
+      }
+    }
+  }
+}
