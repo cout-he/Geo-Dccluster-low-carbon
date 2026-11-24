@@ -1,0 +1,257 @@
+{
+  "config_fingerprint": "b1884082863e32d3b6fc8bdc1d2c5e423ae61d476c08d5deb94f7278082741a9",
+  "reset": {
+    "reset_seed": 4,
+    "episode_start_utc": "2023-07-01T00:00:00+00:00",
+    "episode_end_utc": "2023-07-31T00:00:00+00:00",
+    "workload_start_utc": "2020-07-01T00:00:00+00:00",
+    "dc_source_indices": {
+      "US-CAL-CISO": {
+        "carbon_15m": 17376,
+        "electricity_price_15m": 17376,
+        "weather_local_15m": 17348,
+        "weather_roll_days": 10,
+        "weather_source_local_15m": 16388
+      },
+      "DE-LU": {
+        "carbon_15m": 17376,
+        "electricity_price_15m": 17376,
+        "weather_local_15m": 17380,
+        "weather_roll_days": 10,
+        "weather_source_local_15m": 16420
+      },
+      "CL-SIC": {
+        "carbon_15m": 17376,
+        "electricity_price_15m": 17376,
+        "weather_local_15m": 17356,
+        "weather_roll_days": 10,
+        "weather_source_local_15m": 16396
+      },
+      "SG": {
+        "carbon_15m": 17376,
+        "electricity_price_15m": 17376,
+        "weather_local_15m": 17408,
+        "weather_roll_days": 10,
+        "weather_source_local_15m": 16448
+      },
+      "AU-NSW": {
+        "carbon_15m": 17376,
+        "electricity_price_15m": 17376,
+        "weather_local_15m": 17420,
+        "weather_roll_days": 10,
+        "weather_source_local_15m": 16460
+      }
+    }
+  },
+  "summary": {
+    "mode": "lowest_carbon",
+    "seed": 4,
+    "steps": 2880,
+    "total_cost_usd": 428972.31332815887,
+    "total_co2_t": 1303.5125309228044,
+    "total_energy_mwh": 4766.077752612937,
+    "total_water_m3": 31859.5284837,
+    "sla_violation_pct_finished": 1.411035680454689,
+    "avg_cpu_util_pct": 2.9803728998030743,
+    "avg_gpu_util_pct": 12.687108546270833,
+    "transmission_cost_usd": 19255.260803117082,
+    "tasks_deferred": 0,
+    "unfinished_tasks": 220,
+    "electricity_cost_usd": 409717.05252504174,
+    "dc_carbon_kg": 1298930.0286713296,
+    "transmission_carbon_kg": 4582.502251474723,
+    "dc_energy_kwh": 4751862.185121946,
+    "transmission_energy_kwh": 14215.567490991141,
+    "new_arrivals": 101564,
+    "tasks_finished": 101344,
+    "sla_met": 99914,
+    "sla_violated": 1430,
+    "unique_tasks_deferred": 0,
+    "cross_dc_assignments": 75988,
+    "cross_dc_started": 75988,
+    "deadline_overrides": 0
+  },
+  "arrival_stream_sha256": "c772e2690d2d7c9c9850bfc3602d6bd0c82cd6c4f11bf5c4139808acac7ff8d2",
+  "last_step_utc": "2023-07-30T23:45:00+00:00",
+  "actions": [
+    {
+      "mode": "lowest_carbon",
+      "seed": 4,
+      "kind": "raw_action",
+      "action": 0,
+      "count": 0
+    },
+    {
+      "mode": "lowest_carbon",
+      "seed": 4,
+      "kind": "raw_action",
+      "action": 1,
+      "count": 39823
+    },
+    {
+      "mode": "lowest_carbon",
+      "seed": 4,
+      "kind": "raw_action",
+      "action": 2,
+      "count": 40454
+    },
+    {
+      "mode": "lowest_carbon",
+      "seed": 4,
+      "kind": "raw_action",
+      "action": 3,
+      "count": 21287
+    },
+    {
+      "mode": "lowest_carbon",
+      "seed": 4,
+      "kind": "raw_action",
+      "action": 4,
+      "count": 0
+    },
+    {
+      "mode": "lowest_carbon",
+      "seed": 4,
+      "kind": "raw_action",
+      "action": 5,
+      "count": 0
+    },
+    {
+      "mode": "lowest_carbon",
+      "seed": 4,
+      "kind": "policy_action",
+      "action": 0,
+      "count": 0
+    },
+    {
+      "mode": "lowest_carbon",
+      "seed": 4,
+      "kind": "policy_action",
+      "action": 1,
+      "count": 39823
+    },
+    {
+      "mode": "lowest_carbon",
+      "seed": 4,
+      "kind": "policy_action",
+      "action": 2,
+      "count": 40454
+    },
+    {
+      "mode": "lowest_carbon",
+      "seed": 4,
+      "kind": "policy_action",
+      "action": 3,
+      "count": 21287
+    },
+    {
+      "mode": "lowest_carbon",
+      "seed": 4,
+      "kind": "policy_action",
+      "action": 4,
+      "count": 0
+    },
+    {
+      "mode": "lowest_carbon",
+      "seed": 4,
+      "kind": "policy_action",
+      "action": 5,
+      "count": 0
+    },
+    {
+      "mode": "lowest_carbon",
+      "seed": 4,
+      "kind": "effective_action",
+      "action": 0,
+      "count": 0
+    },
+    {
+      "mode": "lowest_carbon",
+      "seed": 4,
+      "kind": "effective_action",
+      "action": 1,
+      "count": 39823
+    },
+    {
+      "mode": "lowest_carbon",
+      "seed": 4,
+      "kind": "effective_action",
+      "action": 2,
+      "count": 40454
+    },
+    {
+      "mode": "lowest_carbon",
+      "seed": 4,
+      "kind": "effective_action",
+      "action": 3,
+      "count": 21287
+    },
+    {
+      "mode": "lowest_carbon",
+      "seed": 4,
+      "kind": "effective_action",
+      "action": 4,
+      "count": 0
+    },
+    {
+      "mode": "lowest_carbon",
+      "seed": 4,
+      "kind": "effective_action",
+      "action": 5,
+      "count": 0
+    },
+    {
+      "mode": "lowest_carbon",
+      "seed": 4,
+      "kind": "new_arrivals",
+      "action": null,
+      "count": 101564
+    },
+    {
+      "mode": "lowest_carbon",
+      "seed": 4,
+      "kind": "decisions",
+      "action": null,
+      "count": 101564
+    },
+    {
+      "mode": "lowest_carbon",
+      "seed": 4,
+      "kind": "defer_actions",
+      "action": null,
+      "count": 0
+    },
+    {
+      "mode": "lowest_carbon",
+      "seed": 4,
+      "kind": "unique_tasks_deferred",
+      "action": null,
+      "count": 0
+    },
+    {
+      "mode": "lowest_carbon",
+      "seed": 4,
+      "kind": "cross_dc_assignments",
+      "action": null,
+      "count": 75988
+    },
+    {
+      "mode": "lowest_carbon",
+      "seed": 4,
+      "kind": "deadline_overrides",
+      "action": null,
+      "count": 0
+    },
+    {
+      "mode": "lowest_carbon",
+      "seed": 4,
+      "kind": "cross_dc_started",
+      "action": null,
+      "count": 75988
+    }
+  ],
+  "output_sha256": {
+    "step_metrics.csv.gz": "88ca4c40d0e9b53cf96756c10dcb75717077fa7f9d8aa666efcf3ff2e284664d",
+    "dc_step_metrics.csv.gz": "3d8910e86934073af185c8dc0dba34bcb45dbc4ffddfb694c0e1fcf069726dab"
+  }
+}

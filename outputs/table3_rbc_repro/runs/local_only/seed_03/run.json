@@ -1,0 +1,257 @@
+{
+  "config_fingerprint": "b1884082863e32d3b6fc8bdc1d2c5e423ae61d476c08d5deb94f7278082741a9",
+  "reset": {
+    "reset_seed": 3,
+    "episode_start_utc": "2023-07-01T00:00:00+00:00",
+    "episode_end_utc": "2023-07-31T00:00:00+00:00",
+    "workload_start_utc": "2020-07-01T00:00:00+00:00",
+    "dc_source_indices": {
+      "US-CAL-CISO": {
+        "carbon_15m": 17376,
+        "electricity_price_15m": 17376,
+        "weather_local_15m": 17348,
+        "weather_roll_days": 11,
+        "weather_source_local_15m": 16292
+      },
+      "DE-LU": {
+        "carbon_15m": 17376,
+        "electricity_price_15m": 17376,
+        "weather_local_15m": 17380,
+        "weather_roll_days": 11,
+        "weather_source_local_15m": 16324
+      },
+      "CL-SIC": {
+        "carbon_15m": 17376,
+        "electricity_price_15m": 17376,
+        "weather_local_15m": 17356,
+        "weather_roll_days": 11,
+        "weather_source_local_15m": 16300
+      },
+      "SG": {
+        "carbon_15m": 17376,
+        "electricity_price_15m": 17376,
+        "weather_local_15m": 17408,
+        "weather_roll_days": 11,
+        "weather_source_local_15m": 16352
+      },
+      "AU-NSW": {
+        "carbon_15m": 17376,
+        "electricity_price_15m": 17376,
+        "weather_local_15m": 17420,
+        "weather_roll_days": 11,
+        "weather_source_local_15m": 16364
+      }
+    }
+  },
+  "summary": {
+    "mode": "local_only",
+    "seed": 3,
+    "steps": 2880,
+    "total_cost_usd": 431521.8463952747,
+    "total_co2_t": 1380.805253565928,
+    "total_energy_mwh": 4733.66814250837,
+    "total_water_m3": 32203.2670015,
+    "sla_violation_pct_finished": 0.5180375749921061,
+    "avg_cpu_util_pct": 2.8893869524924205,
+    "avg_gpu_util_pct": 14.132586924093586,
+    "transmission_cost_usd": 0.0,
+    "tasks_deferred": 0,
+    "unfinished_tasks": 220,
+    "electricity_cost_usd": 431521.8463952747,
+    "dc_carbon_kg": 1380805.253565928,
+    "transmission_carbon_kg": 0.0,
+    "dc_energy_kwh": 4733668.14250837,
+    "transmission_energy_kwh": 0.0,
+    "new_arrivals": 101564,
+    "tasks_finished": 101344,
+    "sla_met": 100819,
+    "sla_violated": 525,
+    "unique_tasks_deferred": 0,
+    "cross_dc_assignments": 0,
+    "cross_dc_started": 0,
+    "deadline_overrides": 0
+  },
+  "arrival_stream_sha256": "aec40994c2b246b1d85a028336b44caaec8b91b33f4574c3355c73a736a094b1",
+  "last_step_utc": "2023-07-30T23:45:00+00:00",
+  "actions": [
+    {
+      "mode": "local_only",
+      "seed": 3,
+      "kind": "raw_action",
+      "action": 0,
+      "count": 0
+    },
+    {
+      "mode": "local_only",
+      "seed": 3,
+      "kind": "raw_action",
+      "action": 1,
+      "count": 18074
+    },
+    {
+      "mode": "local_only",
+      "seed": 3,
+      "kind": "raw_action",
+      "action": 2,
+      "count": 22356
+    },
+    {
+      "mode": "local_only",
+      "seed": 3,
+      "kind": "raw_action",
+      "action": 3,
+      "count": 19491
+    },
+    {
+      "mode": "local_only",
+      "seed": 3,
+      "kind": "raw_action",
+      "action": 4,
+      "count": 26385
+    },
+    {
+      "mode": "local_only",
+      "seed": 3,
+      "kind": "raw_action",
+      "action": 5,
+      "count": 15258
+    },
+    {
+      "mode": "local_only",
+      "seed": 3,
+      "kind": "policy_action",
+      "action": 0,
+      "count": 0
+    },
+    {
+      "mode": "local_only",
+      "seed": 3,
+      "kind": "policy_action",
+      "action": 1,
+      "count": 18074
+    },
+    {
+      "mode": "local_only",
+      "seed": 3,
+      "kind": "policy_action",
+      "action": 2,
+      "count": 22356
+    },
+    {
+      "mode": "local_only",
+      "seed": 3,
+      "kind": "policy_action",
+      "action": 3,
+      "count": 19491
+    },
+    {
+      "mode": "local_only",
+      "seed": 3,
+      "kind": "policy_action",
+      "action": 4,
+      "count": 26385
+    },
+    {
+      "mode": "local_only",
+      "seed": 3,
+      "kind": "policy_action",
+      "action": 5,
+      "count": 15258
+    },
+    {
+      "mode": "local_only",
+      "seed": 3,
+      "kind": "effective_action",
+      "action": 0,
+      "count": 0
+    },
+    {
+      "mode": "local_only",
+      "seed": 3,
+      "kind": "effective_action",
+      "action": 1,
+      "count": 18074
+    },
+    {
+      "mode": "local_only",
+      "seed": 3,
+      "kind": "effective_action",
+      "action": 2,
+      "count": 22356
+    },
+    {
+      "mode": "local_only",
+      "seed": 3,
+      "kind": "effective_action",
+      "action": 3,
+      "count": 19491
+    },
+    {
+      "mode": "local_only",
+      "seed": 3,
+      "kind": "effective_action",
+      "action": 4,
+      "count": 26385
+    },
+    {
+      "mode": "local_only",
+      "seed": 3,
+      "kind": "effective_action",
+      "action": 5,
+      "count": 15258
+    },
+    {
+      "mode": "local_only",
+      "seed": 3,
+      "kind": "new_arrivals",
+      "action": null,
+      "count": 101564
+    },
+    {
+      "mode": "local_only",
+      "seed": 3,
+      "kind": "decisions",
+      "action": null,
+      "count": 101564
+    },
+    {
+      "mode": "local_only",
+      "seed": 3,
+      "kind": "defer_actions",
+      "action": null,
+      "count": 0
+    },
+    {
+      "mode": "local_only",
+      "seed": 3,
+      "kind": "unique_tasks_deferred",
+      "action": null,
+      "count": 0
+    },
+    {
+      "mode": "local_only",
+      "seed": 3,
+      "kind": "cross_dc_assignments",
+      "action": null,
+      "count": 0
+    },
+    {
+      "mode": "local_only",
+      "seed": 3,
+      "kind": "deadline_overrides",
+      "action": null,
+      "count": 0
+    },
+    {
+      "mode": "local_only",
+      "seed": 3,
+      "kind": "cross_dc_started",
+      "action": null,
+      "count": 0
+    }
+  ],
+  "output_sha256": {
+    "step_metrics.csv.gz": "b37529f30457b707ab2f440af18d523084abf35f1437ed9a5d5f74a4bf1635ad",
+    "dc_step_metrics.csv.gz": "b8cd38c9c3aa35c5ae9c2370f80dcac002cd5ea2348611b9b63e3349b9f82f4b"
+  }
+}

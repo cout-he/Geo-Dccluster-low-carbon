@@ -1,0 +1,257 @@
+{
+  "config_fingerprint": "b1884082863e32d3b6fc8bdc1d2c5e423ae61d476c08d5deb94f7278082741a9",
+  "reset": {
+    "reset_seed": 9,
+    "episode_start_utc": "2023-07-01T00:00:00+00:00",
+    "episode_end_utc": "2023-07-31T00:00:00+00:00",
+    "workload_start_utc": "2020-07-01T00:00:00+00:00",
+    "dc_source_indices": {
+      "US-CAL-CISO": {
+        "carbon_15m": 17376,
+        "electricity_price_15m": 17376,
+        "weather_local_15m": 17348,
+        "weather_roll_days": 5,
+        "weather_source_local_15m": 16868
+      },
+      "DE-LU": {
+        "carbon_15m": 17376,
+        "electricity_price_15m": 17376,
+        "weather_local_15m": 17380,
+        "weather_roll_days": 5,
+        "weather_source_local_15m": 16900
+      },
+      "CL-SIC": {
+        "carbon_15m": 17376,
+        "electricity_price_15m": 17376,
+        "weather_local_15m": 17356,
+        "weather_roll_days": 5,
+        "weather_source_local_15m": 16876
+      },
+      "SG": {
+        "carbon_15m": 17376,
+        "electricity_price_15m": 17376,
+        "weather_local_15m": 17408,
+        "weather_roll_days": 5,
+        "weather_source_local_15m": 16928
+      },
+      "AU-NSW": {
+        "carbon_15m": 17376,
+        "electricity_price_15m": 17376,
+        "weather_local_15m": 17420,
+        "weather_roll_days": 5,
+        "weather_source_local_15m": 16940
+      }
+    }
+  },
+  "summary": {
+    "mode": "most_available",
+    "seed": 9,
+    "steps": 2880,
+    "total_cost_usd": 489849.4254995808,
+    "total_co2_t": 1417.5025931137961,
+    "total_energy_mwh": 5128.8026880642565,
+    "total_water_m3": 32053.2795168,
+    "sla_violation_pct_finished": 3.8009156930849386,
+    "avg_cpu_util_pct": 1.9934141589715622,
+    "avg_gpu_util_pct": 18.97737154983135,
+    "transmission_cost_usd": 16144.852307323215,
+    "tasks_deferred": 0,
+    "unfinished_tasks": 220,
+    "electricity_cost_usd": 473704.5731922576,
+    "dc_carbon_kg": 1412948.1363481067,
+    "transmission_carbon_kg": 4554.456765689428,
+    "dc_energy_kwh": 5113635.952129004,
+    "transmission_energy_kwh": 15166.73593525324,
+    "new_arrivals": 101564,
+    "tasks_finished": 101344,
+    "sla_met": 97492,
+    "sla_violated": 3852,
+    "unique_tasks_deferred": 0,
+    "cross_dc_assignments": 82261,
+    "cross_dc_started": 82261,
+    "deadline_overrides": 0
+  },
+  "arrival_stream_sha256": "cc6bbd3ee58035bc90b8759e3b78e919d8006372aa71a237bdf7e851ed45ee7a",
+  "last_step_utc": "2023-07-30T23:45:00+00:00",
+  "actions": [
+    {
+      "mode": "most_available",
+      "seed": 9,
+      "kind": "raw_action",
+      "action": 0,
+      "count": 0
+    },
+    {
+      "mode": "most_available",
+      "seed": 9,
+      "kind": "raw_action",
+      "action": 1,
+      "count": 0
+    },
+    {
+      "mode": "most_available",
+      "seed": 9,
+      "kind": "raw_action",
+      "action": 2,
+      "count": 17784
+    },
+    {
+      "mode": "most_available",
+      "seed": 9,
+      "kind": "raw_action",
+      "action": 3,
+      "count": 83008
+    },
+    {
+      "mode": "most_available",
+      "seed": 9,
+      "kind": "raw_action",
+      "action": 4,
+      "count": 772
+    },
+    {
+      "mode": "most_available",
+      "seed": 9,
+      "kind": "raw_action",
+      "action": 5,
+      "count": 0
+    },
+    {
+      "mode": "most_available",
+      "seed": 9,
+      "kind": "policy_action",
+      "action": 0,
+      "count": 0
+    },
+    {
+      "mode": "most_available",
+      "seed": 9,
+      "kind": "policy_action",
+      "action": 1,
+      "count": 0
+    },
+    {
+      "mode": "most_available",
+      "seed": 9,
+      "kind": "policy_action",
+      "action": 2,
+      "count": 17784
+    },
+    {
+      "mode": "most_available",
+      "seed": 9,
+      "kind": "policy_action",
+      "action": 3,
+      "count": 83008
+    },
+    {
+      "mode": "most_available",
+      "seed": 9,
+      "kind": "policy_action",
+      "action": 4,
+      "count": 772
+    },
+    {
+      "mode": "most_available",
+      "seed": 9,
+      "kind": "policy_action",
+      "action": 5,
+      "count": 0
+    },
+    {
+      "mode": "most_available",
+      "seed": 9,
+      "kind": "effective_action",
+      "action": 0,
+      "count": 0
+    },
+    {
+      "mode": "most_available",
+      "seed": 9,
+      "kind": "effective_action",
+      "action": 1,
+      "count": 0
+    },
+    {
+      "mode": "most_available",
+      "seed": 9,
+      "kind": "effective_action",
+      "action": 2,
+      "count": 17784
+    },
+    {
+      "mode": "most_available",
+      "seed": 9,
+      "kind": "effective_action",
+      "action": 3,
+      "count": 83008
+    },
+    {
+      "mode": "most_available",
+      "seed": 9,
+      "kind": "effective_action",
+      "action": 4,
+      "count": 772
+    },
+    {
+      "mode": "most_available",
+      "seed": 9,
+      "kind": "effective_action",
+      "action": 5,
+      "count": 0
+    },
+    {
+      "mode": "most_available",
+      "seed": 9,
+      "kind": "new_arrivals",
+      "action": null,
+      "count": 101564
+    },
+    {
+      "mode": "most_available",
+      "seed": 9,
+      "kind": "decisions",
+      "action": null,
+      "count": 101564
+    },
+    {
+      "mode": "most_available",
+      "seed": 9,
+      "kind": "defer_actions",
+      "action": null,
+      "count": 0
+    },
+    {
+      "mode": "most_available",
+      "seed": 9,
+      "kind": "unique_tasks_deferred",
+      "action": null,
+      "count": 0
+    },
+    {
+      "mode": "most_available",
+      "seed": 9,
+      "kind": "cross_dc_assignments",
+      "action": null,
+      "count": 82261
+    },
+    {
+      "mode": "most_available",
+      "seed": 9,
+      "kind": "deadline_overrides",
+      "action": null,
+      "count": 0
+    },
+    {
+      "mode": "most_available",
+      "seed": 9,
+      "kind": "cross_dc_started",
+      "action": null,
+      "count": 82261
+    }
+  ],
+  "output_sha256": {
+    "step_metrics.csv.gz": "7da5e862a0a68d8fdf7f9c53f1c192424ac9349502f2ef052838c6235739c9a2",
+    "dc_step_metrics.csv.gz": "54b306b86babde0532447aa0efdcd9f30a88999092a952b3ad60017b728a3c12"
+  }
+}

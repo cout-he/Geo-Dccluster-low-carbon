@@ -1,0 +1,516 @@
+{
+  "status": "complete",
+  "started_at_utc": "2026-11-20T10:47:41.367271+00:00",
+  "ended_at_utc": "2026-11-20T10:53:34.284809+00:00",
+  "strategies": [
+    "local_only",
+    "lowest_carbon",
+    "lowest_price",
+    "most_available",
+    "round_robin"
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "steps_per_run": 2880,
+  "sim": {
+    "year": 2023,
+    "month": 7,
+    "init_day": 1,
+    "init_hour": 0,
+    "duration_days": 30,
+    "timestep_minutes": 15,
+    "workload_path": "data/workload/alibaba_2020_dataset/result_df_full_year_2020.pkl",
+    "cloud_provider": "aws",
+    "shuffle_datacenters": false,
+    "strategy": "manual_rl",
+    "single_action_mode": false,
+    "disable_defer_action": false,
+    "use_tensorboard": false,
+    "align_simulation_time": true,
+    "randomize_episode_start": false
+  },
+  "datacenters": [
+    {
+      "dc_id": 1,
+      "location": "US-CAL-CISO",
+      "timezone_shift": -7,
+      "population_weight": 0.18,
+      "total_cores": 50000,
+      "total_gpus": 1000,
+      "total_mem": 80000,
+      "dc_config_file": "configs/dcs/dc_config.json",
+      "use_rl_hvac": false,
+      "hru_enabled": false
+    },
+    {
+      "dc_id": 2,
+      "location": "DE-LU",
+      "timezone_shift": 1,
+      "population_weight": 0.22,
+      "total_cores": 85000,
+      "total_gpus": 600,
+      "total_mem": 80000,
+      "dc_config_file": "configs/dcs/dc_config.json",
+      "use_rl_hvac": false,
+      "hru_enabled": false
+    },
+    {
+      "dc_id": 3,
+      "location": "CL-SIC",
+      "timezone_shift": -5,
+      "population_weight": 0.2,
+      "total_cores": 110000,
+      "total_gpus": 300,
+      "total_mem": 60000,
+      "dc_config_file": "configs/dcs/dc_config.json",
+      "use_rl_hvac": false,
+      "hru_enabled": false
+    },
+    {
+      "dc_id": 4,
+      "location": "SG",
+      "timezone_shift": 8,
+      "population_weight": 0.25,
+      "total_cores": 75000,
+      "total_gpus": 700,
+      "total_mem": 50000,
+      "dc_config_file": "configs/dcs/dc_config.json",
+      "use_rl_hvac": false,
+      "hru_enabled": false
+    },
+    {
+      "dc_id": 5,
+      "location": "AU-NSW",
+      "timezone_shift": 11,
+      "population_weight": 0.15,
+      "total_cores": 65000,
+      "total_gpus": 300,
+      "total_mem": 60000,
+      "dc_config_file": "configs/dcs/dc_config.json",
+      "use_rl_hvac": false,
+      "hru_enabled": false
+    }
+  ],
+  "reward": {
+    "normalize": false,
+    "components": {
+      "energy_price": {
+        "weight": 0.5,
+        "args": {
+          "normalize_factor": 100000,
+          "use_metered_totals": true
+        }
+      },
+      "carbon_emissions": {
+        "weight": 0.3,
+        "args": {
+          "normalize_factor": 10,
+          "use_metered_totals": true
+        }
+      },
+      "transmission_cost": {
+        "weight": 0.2,
+        "args": {
+          "normalize_factor": 1
+        }
+      },
+      "sla_penalty": {
+        "weight": 0.1,
+        "args": {
+          "penalty_per_violation": 5.0
+        }
+      },
+      "transmission_emissions": {
+        "weight": 0.1,
+        "args": {
+          "normalize_factor": 1
+        }
+      }
+    }
+  },
+  "strategy_dispatch": "Native DatacenterClusterManager.strategy_map and immediate destination enqueue",
+  "most_available_definition": "Repository implementation: maximum free CPU count among feasible sites",
+  "sac_reference_git": {
+    "baseline_commit": "c79e8f78a9229b904f123276168a9ef7746177fd",
+    "commit": "7b88dce19811c6563ad4a07205007f721b0fa09f",
+    "branch": "experiment/table3-sac-reproduction",
+    "dirty": false
+  },
+  "sac_reference_sha256": "b2a5c3753572477210c56c4e74c0fc23e62edb6674f3811c2b5946426b98b66b",
+  "git": {
+    "baseline_commit": "c79e8f78a9229b904f123276168a9ef7746177fd",
+    "commit": "d402c32afd7f30fda514cca69de239a03736ffdc",
+    "branch": "experiment/table3-sac-reproduction",
+    "dirty": true
+  },
+  "runner_sha256": "ab12dddc598274685d9191665a6e1206a486e1f7210b699e2e756e0e8026fc44",
+  "config_fingerprint": "b1884082863e32d3b6fc8bdc1d2c5e423ae61d476c08d5deb94f7278082741a9",
+  "input_sha256": {
+    "data/workload/alibaba_2020_dataset/result_df_full_year_2020.pkl": "3ba8a8e0067288f8d2542752a292f7da04cb79305689ba145cc6060e96cb7f2e",
+    "configs/dcs/dc_config.json": "b1675fbca01217565f469c1199584b88afcda2de8d8502cffcad19ae26b6ecd2",
+    "data/network_cost/aws_transmission_cost_matrix.csv": "ff3f6e77197b16ca107a01b3303e41e108cbe37cfb158d64011e93131848ae75",
+    "data/carbon_intensity/US-CAL-CISO/2023/US-CAL-CISO_2023_hourly.csv": "44bafab775c6b0d4762b1dc971eb293cfea154f80799a5230f9268d32e1ad55b",
+    "data/electricity_prices/standardized/US-CAL-CISO/2023/US-CAL-CISO_electricity_prices_2023.csv": "031f729c7354d56ea79eca169da7f875b8513572ac5704dc2d60814072cf5592",
+    "data/weather/US-CAL-CISO/2023.json": "d183ba0333304aa5d7d69cf0c52b85f3a7020e914b1462c3135422d83dc3e73b",
+    "data/carbon_intensity/DE-LU/2023/DE-LU_2023_hourly.csv": "b6040328169313ca91b28806f3d69191cb6c035f45a7bcdd338a7c090d914dcb",
+    "data/electricity_prices/standardized/DE-LU/2023/DE-LU_electricity_prices_2023.csv": "92009879f715c90f903b49521f3cf0d97677c0ca00c2b271f6b86b4f61bad64b",
+    "data/weather/DE-LU/2023.json": "8cbcb5482579889e7f93abcf74e80453b520e47dfc3b84c275d365ba39333089",
+    "data/carbon_intensity/CL-SIC/2023/CL-SIC_2023_hourly.csv": "1f5287c0143ec2638f67ed8f367a13cddfc25f3ba3307c49dd4df6e49d8fc44c",
+    "data/electricity_prices/standardized/CL-SIC/2023/CL-SIC_electricity_prices_2023.csv": "9dc33d953c051cef6307bdbba9e1e1f1a5216f040c982f2af6264c33601e95c0",
+    "data/weather/CL-SIC/2023.json": "8744eddffa261d078ca54487e08cb7d846d17607490393c25bb5ef662f457d0e",
+    "data/carbon_intensity/SG/2023/SG_2023_hourly.csv": "d668136330b50887e9736d194586b984b71f32c3192382b7df65739a37839de3",
+    "data/electricity_prices/standardized/SG/2023/SG_electricity_prices_2023.csv": "e7537547f5d3ed18f58535c284908e423f38fa1253529e7305081fb4522bf630",
+    "data/weather/SG/2023.json": "6ca110ba97eda2c261328b7e49376f5be9d12a6a07835065a59f4e97856fd654",
+    "data/carbon_intensity/AU-NSW/2023/AU-NSW_2023_hourly.csv": "cc6cea81513c83442219f9b1891d0d514e7fe7a6d0b15fc7447b2fad4b359809",
+    "data/electricity_prices/standardized/AU-NSW/2023/AU-NSW_electricity_prices_2023.csv": "34f3993be153f3915b04589cc96cf9bfe11321e54f3c7df52799a48f999917c3",
+    "data/weather/AU-NSW/2023.json": "391576a25f1a8ac480a0fb84927a3888955d7722676e51e779e6f149f8c80c7a"
+  },
+  "sac_reference_input_sha256": {
+    "data/workload/alibaba_2020_dataset/result_df_full_year_2020.pkl": "3ba8a8e0067288f8d2542752a292f7da04cb79305689ba145cc6060e96cb7f2e",
+    "configs/dcs/dc_config.json": "b1675fbca01217565f469c1199584b88afcda2de8d8502cffcad19ae26b6ecd2",
+    "data/network_cost/aws_transmission_cost_matrix.csv": "96ed38224d68f7d1990de53d227fa4688277f81e8151623901b0b55093543e1d",
+    "data/carbon_intensity/US-CAL-CISO/2023/US-CAL-CISO_2023_hourly.csv": "d06d8171b696a5cfc78e5a654009f343ee73bcc1849dd9ffc56cdd17b2f6bbd4",
+    "data/electricity_prices/standardized/US-CAL-CISO/2023/US-CAL-CISO_electricity_prices_2023.csv": "031f729c7354d56ea79eca169da7f875b8513572ac5704dc2d60814072cf5592",
+    "data/weather/US-CAL-CISO/2023.json": "d183ba0333304aa5d7d69cf0c52b85f3a7020e914b1462c3135422d83dc3e73b",
+    "data/carbon_intensity/DE-LU/2023/DE-LU_2023_hourly.csv": "870a3e500e130f8ef5c550d711864c31399b540ef30d8e69d16f4122e7fd487e",
+    "data/electricity_prices/standardized/DE-LU/2023/DE-LU_electricity_prices_2023.csv": "92009879f715c90f903b49521f3cf0d97677c0ca00c2b271f6b86b4f61bad64b",
+    "data/weather/DE-LU/2023.json": "8cbcb5482579889e7f93abcf74e80453b520e47dfc3b84c275d365ba39333089",
+    "data/carbon_intensity/CL-SIC/2023/CL-SIC_2023_hourly.csv": "bc7ea01f491a661a36f35fb4361fde79ad665da26543dc3017ace9b1c430c31b",
+    "data/electricity_prices/standardized/CL-SIC/2023/CL-SIC_electricity_prices_2023.csv": "9dc33d953c051cef6307bdbba9e1e1f1a5216f040c982f2af6264c33601e95c0",
+    "data/weather/CL-SIC/2023.json": "8744eddffa261d078ca54487e08cb7d846d17607490393c25bb5ef662f457d0e",
+    "data/carbon_intensity/SG/2023/SG_2023_hourly.csv": "555a0cb9852b98fad3443a5192903c18b42a07c2eb0f76bc72a20db5cec7fac4",
+    "data/electricity_prices/standardized/SG/2023/SG_electricity_prices_2023.csv": "e7537547f5d3ed18f58535c284908e423f38fa1253529e7305081fb4522bf630",
+    "data/weather/SG/2023.json": "6ca110ba97eda2c261328b7e49376f5be9d12a6a07835065a59f4e97856fd654",
+    "data/carbon_intensity/AU-NSW/2023/AU-NSW_2023_hourly.csv": "62d10fe5804f2e745f228a5f69142717c33fa322ae4916e5ebdf446c535175dd",
+    "data/electricity_prices/standardized/AU-NSW/2023/AU-NSW_electricity_prices_2023.csv": "34f3993be153f3915b04589cc96cf9bfe11321e54f3c7df52799a48f999917c3",
+    "data/weather/AU-NSW/2023.json": "391576a25f1a8ac480a0fb84927a3888955d7722676e51e779e6f149f8c80c7a"
+  },
+  "csv_crlf_to_lf_matches": [
+    "data/network_cost/aws_transmission_cost_matrix.csv",
+    "data/carbon_intensity/US-CAL-CISO/2023/US-CAL-CISO_2023_hourly.csv",
+    "data/carbon_intensity/DE-LU/2023/DE-LU_2023_hourly.csv",
+    "data/carbon_intensity/CL-SIC/2023/CL-SIC_2023_hourly.csv",
+    "data/carbon_intensity/SG/2023/SG_2023_hourly.csv",
+    "data/carbon_intensity/AU-NSW/2023/AU-NSW_2023_hourly.csv"
+  ],
+  "runtime": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.10.21",
+    "torch": "2.14.0+cpu",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "device": "cpu"
+  },
+  "runs": [
+    {
+      "rule": "local_only",
+      "seed": 0,
+      "arrival_stream_sha256": "e7f0fdd5bc88cf1f6e549fc275a9083fa116306a30a735778519a630dea1987e",
+      "path": "runs/local_only/seed_00/run.json"
+    },
+    {
+      "rule": "local_only",
+      "seed": 1,
+      "arrival_stream_sha256": "9032e9dd3234e9f1815619fa9d9813c92b24144b2314ee76a6efe75e859d8d90",
+      "path": "runs/local_only/seed_01/run.json"
+    },
+    {
+      "rule": "local_only",
+      "seed": 2,
+      "arrival_stream_sha256": "b172920855ae5248d8ae3c99b2f13694b46326246519fe0eaa7e98f62753b4dc",
+      "path": "runs/local_only/seed_02/run.json"
+    },
+    {
+      "rule": "local_only",
+      "seed": 3,
+      "arrival_stream_sha256": "aec40994c2b246b1d85a028336b44caaec8b91b33f4574c3355c73a736a094b1",
+      "path": "runs/local_only/seed_03/run.json"
+    },
+    {
+      "rule": "local_only",
+      "seed": 4,
+      "arrival_stream_sha256": "c772e2690d2d7c9c9850bfc3602d6bd0c82cd6c4f11bf5c4139808acac7ff8d2",
+      "path": "runs/local_only/seed_04/run.json"
+    },
+    {
+      "rule": "local_only",
+      "seed": 5,
+      "arrival_stream_sha256": "a8edce519a26dd1de09cb6206ca89ae87eef4b67168b0780af1868bc5eb3a28d",
+      "path": "runs/local_only/seed_05/run.json"
+    },
+    {
+      "rule": "local_only",
+      "seed": 6,
+      "arrival_stream_sha256": "e6b69365264e4f1b0902e985b6af85c81027ba44916658b88196b55386085aec",
+      "path": "runs/local_only/seed_06/run.json"
+    },
+    {
+      "rule": "local_only",
+      "seed": 7,
+      "arrival_stream_sha256": "48678ed630518354c2b2354a80b9016c24e30cd57ccd0c8f522eb16d5556505c",
+      "path": "runs/local_only/seed_07/run.json"
+    },
+    {
+      "rule": "local_only",
+      "seed": 8,
+      "arrival_stream_sha256": "acdaffb9835242913146fe14066c0d019d0899bf1971416571d0288ec178913b",
+      "path": "runs/local_only/seed_08/run.json"
+    },
+    {
+      "rule": "local_only",
+      "seed": 9,
+      "arrival_stream_sha256": "cc6bbd3ee58035bc90b8759e3b78e919d8006372aa71a237bdf7e851ed45ee7a",
+      "path": "runs/local_only/seed_09/run.json"
+    },
+    {
+      "rule": "lowest_carbon",
+      "seed": 0,
+      "arrival_stream_sha256": "e7f0fdd5bc88cf1f6e549fc275a9083fa116306a30a735778519a630dea1987e",
+      "path": "runs/lowest_carbon/seed_00/run.json"
+    },
+    {
+      "rule": "lowest_carbon",
+      "seed": 1,
+      "arrival_stream_sha256": "9032e9dd3234e9f1815619fa9d9813c92b24144b2314ee76a6efe75e859d8d90",
+      "path": "runs/lowest_carbon/seed_01/run.json"
+    },
+    {
+      "rule": "lowest_carbon",
+      "seed": 2,
+      "arrival_stream_sha256": "b172920855ae5248d8ae3c99b2f13694b46326246519fe0eaa7e98f62753b4dc",
+      "path": "runs/lowest_carbon/seed_02/run.json"
+    },
+    {
+      "rule": "lowest_carbon",
+      "seed": 3,
+      "arrival_stream_sha256": "aec40994c2b246b1d85a028336b44caaec8b91b33f4574c3355c73a736a094b1",
+      "path": "runs/lowest_carbon/seed_03/run.json"
+    },
+    {
+      "rule": "lowest_carbon",
+      "seed": 4,
+      "arrival_stream_sha256": "c772e2690d2d7c9c9850bfc3602d6bd0c82cd6c4f11bf5c4139808acac7ff8d2",
+      "path": "runs/lowest_carbon/seed_04/run.json"
+    },
+    {
+      "rule": "lowest_carbon",
+      "seed": 5,
+      "arrival_stream_sha256": "a8edce519a26dd1de09cb6206ca89ae87eef4b67168b0780af1868bc5eb3a28d",
+      "path": "runs/lowest_carbon/seed_05/run.json"
+    },
+    {
+      "rule": "lowest_carbon",
+      "seed": 6,
+      "arrival_stream_sha256": "e6b69365264e4f1b0902e985b6af85c81027ba44916658b88196b55386085aec",
+      "path": "runs/lowest_carbon/seed_06/run.json"
+    },
+    {
+      "rule": "lowest_carbon",
+      "seed": 7,
+      "arrival_stream_sha256": "48678ed630518354c2b2354a80b9016c24e30cd57ccd0c8f522eb16d5556505c",
+      "path": "runs/lowest_carbon/seed_07/run.json"
+    },
+    {
+      "rule": "lowest_carbon",
+      "seed": 8,
+      "arrival_stream_sha256": "acdaffb9835242913146fe14066c0d019d0899bf1971416571d0288ec178913b",
+      "path": "runs/lowest_carbon/seed_08/run.json"
+    },
+    {
+      "rule": "lowest_carbon",
+      "seed": 9,
+      "arrival_stream_sha256": "cc6bbd3ee58035bc90b8759e3b78e919d8006372aa71a237bdf7e851ed45ee7a",
+      "path": "runs/lowest_carbon/seed_09/run.json"
+    },
+    {
+      "rule": "lowest_price",
+      "seed": 0,
+      "arrival_stream_sha256": "e7f0fdd5bc88cf1f6e549fc275a9083fa116306a30a735778519a630dea1987e",
+      "path": "runs/lowest_price/seed_00/run.json"
+    },
+    {
+      "rule": "lowest_price",
+      "seed": 1,
+      "arrival_stream_sha256": "9032e9dd3234e9f1815619fa9d9813c92b24144b2314ee76a6efe75e859d8d90",
+      "path": "runs/lowest_price/seed_01/run.json"
+    },
+    {
+      "rule": "lowest_price",
+      "seed": 2,
+      "arrival_stream_sha256": "b172920855ae5248d8ae3c99b2f13694b46326246519fe0eaa7e98f62753b4dc",
+      "path": "runs/lowest_price/seed_02/run.json"
+    },
+    {
+      "rule": "lowest_price",
+      "seed": 3,
+      "arrival_stream_sha256": "aec40994c2b246b1d85a028336b44caaec8b91b33f4574c3355c73a736a094b1",
+      "path": "runs/lowest_price/seed_03/run.json"
+    },
+    {
+      "rule": "lowest_price",
+      "seed": 4,
+      "arrival_stream_sha256": "c772e2690d2d7c9c9850bfc3602d6bd0c82cd6c4f11bf5c4139808acac7ff8d2",
+      "path": "runs/lowest_price/seed_04/run.json"
+    },
+    {
+      "rule": "lowest_price",
+      "seed": 5,
+      "arrival_stream_sha256": "a8edce519a26dd1de09cb6206ca89ae87eef4b67168b0780af1868bc5eb3a28d",
+      "path": "runs/lowest_price/seed_05/run.json"
+    },
+    {
+      "rule": "lowest_price",
+      "seed": 6,
+      "arrival_stream_sha256": "e6b69365264e4f1b0902e985b6af85c81027ba44916658b88196b55386085aec",
+      "path": "runs/lowest_price/seed_06/run.json"
+    },
+    {
+      "rule": "lowest_price",
+      "seed": 7,
+      "arrival_stream_sha256": "48678ed630518354c2b2354a80b9016c24e30cd57ccd0c8f522eb16d5556505c",
+      "path": "runs/lowest_price/seed_07/run.json"
+    },
+    {
+      "rule": "lowest_price",
+      "seed": 8,
+      "arrival_stream_sha256": "acdaffb9835242913146fe14066c0d019d0899bf1971416571d0288ec178913b",
+      "path": "runs/lowest_price/seed_08/run.json"
+    },
+    {
+      "rule": "lowest_price",
+      "seed": 9,
+      "arrival_stream_sha256": "cc6bbd3ee58035bc90b8759e3b78e919d8006372aa71a237bdf7e851ed45ee7a",
+      "path": "runs/lowest_price/seed_09/run.json"
+    },
+    {
+      "rule": "most_available",
+      "seed": 0,
+      "arrival_stream_sha256": "e7f0fdd5bc88cf1f6e549fc275a9083fa116306a30a735778519a630dea1987e",
+      "path": "runs/most_available/seed_00/run.json"
+    },
+    {
+      "rule": "most_available",
+      "seed": 1,
+      "arrival_stream_sha256": "9032e9dd3234e9f1815619fa9d9813c92b24144b2314ee76a6efe75e859d8d90",
+      "path": "runs/most_available/seed_01/run.json"
+    },
+    {
+      "rule": "most_available",
+      "seed": 2,
+      "arrival_stream_sha256": "b172920855ae5248d8ae3c99b2f13694b46326246519fe0eaa7e98f62753b4dc",
+      "path": "runs/most_available/seed_02/run.json"
+    },
+    {
+      "rule": "most_available",
+      "seed": 3,
+      "arrival_stream_sha256": "aec40994c2b246b1d85a028336b44caaec8b91b33f4574c3355c73a736a094b1",
+      "path": "runs/most_available/seed_03/run.json"
+    },
+    {
+      "rule": "most_available",
+      "seed": 4,
+      "arrival_stream_sha256": "c772e2690d2d7c9c9850bfc3602d6bd0c82cd6c4f11bf5c4139808acac7ff8d2",
+      "path": "runs/most_available/seed_04/run.json"
+    },
+    {
+      "rule": "most_available",
+      "seed": 5,
+      "arrival_stream_sha256": "a8edce519a26dd1de09cb6206ca89ae87eef4b67168b0780af1868bc5eb3a28d",
+      "path": "runs/most_available/seed_05/run.json"
+    },
+    {
+      "rule": "most_available",
+      "seed": 6,
+      "arrival_stream_sha256": "e6b69365264e4f1b0902e985b6af85c81027ba44916658b88196b55386085aec",
+      "path": "runs/most_available/seed_06/run.json"
+    },
+    {
+      "rule": "most_available",
+      "seed": 7,
+      "arrival_stream_sha256": "48678ed630518354c2b2354a80b9016c24e30cd57ccd0c8f522eb16d5556505c",
+      "path": "runs/most_available/seed_07/run.json"
+    },
+    {
+      "rule": "most_available",
+      "seed": 8,
+      "arrival_stream_sha256": "acdaffb9835242913146fe14066c0d019d0899bf1971416571d0288ec178913b",
+      "path": "runs/most_available/seed_08/run.json"
+    },
+    {
+      "rule": "most_available",
+      "seed": 9,
+      "arrival_stream_sha256": "cc6bbd3ee58035bc90b8759e3b78e919d8006372aa71a237bdf7e851ed45ee7a",
+      "path": "runs/most_available/seed_09/run.json"
+    },
+    {
+      "rule": "round_robin",
+      "seed": 0,
+      "arrival_stream_sha256": "e7f0fdd5bc88cf1f6e549fc275a9083fa116306a30a735778519a630dea1987e",
+      "path": "runs/round_robin/seed_00/run.json"
+    },
+    {
+      "rule": "round_robin",
+      "seed": 1,
+      "arrival_stream_sha256": "9032e9dd3234e9f1815619fa9d9813c92b24144b2314ee76a6efe75e859d8d90",
+      "path": "runs/round_robin/seed_01/run.json"
+    },
+    {
+      "rule": "round_robin",
+      "seed": 2,
+      "arrival_stream_sha256": "b172920855ae5248d8ae3c99b2f13694b46326246519fe0eaa7e98f62753b4dc",
+      "path": "runs/round_robin/seed_02/run.json"
+    },
+    {
+      "rule": "round_robin",
+      "seed": 3,
+      "arrival_stream_sha256": "aec40994c2b246b1d85a028336b44caaec8b91b33f4574c3355c73a736a094b1",
+      "path": "runs/round_robin/seed_03/run.json"
+    },
+    {
+      "rule": "round_robin",
+      "seed": 4,
+      "arrival_stream_sha256": "c772e2690d2d7c9c9850bfc3602d6bd0c82cd6c4f11bf5c4139808acac7ff8d2",
+      "path": "runs/round_robin/seed_04/run.json"
+    },
+    {
+      "rule": "round_robin",
+      "seed": 5,
+      "arrival_stream_sha256": "a8edce519a26dd1de09cb6206ca89ae87eef4b67168b0780af1868bc5eb3a28d",
+      "path": "runs/round_robin/seed_05/run.json"
+    },
+    {
+      "rule": "round_robin",
+      "seed": 6,
+      "arrival_stream_sha256": "e6b69365264e4f1b0902e985b6af85c81027ba44916658b88196b55386085aec",
+      "path": "runs/round_robin/seed_06/run.json"
+    },
+    {
+      "rule": "round_robin",
+      "seed": 7,
+      "arrival_stream_sha256": "48678ed630518354c2b2354a80b9016c24e30cd57ccd0c8f522eb16d5556505c",
+      "path": "runs/round_robin/seed_07/run.json"
+    },
+    {
+      "rule": "round_robin",
+      "seed": 8,
+      "arrival_stream_sha256": "acdaffb9835242913146fe14066c0d019d0899bf1971416571d0288ec178913b",
+      "path": "runs/round_robin/seed_08/run.json"
+    },
+    {
+      "rule": "round_robin",
+      "seed": 9,
+      "arrival_stream_sha256": "cc6bbd3ee58035bc90b8759e3b78e919d8006372aa71a237bdf7e851ed45ee7a",
+      "path": "runs/round_robin/seed_09/run.json"
+    }
+  ]
+}

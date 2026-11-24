@@ -1,0 +1,257 @@
+{
+  "config_fingerprint": "b1884082863e32d3b6fc8bdc1d2c5e423ae61d476c08d5deb94f7278082741a9",
+  "reset": {
+    "reset_seed": 5,
+    "episode_start_utc": "2023-07-01T00:00:00+00:00",
+    "episode_end_utc": "2023-07-31T00:00:00+00:00",
+    "workload_start_utc": "2020-07-01T00:00:00+00:00",
+    "dc_source_indices": {
+      "US-CAL-CISO": {
+        "carbon_15m": 17376,
+        "electricity_price_15m": 17376,
+        "weather_local_15m": 17348,
+        "weather_roll_days": 9,
+        "weather_source_local_15m": 16484
+      },
+      "DE-LU": {
+        "carbon_15m": 17376,
+        "electricity_price_15m": 17376,
+        "weather_local_15m": 17380,
+        "weather_roll_days": 9,
+        "weather_source_local_15m": 16516
+      },
+      "CL-SIC": {
+        "carbon_15m": 17376,
+        "electricity_price_15m": 17376,
+        "weather_local_15m": 17356,
+        "weather_roll_days": 9,
+        "weather_source_local_15m": 16492
+      },
+      "SG": {
+        "carbon_15m": 17376,
+        "electricity_price_15m": 17376,
+        "weather_local_15m": 17408,
+        "weather_roll_days": 9,
+        "weather_source_local_15m": 16544
+      },
+      "AU-NSW": {
+        "carbon_15m": 17376,
+        "electricity_price_15m": 17376,
+        "weather_local_15m": 17420,
+        "weather_roll_days": 9,
+        "weather_source_local_15m": 16556
+      }
+    }
+  },
+  "summary": {
+    "mode": "round_robin",
+    "seed": 5,
+    "steps": 2880,
+    "total_cost_usd": 448992.40600381163,
+    "total_co2_t": 1403.0539306235926,
+    "total_energy_mwh": 4747.609962828194,
+    "total_water_m3": 32689.268728500003,
+    "sla_violation_pct_finished": 0.0453899589516893,
+    "avg_cpu_util_pct": 2.9421409205806626,
+    "avg_gpu_util_pct": 14.750014668039022,
+    "transmission_cost_usd": 18732.881512819666,
+    "tasks_deferred": 0,
+    "unfinished_tasks": 220,
+    "electricity_cost_usd": 430259.52449099196,
+    "dc_carbon_kg": 1398810.751844607,
+    "transmission_carbon_kg": 4243.178778985396,
+    "dc_energy_kwh": 4732362.421140108,
+    "transmission_energy_kwh": 15247.541688085405,
+    "new_arrivals": 101564,
+    "tasks_finished": 101344,
+    "sla_met": 101298,
+    "sla_violated": 46,
+    "unique_tasks_deferred": 0,
+    "cross_dc_assignments": 81350,
+    "cross_dc_started": 81350,
+    "deadline_overrides": 0
+  },
+  "arrival_stream_sha256": "a8edce519a26dd1de09cb6206ca89ae87eef4b67168b0780af1868bc5eb3a28d",
+  "last_step_utc": "2023-07-30T23:45:00+00:00",
+  "actions": [
+    {
+      "mode": "round_robin",
+      "seed": 5,
+      "kind": "raw_action",
+      "action": 0,
+      "count": 0
+    },
+    {
+      "mode": "round_robin",
+      "seed": 5,
+      "kind": "raw_action",
+      "action": 1,
+      "count": 20313
+    },
+    {
+      "mode": "round_robin",
+      "seed": 5,
+      "kind": "raw_action",
+      "action": 2,
+      "count": 20313
+    },
+    {
+      "mode": "round_robin",
+      "seed": 5,
+      "kind": "raw_action",
+      "action": 3,
+      "count": 20313
+    },
+    {
+      "mode": "round_robin",
+      "seed": 5,
+      "kind": "raw_action",
+      "action": 4,
+      "count": 20313
+    },
+    {
+      "mode": "round_robin",
+      "seed": 5,
+      "kind": "raw_action",
+      "action": 5,
+      "count": 20312
+    },
+    {
+      "mode": "round_robin",
+      "seed": 5,
+      "kind": "policy_action",
+      "action": 0,
+      "count": 0
+    },
+    {
+      "mode": "round_robin",
+      "seed": 5,
+      "kind": "policy_action",
+      "action": 1,
+      "count": 20313
+    },
+    {
+      "mode": "round_robin",
+      "seed": 5,
+      "kind": "policy_action",
+      "action": 2,
+      "count": 20313
+    },
+    {
+      "mode": "round_robin",
+      "seed": 5,
+      "kind": "policy_action",
+      "action": 3,
+      "count": 20313
+    },
+    {
+      "mode": "round_robin",
+      "seed": 5,
+      "kind": "policy_action",
+      "action": 4,
+      "count": 20313
+    },
+    {
+      "mode": "round_robin",
+      "seed": 5,
+      "kind": "policy_action",
+      "action": 5,
+      "count": 20312
+    },
+    {
+      "mode": "round_robin",
+      "seed": 5,
+      "kind": "effective_action",
+      "action": 0,
+      "count": 0
+    },
+    {
+      "mode": "round_robin",
+      "seed": 5,
+      "kind": "effective_action",
+      "action": 1,
+      "count": 20313
+    },
+    {
+      "mode": "round_robin",
+      "seed": 5,
+      "kind": "effective_action",
+      "action": 2,
+      "count": 20313
+    },
+    {
+      "mode": "round_robin",
+      "seed": 5,
+      "kind": "effective_action",
+      "action": 3,
+      "count": 20313
+    },
+    {
+      "mode": "round_robin",
+      "seed": 5,
+      "kind": "effective_action",
+      "action": 4,
+      "count": 20313
+    },
+    {
+      "mode": "round_robin",
+      "seed": 5,
+      "kind": "effective_action",
+      "action": 5,
+      "count": 20312
+    },
+    {
+      "mode": "round_robin",
+      "seed": 5,
+      "kind": "new_arrivals",
+      "action": null,
+      "count": 101564
+    },
+    {
+      "mode": "round_robin",
+      "seed": 5,
+      "kind": "decisions",
+      "action": null,
+      "count": 101564
+    },
+    {
+      "mode": "round_robin",
+      "seed": 5,
+      "kind": "defer_actions",
+      "action": null,
+      "count": 0
+    },
+    {
+      "mode": "round_robin",
+      "seed": 5,
+      "kind": "unique_tasks_deferred",
+      "action": null,
+      "count": 0
+    },
+    {
+      "mode": "round_robin",
+      "seed": 5,
+      "kind": "cross_dc_assignments",
+      "action": null,
+      "count": 81350
+    },
+    {
+      "mode": "round_robin",
+      "seed": 5,
+      "kind": "deadline_overrides",
+      "action": null,
+      "count": 0
+    },
+    {
+      "mode": "round_robin",
+      "seed": 5,
+      "kind": "cross_dc_started",
+      "action": null,
+      "count": 81350
+    }
+  ],
+  "output_sha256": {
+    "step_metrics.csv.gz": "cf3d247bca8e0fe26dbd337fd79e47b78a809210912c74ca87098a07b70b9cd4",
+    "dc_step_metrics.csv.gz": "596b435865861b992d69510561ac8a3c70f36626f5fec5d3ad5f8532e09203a1"
+  }
+}
